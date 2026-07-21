@@ -37,6 +37,7 @@
 \makeatother
 \usepackage{xcolor}
 \usepackage{longtable,booktabs,array}
+\usepackage{tabularray,float,siunitx}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -231,11 +232,13 @@ Where everything is as in (5), except that now the observation pertains to the i
 
 \subsubsection{Results}\label{results-1}
 
-The culture conversion model (Lizardo 2006) implies that individuals who have command of a wide variety of tastes will be able to sustain larger and sparser personal networks over time, allowing them to reap the benefits of those social connections in the form of higher than average rates of social interaction and a higher ability to remain connected to important social foci where new contacts are made and old ones are sustained. The results of the lagged, random effects and instrumental variables regression models of the effect of cultural capital (in the form of ``omnivore'' taste) in the first time period on network outcomes in the second time period are shown in Table 3.
+The culture conversion model (Lizardo 2006) implies that individuals who have command of a wide variety of tastes will be able to sustain larger and sparser personal networks over time, allowing them to reap the benefits of those social connections in the form of higher than average rates of social interaction and a higher ability to remain connected to important social foci where new contacts are made and old ones are sustained. The results of the Mundlak (within-between) Poisson models of the effect of cultural capital (in the form of ``omnivore'' taste) on network outcomes across time periods are shown in Table 3.
 
-The results shown in the first model of the table are consistent with the culture conversion model: I find that persons who display a wide variety of tastes in the initial time period sustain higher frequencies of social interaction five years later \emph{even after holding constant individual level predictors of interaction frequency in the first time period} (γ\textgreater0, \emph{p}\textless0.05). While not definitive evidence of ``causality'' these results serve to cement in a more straightforward longitudinal framework those reported by Lizardo (2006) using two-stage methods on cross-sectional data, thus serving to more firmly establish the primary empirical implication of the culture conversion model: broad cultural tastes are used to sustain larger and in this case more active patterns of interpersonal engagement over time. Furthermore, we can see in the fourth column of the table having a wide repertoire of taste is not only useful in sustaining higher levels informal social connectivity to other members of the personal community network over time, but that it is also helps in raising the chances of remaining tied to important social foci of interaction such as voluntary associations (\emph{γ}\textgreater0, \emph{p}\textless0.05). As Feld (1981) has noted these interaction foci are important since they serve as the primary social mechanism that allows the individual to form social connections which serve to integrate her into the larger social system. Because recruitment (and the over-time stability of membership) into this foci is largely a matter of keeping alive the network ties that bind the individual to other members of the group (Popielarz and McPherson 1995), it is no surprise that whatever resource helps the individual to sustain social connections to other persons will also appear to sustain his or her connection to these larger social entities.
+The results are consistent with the culture conversion model, particularly when examining the robust between-person differences (the `mean` effects). I find that persons who display a persistently wide variety of tastes (a higher longitudinal mean of cultural breadth) sustain higher frequencies of social interaction across the time periods (\emph{p}\textless0.05). While this cross-sectional ``between'' effect does not offer definitive evidence of strict causality, it cements in a more robust longitudinal modeling framework those results reported by Lizardo (2006). Broad cultural tastes are strongly associated with sustaining larger and more active patterns of interpersonal engagement over time. 
 
-Are the results from the lagged models the spurious by-product of unmeasured individual heterogeneity or simultaneity bias? The models shown in the second and fifth columns of the table show the results after taking into account unobserved individual heterogeneity by modeling it within a random effects framework. The basic result stands: persons who engage in a wide variety of cultural activities are better able to sustain higher levels of social connectivity both in terms of interaction with members of the ``personal community'' (Wellman 1979, Wellman et al 1988) and in terms of connection with organizational interaction foci. Furthermore, as shown in the third and sixth columns of the table, the results remain the same (in fact become stronger, suggesting that the simultaneity bias was depressing the magnitude of the cultural taste coefficient downwards) after we deal with both the simultaneity and unobserved heterogeneity bias by using cultural taste breadth in 1980 as an instrument in the random-effects model. Thus we can conclude that in the very same way that being a cultural ``omnivore'' helps to sustain social connections with friends, cultural variety helps the individual keep their connections to voluntary association foci and sustain high levels of informal sociability with members of the personal community network.
+Furthermore, we can see in the second column of the table that having a high average repertoire of tastes is not only useful in sustaining higher levels of informal social connectivity, but it also raises the chances of remaining tied to important social foci of interaction, such as voluntary associations (\emph{p}\textless0.05). Because recruitment (and the over-time stability of membership) into these foci is largely a matter of keeping alive the network ties that bind the individual to other members of the group (Popielarz and McPherson 1995), it is no surprise that whatever resource helps the individual to sustain social connections to other persons will also appear to sustain his or her connection to these larger social entities.
+
+The Mundlak specification also allows us to evaluate the within-person effects---whether a temporary spike in an individual's cultural tastes over their own average translates to immediate gains in connectivity. The within-person effects for cultural taste breadth are smaller and only marginally significant for interaction with friends (\emph{p}\textless0.1), suggesting that it is the durable, trait-like possession of cultural capital (the between-person effect) rather than short-term fluctuations in cultural activity that primarily drives sustained social connectivity and organizational membership.
 
 \subsection{Discussion and conclusion}\label{discussion-and-conclusion}
 
@@ -473,79 +476,12 @@ Figure
 
 Table 1.
 
-\includegraphics[width=6.81597in,height=1.83194in]{media/image2.wmf}
 
-Table 2.
 
-Table 3. Lagged, Random Effects and Instrumental Variables Random Effects Models of the effect of culture consumption diversity on interaction with friends and number of organizational memberships, Project Canada Survey 1985-1990.
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2963}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1174}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1174}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1132}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0234}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1048}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1084}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1190}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.3481} + 4\tabcolsep}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-Interaction with Friends
-\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.3322} + 4\tabcolsep}@{}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-Number of Memberships
-\end{minipage}} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-& Lagged & Random
+\input{tex/pcs_taste_change_modern.tex}
 
-Effects & IV
-
-Random
-
-Effects & & Lagged & Random
-
-Effects & IV
-
-Random
-
-Effects \\
-N. of Cultural Tastes & 0.0289* & 0.119* & 0.142* & & 0.0874* & 0.0504* & 0.155* \\
-& (3.46) & (17.15) & (5.20) & & (3.88) & (4.59) & (2.73) \\
-Gender (Women=1) & -0.0623+ & -0.123* & -0.128* & & 0.284* & 0.257* & 0.116 \\
-& (-1.80) & (-3.16) & (-2.50) & & (3.05) & (3.27) & (1.04) \\
-Education & 0.0178 & 0.00461 & -0.00680 & & 0.0768* & 0.0907* & 0.0671* \\
-& (1.60) & (0.38) & (-0.41) & & (2.58) & (3.93) & (2.06) \\
-Marital Status (Married=1) & -0.0585 & -0.0610 & -0.134* & & 0.0572 & 0.00358 & 0.152 \\
-& (-1.36) & (-1.31) & (-2.07) & & (0.49) & (0.04) & (1.14) \\
-Children & 0.00392 & 0.00684 & 0.0155 & & 0.0173 & 0.0148 & 0.00837 \\
-& (0.36) & (0.55) & (0.92) & & (0.59) & (0.59) & (0.23) \\
-Age & 0.00486* & 0.000912 & 0.00144 & & 0.00194 & 0.00205 & 0.00772+ \\
-& (4.35) & (0.76) & (0.78) & & (0.64) & (0.87) & (1.66) \\
-Urban & -0.00485 & -0.0267 & 0.00220 & & -0.115 & -0.0743 & -0.0370 \\
-& (-0.17) & (-0.82) & (0.05) & & (-1.49) & (-1.13) & (-0.39) \\
-Constant & -0.310* & -0.222* & -0.310 & & -0.264 & 0.0694 & -0.777 \\
-& (-3.41) & (-2.37) & (-1.56) & & (-1.08) & (0.38) & (-1.61) \\
-& & & & & & & \\
-R\textsuperscript{2} & 0.0766 & & & & 0.0734 & & \\
-\emph{R\textsuperscript{2}} (within) & & 0.312 & 0.308 & & & 0.00704 & 0.0175 \\
-\emph{R\textsuperscript{2}} (between) & & 0.123 & 0.133 & & & 0.0943 & 0.0703 \\
-χ\textsuperscript{2} & & 319.7 & 51.55 & & & 54.09 & 21.85 \\
-N & 560 & 1116\textsuperscript{a} & 657\textsuperscript{a, b} & & 560 & 1116\textsuperscript{a} & 657\textsuperscript{a, b} \\
-\end{longtable}
-
-+p\textless0.10; *p\textless0.05; **p\textless0.01
-
-\textsuperscript{a}Unit of analysis is the individual/time-period. Each individual contributes two observations for the analysis (1985, 1990).
-
-\textsuperscript{b}Only those individuals with data for three panels (1980, 1985, 1990) can be included in the analysis.
-
-\section{\texorpdfstring{Appendix }{Appendix }}\label{appendix}
+\input{tex/pcs_network_stability_modern.tex}
 
 Table 4. Means, standard deviations and range of the variables used in the analysis. Project Canada Survey 1985-1995
 
