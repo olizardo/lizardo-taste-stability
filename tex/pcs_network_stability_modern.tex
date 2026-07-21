@@ -1,0 +1,54 @@
+\begin{table}
+\centering
+\begin{talltblr}[         %% tabularray outer open
+caption={Mundlak (Within-Between) Poisson Models for Network Stability},
+note{}={+ p \num{< 0.1}, * p \num{< 0.05}},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]},
+hline{2}={1-3}{solid, black, 0.05em},
+hline{31}={1-3}{solid, black, 0.05em},
+hline{1}={1-3}{solid, black, 0.08em},
+hline{38}={1-3}{solid, black, 0.08em},
+column{2-3}={}{halign=c},
+column{1}={}{halign=l},
+}                     %% tabularray inner close
+& Friends (Mundlak Poisson) & Org. Memberships (Mundlak Poisson) \\
+(Intercept) & \num{0.823}* & \num{-2.147}* \\
+& (\num{0.176}) & (\num{0.363}) \\
+numcult\_within & \num{-0.039}+ & \num{0.018} \\
+& (\num{0.022}) & (\num{0.035}) \\
+educ\_within & \num{-0.018} & \num{0.039} \\
+& (\num{0.047}) & (\num{0.072}) \\
+married\_within & \num{0.112} & \num{-0.287} \\
+& (\num{0.184}) & (\num{0.292}) \\
+childre\_within & \num{-0.053} & \num{-0.024} \\
+& (\num{0.093}) & (\num{0.151}) \\
+bigcity\_within & \num{0.175} & \num{-0.233} \\
+& (\num{0.288}) & (\num{0.471}) \\
+numcult\_mean & \num{-0.068}* & \num{0.201}* \\
+& (\num{0.016}) & (\num{0.032}) \\
+educ\_mean & \num{-0.010} & \num{0.089}* \\
+& (\num{0.017}) & (\num{0.033}) \\
+married\_mean & \num{0.080} & \num{0.085} \\
+& (\num{0.066}) & (\num{0.130}) \\
+childre\_mean & \num{-0.012} & \num{0.022} \\
+& (\num{0.016}) & (\num{0.031}) \\
+bigcity\_mean & \num{-0.002} & \num{-0.056} \\
+& (\num{0.042}) & (\num{0.079}) \\
+female & \num{0.082} & \num{0.329}* \\
+& (\num{0.050}) & (\num{0.100}) \\
+white & \num{-0.065} & \num{0.260} \\
+& (\num{0.127}) & (\num{0.268}) \\
+as.factor(wave)4 & \num{0.495}* & \num{-0.033} \\
+& (\num{0.073}) & (\num{0.118}) \\
+SD (Intercept id) & \num{0.000} & \num{0.476} \\
+Num.Obs. & \num{1116} & \num{1116} \\
+R2 Marg. &  & \num{0.114} \\
+R2 Cond. &  & \num{0.316} \\
+AIC & \num{3219.5} & \num{2636.3} \\
+BIC & \num{3294.7} & \num{2711.6} \\
+ICC &  & \num{0.2} \\
+RMSE & \num{0.78} & \num{0.71} \\
+\end{talltblr}
+\end{table}
