@@ -1,0 +1,620 @@
+\begin{thebibliography}{}
+
+\bibitem[ref, a]{ref102}
+% \includegraphics[width=6.01319in,height=3.10417in]{media/image1.emf}.
+
+\bibitem[ref, b]{ref103}
+% \includegraphics[width=6.81597in,height=1.83194in]{media/image2.wmf}.
+
+\bibitem[ref, c]{ref104}
+Table 3. Lagged, Within-Between (Mundlak) Poisson Models Effects Models of the effect of culture consumption diversity on interaction with friends and number of organizational memberships, Project Canada Survey 1985-1990.
+
+\bibitem[ref, d]{ref105}
+\begin{longtable}[]{@{} >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.2963}} >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1174}} >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1174}} >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1132}} >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.0234}} >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1048}} >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1084}} >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1190}}@{}} \toprule\noalign{} \begin{minipage}[b]{\linewidth}\raggedright \end{minipage} & \multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.3481} + 4\tabcolsep}}{% \begin{minipage}[b]{\linewidth}\raggedright Interaction with Friends \end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright \end{minipage} & \multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.3322} + 4\tabcolsep}@{}}{% \begin{minipage}[b]{\linewidth}\raggedright Number of Memberships \end{minipage}} \\ \midrule\noalign{} \endhead \bottomrule\noalign{} \endlastfoot & Lagged & Random.
+
+\bibitem[ref, e]{ref106}
+Effects & & Lagged & Random.
+
+\bibitem[ref, f]{ref107}
+Effects \\ N. of Cultural Tastes & 0.0289* & 0.119* & 0.142* & & 0.0874* & 0.0504* & 0.155* \\ & (3.46) & (17.15) & (5.20) & & (3.88) & (4.59) & (2.73) \\ Gender (Women=1) & -0.0623+ & -0.123* & -0.128* & & 0.284* & 0.257* & 0.116 \\ & (-1.80) & (-3.16) & (-2.50) & & (3.05) & (3.27) & (1.04) \\ Education & 0.0178 & 0.00461 & -0.00680 & & 0.0768* & 0.0907* & 0.0671* \\ & (1.60) & (0.38) & (-0.41) & & (2.58) & (3.93) & (2.06) \\ Marital Status (Married=1) & -0.0585 & -0.0610 & -0.134* & & 0.0572 & 0.00358 & 0.152 \\ & (-1.36) & (-1.31) & (-2.07) & & (0.49) & (0.04) & (1.14) \\ Children & 0.00392 & 0.00684 & 0.0155 & & 0.0173 & 0.0148 & 0.00837 \\ & (0.36) & (0.55) & (0.92) & & (0.59) & (0.59) & (0.23) \\ Age & 0.00486* & 0.000912 & 0.00144 & & 0.00194 & 0.00205 & 0.00772+ \\ & (4.35) & (0.76) & (0.78) & & (0.64) & (0.87) & (1.66) \\ Urban & -0.00485 & -0.0267 & 0.00220 & & -0.115 & -0.0743 & -0.0370 \\ & (-0.17) & (-0.82) & (0.05) & & (-1.49) & (-1.13) & (-0.39) \\ Constant & -0.310* & -0.222* & -0.310 & & -0.264 & 0.0694 & -0.777 \\ & (-3.41) & (-2.37) & (-1.56) & & (-1.08) & (0.38) & (-1.61) \\ & & & & & & & \\ R\textsuperscript{2} & 0.0766 & & & & 0.0734 & & \\ \emph{R\textsuperscript{2}} (within) & & 0.312 & 0.308 & & & 0.00704 & 0.0175 \\ \emph{R\textsuperscript{2}} (between) & & 0.123 & 0.133 & & & 0.0943 & 0.0703 \\ $\chi$\textsuperscript{2} & & 319.7 & 51.55 & & & 54.09 & 21.85 \\ N & 560 & 1116\textsuperscript{a} & 657\textsuperscript{a, b} & & 560 & 1116\textsuperscript{a} & 657\textsuperscript{a, b} \\ \end{longtable}.
+
+\bibitem[ref, g]{ref108}
++p\textless0.10; *p\textless0.05; **p\textless0.01.
+
+\bibitem[ref, h]{ref109}
+\textsuperscript{a}Unit of analysis is the individual/time-period. Each individual contributes two observations for the analysis (1985, 1990).
+
+\bibitem[ref, i]{ref110}
+\textsuperscript{b}Only those individuals with data for three panels (1980, 1985, 1990) can be included in the analysis.
+
+\bibitem[\_\_\_\_\_\_, 1982]{1982}
+\_\_\_\_\_\_ (1982).
+\newblock Social structural determinants of similarity among associates.
+\newblock {\em American Sociological Review}.
+\newblock 47:797-801.
+
+\bibitem[\_\_\_\_\_\_, 1983]{1983}
+\_\_\_\_\_\_ (1983).
+\newblock Network analysis: Some basic principles.
+\newblock {\em Sociological Theory}.
+\newblock 1:155-200.
+
+\bibitem[\_\_\_\_\_\_, 1986]{1986}
+\_\_\_\_\_\_ (1986).
+\newblock The forms of capital.
+\newblock Pp. 241-258 in \emph{Handbook of Theory and Research for the Sociology of Education}, edited by J. Richardson. New York: Greenwood Press.
+
+\bibitem[\_\_\_\_\_\_, 1988]{1988}
+\_\_\_\_\_\_ (1988).
+\newblock Afterword: Toward a formal structural sociology.
+\newblock Pp. 477-497 in \emph{Social Structures a Network Approach}, edited by B. Wellman and S. D. Berkowitz. Cambridge: Cambridge University Press.
+
+\bibitem[\_\_\_\_\_\_, 1990]{1990}
+\_\_\_\_\_\_ (1990).
+\newblock {\em The Logic of Practice}.
+\newblock Cambridge: Polity Press.
+
+\bibitem[\_\_\_\_\_\_, 1993]{1993}
+\_\_\_\_\_\_ (1993).
+\newblock Nadel\textquotesingle s paradox revisited: Relational and cultural aspects of organizational structure.
+\newblock Pp. 118-142 in \emph{Networks and Organizations}, edited by N. Nohria and R. G. Eccles. Boston: Harvard Business School Press.
+
+\bibitem[\_\_\_\_\_\_, 1995]{1995}
+\_\_\_\_\_\_ (1995).
+\newblock Communication technologies and their effect on cultural homogeneity, consensus, and the diffusion of new ideas.
+\newblock {\em Sociological Perspectives}.
+\newblock 38: 547-571.
+
+\bibitem[\_\_\_\_\_\_, 1996]{1996}
+\_\_\_\_\_\_ (1996).
+\newblock Are art-museum visitors different from other people? the relationship between attendance and social and political attitudes in the united states.
+\newblock {\em Poetics}.
+\newblock 24:161-180.
+
+\bibitem[\_\_\_\_\_\_, 1997]{1997}
+\_\_\_\_\_\_ (1997).
+\newblock The rise and fall of highbrow snobbery as a status marker.
+\newblock {\em Poetics}.
+\newblock 25:75-92.
+
+\bibitem[\_\_\_\_\_\_, 998b]{1998b}
+\_\_\_\_\_\_ (1998b).
+\newblock Birds of a feather sing together.
+\newblock {\em Social Forces}.
+\newblock 77:453-485.
+
+\bibitem[\_\_\_\_\_\_, 2000]{2000}
+\_\_\_\_\_\_ (2000).
+\newblock {\em Pascalian Meditations}.
+\newblock Stanford: Stanford University Press.
+
+\bibitem[\_\_\_\_\_\_, 2002]{2002}
+\_\_\_\_\_\_ (2002).
+\newblock Bridge decay.
+\newblock {\em Social Networks}.
+\newblock 24: 333-363.
+
+\bibitem[\_\_\_\_\_\_, 2003]{2003}
+\_\_\_\_\_\_ (2003).
+\newblock Culture and competition: Homophily and distancing explanations for cultural niches.
+\newblock {\em American Sociological Review}.
+\newblock 68:319-345.
+
+\bibitem[\_\_\_\_\_\_, 2004]{2004}
+\_\_\_\_\_\_ (2004).
+\newblock A blau space primer: Prolegomenon to an ecology of affiliation.
+\newblock {\em Industrial and Corporate Change}.
+\newblock 13: 263-280.
+
+\bibitem[\_\_\_\_\_\_, 2005]{2005}
+\_\_\_\_\_\_ (2005).
+\newblock {\em Brokerage and Closure}.
+\newblock Oxford: Oxford University Press.
+
+\bibitem[Alexander, 2003]{alexander2003}
+Alexander, V.~D. (2003).
+\newblock {\em Sociology of the Arts: Exploring Fine and Popular Forms}.
+\newblock Malden: Blackwell.
+
+\bibitem[Allison, 1982]{allison1982}
+Allison, P.~D. (1982).
+\newblock Discrete-time methods for the analysis of event histories.
+\newblock {\em Sociological Methodology}.
+\newblock 13: 61-98.
+
+\bibitem[Anderson, 1984]{anderson1984}
+Anderson, T.~B. (1984).
+\newblock Widowhood as a life transition: Its impact on kinship ties.
+\newblock {\em Journal of Marriage and the Family}.
+\newblock 46:105-114.
+
+\bibitem[Belsky and Rovine, 1984a]{belsky1984}
+Belsky, J. and Rovine, M. (1984a).
+\newblock Social-network contact, family support, and the transition to parenthood.
+\newblock {\em Journal of Marriage and the Family}.
+\newblock 46:455-462.
+
+\bibitem[Belsky and Rovine, 1984b]{belskyrovine1984}
+Belsky, J. and Rovine, M. (1984b).
+\newblock Social-network contact, family support, and the transition to parenthood.
+\newblock {\em Journal of Marriage and the Family}, 46:455--462.
+
+\bibitem[Bennett, 2004]{bennett2004}
+Bennett, A. (2004).
+\newblock New tales from canterbury: the making of virtual scene.
+\newblock Pp. 205-220 in \emph{Music Scenes: Local, Translocal and Virtual}, edited by A. Bennett and R. A. Peterson. Nashville: Vanderbilt University Press.
+
+\bibitem[Bennett and Frow, 1999]{bennett1999}
+Bennett, Tony, M.~E. and Frow, J. (1999).
+\newblock {\em Accounting for Tastes: Australian Everyday Cultures}.
+\newblock Cambridge: Cambridge University Press.
+
+\bibitem[Berkowitz, 1982]{berkowitz1982}
+Berkowitz, S.~D. (1982).
+\newblock {\em An Introduction to Structural Analysis: The Network Approach to Social Research}.
+\newblock Toronto: Butterworths.
+
+\bibitem[Bidart and Degenne, 2005]{bidart2005}
+Bidart, C. and Degenne, A. (2005).
+\newblock Introduction: the dynamics of personal networks.
+\newblock {\em Social Networks}.
+\newblock 27:283-287.
+
+\bibitem[Blau, 1977]{blau1977}
+Blau, P.~M. (1977).
+\newblock A macrostructural theory of social structure.
+\newblock {\em American Journal of Sociology}.
+\newblock 83:26-54.
+
+\bibitem[Borgatti, 2005]{borgatti2005}
+Borgatti, S.~P. (2005).
+\newblock Centrality and network flow.
+\newblock {\em Social Networks}.
+\newblock 27:55-71.
+
+\bibitem[Bott, 1971]{bott1971}
+Bott, E. (1971).
+\newblock {\em Family and Social Network}.
+\newblock London: Tavistock Institute of Human Relations.
+
+\bibitem[Bourdieu, 1984]{bourdieu1984}
+Bourdieu, P. (1984).
+\newblock {\em Distinction: a Social Critique of the Judgment of Taste}.
+\newblock Translated by R. Nice. Cambridge: Harvard University Press.
+
+\bibitem[Brass, 1985]{brass1985}
+Brass, D.~J. (1985).
+\newblock Men\textquotesingle s and women\textquotesingle s networks: A study of interaction patterns and influence in an organization.
+\newblock {\em The Academy of Management Journal}.
+\newblock 28:327-343.
+
+\bibitem[Bryson, 1997]{bryson1997}
+Bryson, B. (1997).
+\newblock What about the univores? musical dislikes and group-based identity construction among americans with low levels of education.
+\newblock {\em Poetics}.
+\newblock 25:141-156.
+
+\bibitem[Burt, 2000]{burt2000}
+Burt, R.~S. (2000).
+\newblock Decay functions.
+\newblock {\em Social Networks}.
+\newblock 22:1-28.
+
+\bibitem[Cardon and Granjon, 2005]{cardon2005}
+Cardon, D. and Granjon, F. (2005).
+\newblock Social networks and cultural practices a case study of young avid screen users in france.
+\newblock {\em Social Networks}.
+\newblock :301-315.
+
+\bibitem[Carley, 1991]{carley1991}
+Carley, K.~M. (1991).
+\newblock A theory of group stability.
+\newblock {\em American Sociological Review}.
+\newblock 56:331-354.
+
+\bibitem[Clogg, 1982]{clogg1982}
+Clogg, C.~C. (1982).
+\newblock Using association models in sociological research: Some examples.
+\newblock {\em American Journal of Sociology}.
+\newblock 88:114-134.
+
+\bibitem[Collins, 2004]{collins2004}
+Collins, R. (2004).
+\newblock {\em Interaction Ritual Chains}.
+\newblock Princeton: Princeton University Press.
+
+\bibitem[Coser, 1991]{coser1991}
+Coser, R.~L. (1991).
+\newblock {\em In Defense of Modernity: Role Complexity and Individual Autonomy}.
+\newblock Stanford: Stanford University Press.
+
+\bibitem[Crane, 1993]{crane1993}
+Crane, D. (1993).
+\newblock High culture versus popular culture revisited: Toward a reconceptualization of recorded cultures.
+\newblock Pp. 58-74 in \emph{Cultivating Differences: Symbolic Boundaries and the Making of Inequality}, edited by M. Lamont and M. Fournier. Chicago: Chicago University Press.
+
+\bibitem[Crook, 1997]{crook1997}
+Crook, C.~J. (1997).
+\newblock The dimensionality of stratification-related cultural practices in australia.
+\newblock {\em Journal of Sociology}.
+\newblock 33:226-238.
+
+\bibitem[Degenne and Lebeaux, 2005]{degenne2005}
+Degenne, A. and Lebeaux, M.-O. (2005).
+\newblock The dynamics of personal networks at the time of entry into adult life.
+\newblock {\em Social Networks}.
+\newblock 27:337-358.
+
+\bibitem[DiMaggio, 1987]{dimaggio1987}
+DiMaggio, P. (1987).
+\newblock Classification in art.
+\newblock {\em American Sociological Review}.
+\newblock 52:440-455.
+
+\bibitem[DiMaggio and Mohr, 1985]{dimaggio1985}
+DiMaggio, P. and Mohr, J. (1985).
+\newblock Cultural capital, educational attainment, and marital selection.
+\newblock {\em American Journal of Sociology}.
+\newblock 90:1231-1261.
+
+\bibitem[Dimaggio and Useem, 1978]{dimaggio1978}
+Dimaggio, P. and Useem, M. (1978).
+\newblock Social class and arts consumption: The origins and consequences of class differences in exposure to the arts in america.
+\newblock {\em Theory and Society}.
+\newblock 5:141-161.
+
+\bibitem[Douglas and Isherwood, 1996]{douglas1996}
+Douglas, M. and Isherwood, B. (1996).
+\newblock {\em The World of Goods: Towards an Anthropology of Consumption}.
+\newblock New York: Routledge.
+
+\bibitem[Erickson, 1982]{erickson1982}
+Erickson, B.~H. (1982).
+\newblock Networks, ideologies and belief systems.
+\newblock Pp. 159-172 in \emph{Social Structures and Network Analysis}, edited by P. Marsden and N. Lin. Beverly Hills, CA: Sage.
+
+\bibitem[Feld, 1981]{feld1981}
+Feld, S.~L. (1981).
+\newblock The focused organization of social ties.
+\newblock {\em American Journal of Sociology}.
+\newblock 86:1015-1035.
+
+\bibitem[Fine, 1979]{fine1979}
+Fine, G.~A. (1979).
+\newblock Small groups and culture creation: The idioculture of little league baseball teams.
+\newblock {\em American Sociological Review}.
+\newblock 44: 733-745.
+
+\bibitem[Fischer, 1982]{fischer1982}
+Fischer, C.~S. (1982).
+\newblock {\em To Dwell among Friends: Personal Networks in Town and City}.
+\newblock Chicago: University of Chicago Press.
+
+\bibitem[Fischer and Oliker, 1983]{fischer1983}
+Fischer, C.~S. and Oliker, S.~J. (1983).
+\newblock A research note on friendship, gender, and the life cycle.
+\newblock {\em Social Forces}.
+\newblock 62:124-133.
+
+\bibitem[Frith, 1998]{frith1998}
+Frith, S. (1998).
+\newblock {\em Performing Rites: On the Value of Popular Music}.
+\newblock Cambridge: Harvard University Press.
+
+\bibitem[Gerstel, 1988]{gerstel1988}
+Gerstel, N. (1988).
+\newblock Divorce and kin ties: The importance of gender.
+\newblock {\em Journal of Marriage and the Family}.
+\newblock 50:209-219.
+
+\bibitem[Goodman, 1979]{goodman1979}
+Goodman, L.~A. (1979).
+\newblock Simple models for the analysis of association in cross-classifications having ordered categories.
+\newblock {\em Journal of the American Statistical Association}.
+\newblock 74:537-552.
+
+\bibitem[Gottlieb and Pancer, 1988]{gottliebpancer1988}
+Gottlieb, B.~H. and Pancer, S.~M. (1988).
+\newblock Social networks and the transition to parenthood.
+\newblock In Michaels, G.~Y. and Goldberg, W.~A., editors, {\em The transition to parenthood: current theory and research}. Cambridge University, NY.
+
+\bibitem[Granovetter, 2002]{granovetter2002}
+Granovetter, M. (2002).
+\newblock theoretical agenda for economic sociology.
+\newblock Pp. 35-60 in \emph{The new economic sociology: Developments in an emerging field}, edited by M. F. Guillén, R. Collins, P. England, and M. Meyer. New York: Russell Sage.
+
+\bibitem[Hammer, 1983]{hammer1983}
+Hammer, M. (1983).
+\newblock `core' and `extended' social networks in relation to health and illness.
+\newblock {\em Social Science and Medicine}, 17:405--411.
+
+\bibitem[Hannan and Pólos, 2003]{hannan2003}
+Hannan, Michael~T., G. R.~C. and Pólos, L. (2003).
+\newblock The organizational niche.
+\newblock {\em Sociological Theory}.
+\newblock 21:309-340.
+
+\bibitem[Holbrook and Schindler, 1989]{holbrook1989}
+Holbrook, M.~B. and Schindler, R.~M. (1989).
+\newblock Some exploratory findings on the development of musical tastes.
+\newblock {\em Journal of Consumer Research}.
+\newblock 16:119-124.
+
+\bibitem[Holt, 1997]{holt1997}
+Holt, D.~B. (1997).
+\newblock Distinction in america? recovering bourdieu's theory of tastes from its critics.
+\newblock {\em Poetics}.
+\newblock 25:93-120.
+
+\bibitem[Holt, 1998]{holt1998}
+Holt, D.~B. (1998).
+\newblock Does cultural capital structure american consumption?
+\newblock {\em Journal of Consumer Research}.
+\newblock 25:1-25.
+
+\bibitem[Homans, 1950]{homans1950}
+Homans, G.~C. (1950).
+\newblock {\em The Human Group}.
+\newblock New York: Harcourt Brace.
+
+\bibitem[Ibarra, 1992]{ibarra1992}
+Ibarra, H. (1992).
+\newblock Sex differences in network structure and access in an advertising firm.
+\newblock {\em Administrative Science Quarterly}.
+\newblock 37:422-447.
+
+\bibitem[Illouz, 1998]{illouz1998}
+Illouz, E. (1998).
+\newblock {\em Consuming the Romantic Utopia: Love and the Cultural Contradictions of Capitalism}.
+\newblock Berkeley, CA: University of California Press.
+
+\bibitem[Kane, 2004]{kane2004}
+Kane, D. (2004).
+\newblock A network approach to the puzzle of women\textquotesingle s cultural participation.
+\newblock {\em Poetics}.
+\newblock 32:105-127.
+
+\bibitem[Kracman, 1996]{kracman1996}
+Kracman, K. (1996).
+\newblock The effects of school-based arts instruction on attendance at museums and the performing arts.
+\newblock {\em Poetics}.
+\newblock 24:203-218.
+
+\bibitem[Lang, 2000]{lang2000}
+Lang, F.~R. (2000).
+\newblock Endings and continuity of social relationships: Maximizing intrinsic benefits within personal networks when feeling near to death.
+\newblock {\em Journal of Social and Personal Relationship}.
+\newblock 17:155-182.
+
+\bibitem[Larson, 1984]{larson1984}
+Larson, J.~H. (1984).
+\newblock The effect of husband's unemployment on marital and family relations in blue-collar families.
+\newblock {\em Family Relations}, 33:503--511.
+
+\bibitem[Larson et~al., 1994]{larsonetal1994}
+Larson, J.~H., Wilson, S.~M., and Beley, R. (1994).
+\newblock The impact of job insecurity on marital and family relationships.
+\newblock {\em Family Relations}, 43:138--143.
+
+\bibitem[Lazarsfeld and Merton, 1954]{lazarsfeld1954}
+Lazarsfeld, P.~F. and Merton, R.~K. (1954).
+\newblock Friendship as a social process: A substantive and methodological analysis.
+\newblock Pp. 18-66 in \emph{Freedom and Control in Modern Society}, edited by M. Berger, T. Abel, and C. Page. New York: Van Nostrand.
+
+\bibitem[Leigh and Grady, 1985]{leighgrady1985}
+Leigh, L.~A. and Grady, K. (1985).
+\newblock Changes in mothers' social networks and social support following divorce.
+\newblock {\em Journal of Marriage and the Family}, 47:663--667.
+
+\bibitem[Leslie and Grady, 1985]{leslie1985}
+Leslie, L.~A. and Grady, K. (1985).
+\newblock Changes in mothers\textquotesingle{} social networks and social support following divorce.
+\newblock {\em Journal of Marriage and the Family}.
+\newblock 47:663-673.
+
+\bibitem[Lin and Dumin, 1986]{lin1986}
+Lin, N. and Dumin, M. (1986).
+\newblock Access to occupations through social ties.
+\newblock {\em Social Networks}.
+\newblock 8:365--385.
+
+\bibitem[Lizardo, 2006]{lizardo2006}
+Lizardo, O. (2006).
+\newblock How cultural tastes shape personal networks.
+\newblock {\em American Sociological Review}.
+\newblock 71:778-807.
+
+\bibitem[Long, 2003]{long2003}
+Long, E. (2003).
+\newblock {\em Book Clubs: Women and the Uses of Reading in Everyday Life}.
+\newblock Chicago: University of Chicago Press.
+
+\bibitem[Mark, 998a]{mark1998a}
+Mark, N.~P. (1998a).
+\newblock Beyond individual differences: Social differentiation from first principles.
+\newblock {\em American Sociological Review}.
+\newblock 63:309-330.
+
+\bibitem[McCannell, 1987]{mccannell1987}
+McCannell, K. (1987).
+\newblock Social networks and the transition to motherhood.
+\newblock In Milardo, R., editor, {\em Families and Social Networks}. Sage, Beverly Hills.
+
+\bibitem[McPherson and Cook, 2001]{mcpherson2001}
+McPherson, Miller, L. S.-L. and Cook, J.~M. (2001).
+\newblock Birds of a feather: Homophily in social networks.
+\newblock {\em Annual Review of Sociology}.
+\newblock 27:415-444.
+
+\bibitem[McPherson, 1983]{mcpherson1983}
+McPherson, M. (1983).
+\newblock An ecology of affiliation.
+\newblock {\em American Sociological Review}.
+\newblock 48:519-532.
+
+\bibitem[McPherson and Smith-Lovin, 1987]{mcpherson1987}
+McPherson, M. and Smith-Lovin, L. (1987).
+\newblock Homophily in voluntary organizations: Status distance and the composition of face-to-face groups.
+\newblock {\em American Sociological Review}.
+\newblock 52:370-379.
+
+\bibitem[McPherson and Drobnic, 1992]{mcpherson1992}
+McPherson, J.~Miller, P. A.~P. and Drobnic, S. (1992).
+\newblock Social networks and organizational dynamics.
+\newblock {\em American Sociological Review}.
+\newblock 57:153-170.
+
+\bibitem[Milardo, 1987]{milardo1987}
+Milardo, R.~M. (1987).
+\newblock Changes in social networks of women and men following divorce: A review.
+\newblock {\em Journal of Family Issues}.
+\newblock 8: 78-96.
+
+\bibitem[Mische, 2003]{mische2003}
+Mische, A. (2003).
+\newblock Cross-talk in movements: Reconceiving the culture-network link.
+\newblock Pp. 258-280 in \emph{Social Movements and Networks: Relational Approaches to Collective Action}, edited by M. Diani and D. McAdam. London: Oxford University Press.
+
+\bibitem[Morgan, 1989]{morgan1989}
+Morgan, D.~L. (1989).
+\newblock Adjusting to widowhood: do social networks really make it easier?
+\newblock {\em Gerontologist}, 29:101--107.
+
+\bibitem[Morgan and March, 1992]{morganmarch1992}
+Morgan, D.~L. and March, S.~J. (1992).
+\newblock The impact of life events on networks of personal relationships: a comparison of widowhood and caring for a spouse with alzheimer's disease.
+\newblock {\em Journal of Social and Personal Relationships}, 9:563--584.
+
+\bibitem[Morgan et~al., 1996]{morganetal1996}
+Morgan, D.~L., Neal, M.~B., and Carder, P. (1996).
+\newblock The stability of core and peripheral networks over time.
+\newblock {\em Social Networks}, 19:9--25.
+
+\bibitem[Morgan and Neal, 1997]{morgan1997}
+Morgan, David, P.~C. and Neal, M. (1997).
+\newblock Are some relationships more useful than others? the value of similar others in the networks of recent widows.
+\newblock {\em Journal of Social and Personal Relationships}.
+\newblock 14:745-759.
+
+\bibitem[Munch and Smith-Lovin, 1997]{munch1997}
+Munch, Allison, J. M.~M. and Smith-Lovin, L. (1997).
+\newblock Gender, children, and social contact: The effects of childrearing for men and women.
+\newblock {\em American Sociological Review}.
+\newblock 62:509-520.
+
+\bibitem[Newman, 1988]{newman1988}
+Newman, K.~S. (1988).
+\newblock {\em Falling from grace: the experience of downward mobility in the American middle class}.
+\newblock Free Press, NY.
+
+\bibitem[Ostrower, 1998]{ostrower1998}
+Ostrower, F. (1998).
+\newblock The arts as cultural capital among elites: Bourdieu\textquotesingle s theory reconsidered.
+\newblock {\em Poetics}.
+\newblock 26:43-53.
+
+\bibitem[Pahl and Pevalin, 2005]{pahl2005}
+Pahl, R. and Pevalin, D.~J. (2005).
+\newblock Between family and friends: a longitudinal study of friendship choice.
+\newblock {\em British Journal of Sociology}.
+\newblock 56:433--450.
+
+\bibitem[Peterson, 1992]{peterson1992}
+Peterson, R.~A. (1992).
+\newblock Understanding audience segmentation: From elite and popular to omnivore and univore.
+\newblock {\em Poetics}.
+\newblock 21:243-258.
+
+\bibitem[Popielarz and McPherson, 1995]{popielarz1995}
+Popielarz, P.~A. and McPherson, J.~M. (1995).
+\newblock On the edge or in between: Niche position, niche overlap, and the duration of voluntary association memberships.
+\newblock {\em American Journal of Sociology}.
+\newblock 101:698-720.
+
+\bibitem[Relish, 1997]{relish1997}
+Relish, M. (1997).
+\newblock It\textquotesingle s not all education: Network measures as sources of cultural competency.
+\newblock {\em Poetics}.
+\newblock 25:121-139.
+
+\bibitem[Simmel, 1949]{simmel1949}
+Simmel, G. (1949).
+\newblock The sociology of sociability.
+\newblock {\em American Journal of Sociology}.
+\newblock 55:254-261.
+
+\bibitem[Simon, 1952]{simon1952}
+Simon, H.~A. (1952).
+\newblock Comments on the theory of organizations.
+\newblock {\em American Political Science Review}.
+\newblock 46:1130-1139.
+
+\bibitem[Smith, 1995]{smith1995}
+Smith, T.~W. (1995).
+\newblock Generational differences in musical preferences.
+\newblock {\em Popular Music and Society}.
+\newblock 18:43-59.
+
+\bibitem[Stinchcombe, 1965]{stinchcombe1965}
+Stinchcombe, A.~L. (1965).
+\newblock Social structure and organizations.
+\newblock Pp. 142-193 in \emph{Handbook of Organizations}, edited by J. G. March. Chicago: Rand McNally.
+
+\bibitem[Straits, 1996]{straits1996}
+Straits, B.~C. (1996).
+\newblock Ego-net diversity: Same- and cross-sex coworker ties.
+\newblock {\em Social Networks}.
+\newblock 18:29-45.
+
+\bibitem[Suitor and Morgan, 1997]{suitor1997}
+Suitor, J.~Jill, B.~W. and Morgan, D.~L. (1997).
+\newblock It\textquotesingle s about time: How, why, and when networks change.
+\newblock {\em Social Networks}.
+\newblock 19:1-7.
+
+\bibitem[Suitor and Keeton, 1997]{suitorkeeton1997}
+Suitor, J.~J. and Keeton, S. (1997).
+\newblock Once a friend, always a friend? effects of homophily on women's support networks across a decade.
+\newblock {\em Social Networks}, 19:51--62.
+
+\bibitem[van Eijck and van Rees, 2000]{eijck2000}
+van Eijck, K. and van Rees, K. (2000).
+\newblock Media orientation and media use: Television viewing behavior of specific reader types from 1975 to 1995.
+\newblock {\em Communication Research}.
+\newblock 27:574-616.
+
+\bibitem[van Rees and Verboord, 1999]{rees1999}
+van Rees, Kees, J. K.~V. and Verboord, M. (1999).
+\newblock Cultural classifications under discussion: Latent class analysis of highbrow and lowbrow reading.
+\newblock {\em Poetics}.
+\newblock 26:349-365.
+
+\bibitem[Wali and Longoni, 2002]{wali2002}
+Wali, Alaka, R.~S. and Longoni, M. (2002).
+\newblock {\em Informal Arts: Finding Cohesion, Capacity and Other Cultural Benefits in Unexpected Places}.
+\newblock Chicago: Chicago Center for Arts Policy.
+
+\bibitem[Wellman, 1979]{wellman1979}
+Wellman, B. (1979).
+\newblock The community question: The intimate networks of east yorkers.
+\newblock {\em American Journal of Sociology}.
+\newblock 84:1201-1231.
+
+\bibitem[Wellman and Berkowitz, 1988]{wellman1988}
+Wellman, B. and Berkowitz, S.~D. (1988).
+\newblock Introduction: Studying social structures.
+\newblock Pp. 1-18 in \emph{Social Structures a Network Approach}, edited by B. Wellman and S. D. Berkowitz. Cambridge: Cambridge University Press.
+
+\bibitem[Wellman et~al., 1997]{wellman1997}
+Wellman, B., Wong, R. Y.-L., Tindall, D., and Nazer, N. (1997).
+\newblock A decade of network change: Turnover, persistence and stability in personal communities.
+\newblock {\em Social Networks}.
+\newblock 19:27--50.
+
+\bibitem[Wellman and Wortley, 1990]{wellman1990}
+Wellman, B. and Wortley, S. (1990).
+\newblock Different strokes from different folks: Community ties and social support.
+\newblock {\em American Journal of Sociology}.
+\newblock 96:558-588.
+
+\end{thebibliography}
