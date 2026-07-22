@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.28)  22 JUL 2026 11:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.28)  22 JUL 2026 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -606,7 +606,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 66.
  [1
 
-{/home/omarlizardo/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [2] [3] [4] [5] (./Tabs/pcs_network_stability_modern.tex
+{/home/omarlizardo/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [2] [3] [4]
+
+LaTeX Warning: Reference `tab:network_stability' on page 5 undefined on input line 116.
+
+[5] (./Tabs/pcs_network_stability_modern.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 9.
 
@@ -615,12 +619,16 @@ Overfull \hbox (68.22289pt too wide) in paragraph at lines 5--35
  []
 
 )
-<Plots/unified_cultural_effects.png, id=141, 578.16pt x 361.35pt>
+<Plots/unified_cultural_effects.png, id=140, 578.16pt x 361.35pt>
 File: Plots/unified_cultural_effects.png Graphic file (type png)
 <use Plots/unified_cultural_effects.png>
 Package pdftex.def Info: Plots/unified_cultural_effects.png  used on input line 122.
 (pdftex.def)             Requested size: 293.25209pt x 183.28256pt.
- [6
+
+
+LaTeX Warning: Reference `tab:network_stability' on page 6 undefined on input line 127.
+
+[6
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -640,20 +648,24 @@ l.151 \end{document}
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
  17243 strings out of 469097
  345406 string characters out of 5457857
- 741731 words of memory out of 5000000
+ 741738 words of memory out of 5000000
  45991 multiletter control sequences out of 15000+600000
  695252 words of font info for 93 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  88i,10n,93p,1576b,1165s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on manuscript_research_note.pdf (11 pages, 420874 bytes).
+Output written on manuscript_research_note.pdf (11 pages, 421674 bytes).
 PDF statistics:
- 321 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
+ 319 PDF objects out of 1000 (max. 8388607)
+ 274 compressed objects within 3 object streams
  55 named destinations out of 1000 (max. 500000)
  94 words of extra memory for PDF output out of 10000 (max. 10000000)
 

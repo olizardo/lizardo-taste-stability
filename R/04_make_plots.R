@@ -1,6 +1,8 @@
 library(ggplot2)
 library(dplyr)
 library(here)
+library(ordinal)
+library(lme4)
 
 cat("Running 04_make_plots.R...\n")
 
