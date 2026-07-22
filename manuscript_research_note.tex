@@ -6,34 +6,18 @@
 ]{article}
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
-\ifPDFTeX
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
-  \usepackage{unicode-math} % this also loads fontspec
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-\fi
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={magenta},
+  citecolor={blue},
+  urlcolor={blue}
+}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp} % provide euro and other symbols
 \usepackage{lmodern}
-\ifPDFTeX\else
-  % xetex/luatex font selection
-\fi
-% Use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
 \usepackage{longtable,booktabs,array}
@@ -41,12 +25,6 @@
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
-\makeatletter
-\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
-\makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -71,10 +49,6 @@
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
-\hypersetup{
-  pdftitle={Culture consumption and social capital},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
 
 \title{Examining the Dynamics of Changing Tastes\footnote{\textsuperscript{*}Data for this project were obtained from the Association of Religion Data Archives at \url{http://www.thearda.com}. The author bears sole responsibility for the current interpretation, analyses and tabulations of these data. I would like to thank Paul DiMaggio, Bart Bonikowski, and the members of the Princeton seminar in cultural sociology for their very useful comments on previous drafts of this paper.}}
 \author{Omar Lizardo \\ Department of Sociology \\ University of California, Los Angeles \\ \href{mailto:olizardo@soc.ucla.edu}{\nolinkurl{olizardo@soc.ucla.edu}} \\ \url{https://olizardo.github.io/mysite/}}
@@ -87,11 +61,11 @@
 Does cultural taste primarily flow from shifting social networks, or do durable cultural tastes help stabilize personal communities over time? Network transmission models posit that tastes are volatile and decay when social ties are disrupted, whereas cultural capital models posit that tastes are enduring dispositions that facilitate tie maintenance. Using longitudinal panel data from the Project Canada Survey (1985--1995), I adjudicate between these frameworks via descriptive event-history tracking and Mundlak Poisson models. I find that cultural tastes exhibit remarkably high levels of over-time stability (roughly 98\% retention over five years), countering standard network volatility assumptions. The extreme rarity of taste loss undermines the network-theoretic expectation that structural network turnover frequently drives cultural shedding, though network shocks do predict the \emph{acquisition} of new tastes, revealing an additive asymmetry. Furthermore, holding durable cultural breadth (omnivore tastes) longitudinally predicts higher rates of maintained social connectivity, specifically for ``chosen'' ties (friends) rather than structurally ``prescribed'' ties (family). These findings point toward a decisive advantage for the cultural capital model: tastes act as durable, selective filters that maintain voluntary social ties, while remaining highly resilient to network shocks.
 \end{abstract}
 
+\newpage
 \section{Introduction}\label{introduction}
+Structural models of taste formation, transmission, and decay in the sociology of culture posit that current tastes are largely a product of the individual's current network configuration \citep{mark1998birds-abd, mark2003culture-ed5}. The standard assumption is that tastes are transmitted through existing network ties, in particular those social connections characterized by sociodemographic similarity \citep{lazarsfeld1954, mcpherson2001}. From this perspective, tastes are not enduring aspects of the person but malleable, ``thin'' contents liable to change when network ties change \citep{mark1998birds-abd}. Given that personal networks are highly volatile and exhibit great rates of turnover over time \citep{burt2000, suitor1997}, this network perspective implies that cultural tastes should exhibit even greater rates of instability over time \citep{lizardo2006}.
 
-Prevailing models of taste formation, transmission, and decay in the sociology of culture posit that current tastes are largely a product of the individual's current network configuration. The standard assumption is that tastes are transmitted through existing network ties, in particular those social connections characterized by sociodemographic similarity \citep{lazarsfeld1954, mcpherson2001}. From this perspective, tastes are not enduring aspects of the person but malleable, ``thin'' contents liable to change when network ties change \citep{mark1998a}. Given that personal networks are highly volatile \citep{burt2000, suitor1997}, this network perspective implies that cultural tastes should also exhibit significant instability over time.
-
-In contrast, the cultural capital model \citep{bourdieu1984, holt1998} conceives of cultural tastes as highly durable dispositions. Formed early in life, these embodied cultural practices are resistant to change and serve as stable resources to maintain and forge network connections \citep{lizardo2006}. Recent empirical work strongly supports this ``cultured means connected'' hypothesis, demonstrating that cultural tastes not only improve the quality and stability of network ties through shared activities and ``cultural talk'' \citep{jaeger2026, meuleman2023}, but also serve as structural opportunities for positive social exchange that generate relational cohesion \citep{vanzella2022}. Furthermore, holding diverse or highbrow tastes is positively linked to accessing higher socioeconomic resources within those networks \citep{meuleman2021}. Rather than being at the mercy of shifting networks, stable cultural tastes may act as a reciprocal driver of network maintenance, enabling individuals to sustain interaction across constantly shifting personal communities. 
+In contrast, the cultural capital model \citep{bourdieu1984, holt1998} conceives of cultural tastes as highly durable dispositions. Formed early in life, these embodied cultural practices are resistant to change and serve as stable resources to maintain and forge network connections \citep{lizardo2006}. Recent empirical work strongly supports this ``cultured means connected'' hypothesis, demonstrating that cultural tastes not only improve the quality and stability of network ties through shared activities and ``cultural talk'' \citep{jaeger2026, meuleman2023, lizardo2016why-418}, but also serve as structural opportunities for positive social exchange that generate relational cohesion \citep{vanzella2022, hachen2022generators-923}. Furthermore, holding diverse or highbrow tastes is positively linked to accessing higher socioeconomic resources within those networks \citep{meuleman2021}. Rather than being at the mercy of shifting networks, stable cultural tastes may act as a reciprocal driver of network maintenance, enabling individuals to sustain interaction across constantly shifting personal communities. 
 
 This research note empirically adjudicates between these divergent expectations using longitudinal panel data. Specifically, I address the following research questions: 
 (1) Do cultural tastes exhibit the high volatility implied by network transmission models, or the high stability expected by cultural capital models? 
