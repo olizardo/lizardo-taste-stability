@@ -1,59 +1,32 @@
 \begin{table}
+\tiny
 \centering
+\resizebox{\linewidth}{!}{
 \begin{talltblr}[         %% tabularray outer open
-caption={Pooled Discrete-Time Logistic Regression of Taste Change (with Clustered SEs)},
-note{}={+ p \num{< 0.1}, * p \num{< 0.05}},
+caption={Predictors of Taste Loss (Pooled Discrete-Time Logistic Regression)},
+note{}={Controls (sociodemographics, initial status, and period effects) are included but omitted for space.},
+note{ }={Standard errors omitted for space.},
+note{  }={+ p < 0.1, * p < 0.05},
 ]                     %% tabularray outer close
 {                     %% tabularray inner open
 colspec={Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]},
 hline{2}={1-11}{solid, black, 0.05em},
-hline{38}={1-11}{solid, black, 0.05em},
+hline{10}={1-11}{solid, black, 0.05em},
 hline{1}={1-11}{solid, black, 0.08em},
-hline{43}={1-11}{solid, black, 0.08em},
+hline{11}={1-11}{solid, black, 0.08em},
 column{2-11}={}{halign=c},
 column{1}={}{halign=l},
 }                     %% tabularray inner close
-& music & movie & play & sports & paper & books & spevent & videos & hobby & mags \\
-(Intercept) & \num{-50.943}* & \num{24.566} & \num{-49.727}* & \num{-11.291}* & \num{-17.316}* & \num{-1.899} & \num{91.055}* & \num{-15.140}+ & \num{0.868} & \num{1.760} \\
-& (\num{3.006}) & (\num{42.739}) & (\num{4.700}) & (\num{2.253}) & (\num{2.195}) & (\num{1.479}) & (\num{4.190}) & (\num{8.241}) & (\num{1.683}) & (\num{1.533}) \\
-chngfriends\_endTRUE & \num{17.487}* & \num{-0.000} & \num{50.970}* & \num{0.253} & \num{0.183} & \num{-0.111} & \num{-17.392}* & \num{-0.731} & \num{0.746} & \num{0.591} \\
-& (\num{0.332}) & (\num{27.709}) & (\num{4.284}) & (\num{0.515}) & (\num{0.691}) & (\num{0.407}) & (\num{1.433}) & (\num{3.116}) & (\num{0.454}) & (\num{0.365}) \\
-chngorgs\_endTRUE & \num{-0.911} & \num{0.000} & \num{-3.254}* & \num{-0.905}* & \num{-0.932} & \num{-0.068} & \num{-0.565} & \num{-2.171} & \num{0.357} & \num{0.055} \\
-& (\num{0.628}) & (\num{13.488}) & (\num{1.065}) & (\num{0.451}) & (\num{0.623}) & (\num{0.310}) & (\num{1.153}) & (\num{1.633}) & (\num{0.325}) & (\num{0.289}) \\
-chngeduc\_endTRUE & \num{0.450} & \num{0.000} & \num{-15.010}* & \num{0.069} & \num{-0.135} & \num{0.414} & \num{-0.881} & \num{0.851} & \num{0.079} & \num{-0.318} \\
-& (\num{0.591}) & (\num{2.423}) & (\num{1.540}) & (\num{0.445}) & (\num{0.540}) & (\num{0.326}) & (\num{0.900}) & (\num{1.732}) & (\num{0.332}) & (\num{0.305}) \\
-chngmarital\_endTRUE & \num{-15.313}* & \num{-0.000} & \num{-45.559}* & \num{1.419}* & \num{1.424}* & \num{-0.474} & \num{13.081}* & \num{5.506}* & \num{0.377} & \num{0.440} \\
-& (\num{0.752}) & (\num{6.069}) & (\num{2.865}) & (\num{0.636}) & (\num{0.652}) & (\num{0.620}) & (\num{4.314}) & (\num{2.698}) & (\num{0.621}) & (\num{0.491}) \\
-chngchildre\_endTRUE & \num{-17.686}* & \num{0.000} & \num{57.390}* & \num{-1.009} & \num{0.919} & \num{-1.680} & \num{-14.337}* & \num{-76.155}* & \num{0.193} & \num{-0.249} \\
-& (\num{1.050}) & (\num{11.991}) & (\num{4.748}) & (\num{1.082}) & (\num{0.794}) & (\num{1.132}) & (\num{3.097}) & (\num{16.471}) & (\num{0.502}) & (\num{0.508}) \\
-chngwrkstat\_endTRUE & \num{1.381}* & \num{-0.000} & \num{-15.808}* & \num{0.418} & \num{-0.269} & \num{0.084} & \num{0.260} & \num{56.113}* & \num{0.117} & \num{-0.329} \\
-& (\num{0.699}) & (\num{19.020}) & (\num{1.299}) & (\num{0.535}) & (\num{0.639}) & (\num{0.386}) & (\num{1.238}) & (\num{12.593}) & (\num{0.380}) & (\num{0.346}) \\
-chngareanam\_endTRUE & \num{-0.005} & \num{0.000} & \num{-3.254} & \num{-0.009} & \num{0.504} & \num{0.554} & \num{1.038} & \num{-4.356} & \num{-0.203} & \num{-0.206} \\
-& (\num{0.742}) & (\num{15.127}) & (\num{2.251}) & (\num{0.421}) & (\num{0.709}) & (\num{0.352}) & (\num{1.244}) & (\num{4.813}) & (\num{0.420}) & (\num{0.344}) \\
-agegrp\_start & \num{-0.674} & \num{0.000} & \num{19.160}* & \num{-0.203} & \num{-0.166} & \num{-0.066} & \num{-0.242} & \num{1.408} & \num{-0.707}* & \num{-0.093} \\
-& (\num{0.436}) & (\num{11.330}) & (\num{0.931}) & (\num{0.329}) & (\num{0.418}) & (\num{0.255}) & (\num{0.834}) & (\num{1.364}) & (\num{0.243}) & (\num{0.207}) \\
-educ\_start & \num{-0.376} & \num{0.000} & \num{6.477}* & \num{-0.215} & \num{-0.017} & \num{-0.078} & \num{-0.591} & \num{0.687} & \num{-0.181} & \num{-0.155} \\
-& (\num{0.351}) & (\num{0.820}) & (\num{0.470}) & (\num{0.162}) & (\num{0.207}) & (\num{0.138}) & (\num{0.430}) & (\num{0.684}) & (\num{0.141}) & (\num{0.126}) \\
-income\_start & \num{-0.147} & \num{0.000} & \num{3.864}* & \num{-0.223} & \num{-0.333}* & \num{-0.108} & \num{0.399} & \num{2.121}+ & \num{-0.159} & \num{-0.089} \\
-& (\num{0.229}) & (\num{6.273}) & (\num{0.578}) & (\num{0.169}) & (\num{0.160}) & (\num{0.092}) & (\num{0.319}) & (\num{1.101}) & (\num{0.097}) & (\num{0.089}) \\
-married\_start & \num{15.945}* & \num{0.000} & \num{-29.839}* & \num{-0.097} & \num{-0.719} & \num{0.051} & \num{-18.377}* & \num{-20.540}* & \num{0.133} & \num{0.013} \\
-& (\num{0.646}) & (\num{3.961}) & (\num{2.433}) & (\num{0.883}) & (\num{0.861}) & (\num{0.456}) & (\num{1.397}) & (\num{4.121}) & (\num{0.486}) & (\num{0.457}) \\
-childre\_start & \num{0.120} & \num{-0.000} & \num{-1.035} & \num{-0.627}* & \num{0.169} & \num{-0.027} & \num{-0.190} & \num{-0.145} & \num{-0.042} & \num{-0.247}* \\
-& (\num{0.148}) & (\num{5.584}) & (\num{1.157}) & (\num{0.203}) & (\num{0.182}) & (\num{0.141}) & (\num{0.554}) & (\num{0.941}) & (\num{0.124}) & (\num{0.112}) \\
-working\_start & \num{-1.534}* &  & \num{-10.191}* & \num{0.136} & \num{0.169} & \num{0.514} & \num{-16.233}* & \num{4.370} & \num{0.340} & \num{-0.337} \\
-& (\num{0.750}) &  & (\num{1.261}) & (\num{0.604}) & (\num{0.664}) & (\num{0.450}) & (\num{2.370}) & (\num{3.893}) & (\num{0.394}) & (\num{0.353}) \\
-bigcity\_start & \num{-0.467} &  & \num{-8.021}* & \num{0.524} & \num{0.054} & \num{0.910}* & \num{1.273} & \num{-5.774} & \num{0.854}+ & \num{-0.063} \\
-& (\num{0.568}) &  & (\num{1.946}) & (\num{0.458}) & (\num{0.686}) & (\num{0.372}) & (\num{1.206}) & (\num{3.633}) & (\num{0.440}) & (\num{0.336}) \\
-female & \num{2.068}+ &  & \num{-13.796}* & \num{-0.899} & \num{1.967}* & \num{0.562} & \num{-19.171}* & \num{-6.351}+ & \num{0.219} & \num{-0.392} \\
-& (\num{1.122}) &  & (\num{2.277}) & (\num{0.610}) & (\num{0.893}) & (\num{0.419}) & (\num{1.108}) & (\num{3.289}) & (\num{0.384}) & (\num{0.347}) \\
-white & \num{17.427}* &  & \num{-12.509}* & \num{14.195}* & \num{14.475}* & \num{0.102} & \num{-19.178}* & \num{27.693}* & \num{0.729} & \num{-0.457} \\
-& (\num{1.792}) &  & (\num{2.839}) & (\num{0.886}) & (\num{0.572}) & (\num{0.789}) & (\num{1.373}) & (\num{5.404}) & (\num{1.068}) & (\num{1.012}) \\
+& Music & Movies & Play & Sports & Paper & Books & Sp.Event & Videos & Hobby & Mags \\
+Change in Friends & \num{17.487}* & \num{-0.000} & \num{50.970}* & \num{0.253} & \num{0.183} & \num{-0.111} & \num{-17.392}* & \num{-0.731} & \num{0.746} & \num{0.591} \\
+Change in Org. Memberships & \num{-0.911} & \num{0.000} & \num{-3.254}* & \num{-0.905}* & \num{-0.932} & \num{-0.068} & \num{-0.565} & \num{-2.171} & \num{0.357} & \num{0.055} \\
+Change in Educ. Standing & \num{0.450} & \num{0.000} & \num{-15.010}* & \num{0.069} & \num{-0.135} & \num{0.414} & \num{-0.881} & \num{0.851} & \num{0.079} & \num{-0.318} \\
+Change in Marital Status & \num{-15.313}* & \num{-0.000} & \num{-45.559}* & \num{1.419}* & \num{1.424}* & \num{-0.474} & \num{13.081}* & \num{5.506}* & \num{0.377} & \num{0.440} \\
+Change in Children & \num{-17.686}* & \num{0.000} & \num{57.390}* & \num{-1.009} & \num{0.919} & \num{-1.680} & \num{-14.337}* & \num{-76.155}* & \num{0.193} & \num{-0.249} \\
+Change in Work Status & \num{1.381}* & \num{-0.000} & \num{-15.808}* & \num{0.418} & \num{-0.269} & \num{0.084} & \num{0.260} & \num{56.113}* & \num{0.117} & \num{-0.329} \\
+Geographic Mobility & \num{-0.005} & \num{0.000} & \num{-3.254} & \num{-0.009} & \num{0.504} & \num{0.554} & \num{1.038} & \num{-4.356} & \num{-0.203} & \num{-0.206} \\
 as.factor(period)2 & \num{-2.257}* &  & \num{19.924}* & \num{-2.106}* & \num{-1.632}+ & \num{-18.011}* & \num{-37.189}* & \num{-48.355}* & \num{-2.874}* & \num{-3.369}* \\
-& (\num{0.912}) &  & (\num{1.931}) & (\num{0.774}) & (\num{0.965}) & (\num{0.212}) & (\num{2.871}) & (\num{9.904}) & (\num{0.737}) & (\num{0.965}) \\
 Num.Obs. & \num{521} & \num{13} & \num{29} & \num{270} & \num{681} & \num{404} & \num{50} & \num{52} & \num{246} & \num{320} \\
-AIC & \num{3902.4} & \num{11719.4} & \num{10585.3} & \num{461.6} & \num{1618.6} & \num{573.7} & \num{6762.0} & \num{5990.8} & \num{403.6} & \num{343.6} \\
-BIC & \num{3979.0} & \num{11726.8} & \num{10609.9} & \num{526.4} & \num{1700.1} & \num{645.7} & \num{6796.4} & \num{6025.9} & \num{466.7} & \num{411.4} \\
-Log.Lik. & \num{-1933.180} & \num{-5846.725} & \num{-5274.654} & \num{-212.819} & \num{-791.325} & \num{-268.843} & \num{-3362.977} & \num{-2977.401} & \num{-183.793} & \num{-153.784} \\
-RMSE & \num{0.14} & \num{0.00} & \num{0.00} & \num{0.29} & \num{0.15} & \num{0.32} & \num{0.30} & \num{0.24} & \num{0.41} & \num{0.40} \\
 \end{talltblr}
+}
 \end{table}

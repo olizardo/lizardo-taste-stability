@@ -1,3 +1,4 @@
+options(modelsummary_factory_latex = 'kableExtra')
 # Modernized Data Analysis Workflow for PCS (1980-1995)
 library(dplyr)
 library(tidyr)
@@ -141,4 +142,60 @@ modelsummary(
   title = "Mundlak (Within-Between) Poisson Models for Network Stability (1985-1995)",
   gof_map = c("nobs", "r.squared", "aic", "bic", "icc", "rmse")
 )
+
+
+# Save modified tables
+library(kableExtra)
+
+m1 <- modelsummary(
+  logit_models,
+  vcov = lapply(logit_models, function(m) sandwich::vcovCL(m, cluster = m$data$id)),
+  estimate = '{estimate}{stars}',
+  statistic = NULL,
+  stars = c('+' = 0.1, '*' = 0.05),
+  coef_rename = c(
+    'chngfriends_endTRUE' = 'Change in Friends',
+    'chngorgs_endTRUE' = 'Change in Org. Memberships',
+    'chngeduc_endTRUE' = 'Change in Educ. Standing',
+    'chngmarital_endTRUE' = 'Change in Marital Status',
+    'chngchildre_endTRUE' = 'Change in Children',
+    'chngwrkstat_endTRUE' = 'Change in Work Status',
+    'chngareanam_endTRUE' = 'Geographic Mobility'
+  ),
+  coef_omit = 'Intercept|.*_start|female|white|as\\\\.factor',
+  gof_map = c('nobs'),
+  title = 'Predictors of Taste Loss (Pooled Discrete-Time Logistic Regression)',
+  notes = list('Controls (sociodemographics, initial status, and period effects) are included but omitted for space.', 'Standard errors omitted for space.', '+ p < 0.1, * p < 0.05'),
+  output = "kableExtra"
+)
+
+m1 |> kable_styling(latex_options = "scale_down") |> save_kable(here("tex", "pcs_taste_change_modern.tex"))
+
+m2 <- modelsummary(
+  list('Friends' = m_friends, 'Org. Memberships' = m_orgs),
+  estimate = '{estimate}{stars}',
+  statistic = NULL,
+  stars = c('+' = 0.1, '*' = 0.05),
+  coef_rename = c(
+    'numcult_mean' = 'Cultural Breadth (Between)',
+    'educ_mean' = 'Education (Between)',
+    'married_mean' = 'Married (Between)',
+    'childre_mean' = 'Children (Between)',
+    'bigcity_mean' = 'Big City (Between)',
+    'numcult_within' = 'Cultural Breadth (Within)',
+    'educ_within' = 'Education (Within)',
+    'married_within' = 'Married (Within)',
+    'childre_within' = 'Children (Within)',
+    'bigcity_within' = 'Big City (Within)',
+    'female' = 'Female',
+    'white' = 'White'
+  ),
+  coef_omit = 'Intercept|wave',
+  gof_map = c('nobs'),
+  title = 'Mundlak Poisson Models for Network Connectivity (1985-1995)',
+  notes = list('Wave fixed effects and intercept omitted for space.', 'Standard errors omitted for space.', '+ p < 0.1, * p < 0.05'),
+  output = "kableExtra"
+)
+
+m2 |> kable_styling(latex_options = "scale_down") |> save_kable(here("tex", "pcs_network_stability_modern.tex"))
 
