@@ -1,8 +1,0 @@
-library(dplyr)
-library(haven)
-library(here)
-raw_pcs <- read_dta(here("PCS", "pc1980-85-90-95.dta"))
-cat("Names of movie-related raw vars:\n")
-print(grep("movie", names(raw_pcs), value=TRUE))
-cat("Table raw movie4:\n")
-print(table(raw_pcs$movie4, useNA="always"))
