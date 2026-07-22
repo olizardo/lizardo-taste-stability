@@ -32,7 +32,7 @@ p1 <- ggplot(retention_data, aes(x = reorder(Activity, Retention_Rate), y = Rete
   theme_minimal() +
   theme(plot.title = element_text(face = "bold"))
 
-ggsave("tex/taste_retention.png", p1, width = 8, height = 5)
+ggsave("Plots/taste_retention.png", p1, width = 8, height = 5)
 
 # -------------------------------------------------------------------
 # 2. Predictors of Taste Loss (Supporting H2)
@@ -63,7 +63,7 @@ p2 <- ggplot(or_data, aes(x = OddsRatio, y = reorder(Predictor, OddsRatio))) +
   ) +
   theme_minimal()
 
-ggsave("tex/taste_loss_forest_plot.png", p2, width = 8, height = 5)
+ggsave("Plots/taste_loss_forest_plot.png", p2, width = 8, height = 5)
 
 # -------------------------------------------------------------------
 # 3. Cultural Conversion: Between-Person Effects (Supporting H4)
@@ -94,8 +94,9 @@ p3 <- ggplot(conversion_data, aes(x = Cultural_Breadth_Mean, y = Predicted_Count
     color = "Connectivity Measure"
   ) +
   theme_minimal() +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom") +
+  scale_x_continuous(breaks = 0:10, limits = c(0, 10))
 
-ggsave("tex/cultural_conversion_effects.png", p3, width = 8, height = 5)
+ggsave("Plots/cultural_conversion_effects.png", p3, width = 8, height = 5)
 
 print("Visualizations script R/visualize_results.R created successfully.")

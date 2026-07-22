@@ -60,16 +60,28 @@ m2 <- modelsummary(
 # Build simple coefficient plot
 library(ggplot2)
 coefs <- data.frame(
-  Model = c("Friends", "Family"),
-  Estimate = c(summary(m_friends)$coefficients["numcult_mean", "Estimate"], summary(m_family)$coefficients["numcult_mean", "Estimate"]),
-  SE = c(summary(m_friends)$coefficients["numcult_mean", "Std. Error"], summary(m_family)$coefficients["numcult_mean", "Std. Error"])
+  Model = rep(c("Friends", "Family"), each = 2),
+  EffectType = rep(c("Between-Person (Mean)", "Within-Person (Deviation)"), 2),
+  Estimate = c(
+    summary(m_friends)$coefficients["numcult_mean", "Estimate"],
+    summary(m_friends)$coefficients["numcult_within", "Estimate"],
+    summary(m_family)$coefficients["numcult_mean", "Estimate"],
+    summary(m_family)$coefficients["numcult_within", "Estimate"]
+  ),
+  SE = c(
+    summary(m_friends)$coefficients["numcult_mean", "Std. Error"],
+    summary(m_friends)$coefficients["numcult_within", "Std. Error"],
+    summary(m_family)$coefficients["numcult_mean", "Std. Error"],
+    summary(m_family)$coefficients["numcult_within", "Std. Error"]
+  )
 )
 
-ggplot(coefs, aes(x = Model, y = Estimate, fill=Model)) +
-  geom_bar(stat = "identity", width = 0.5) +
-  geom_errorbar(aes(ymin = Estimate - 1.96*SE, ymax = Estimate + 1.96*SE), width = 0.2) +
+ggplot(coefs, aes(x = Model, y = Estimate, fill = EffectType)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.6), width = 0.5) +
+  geom_errorbar(aes(ymin = Estimate - 1.96*SE, ymax = Estimate + 1.96*SE), position = position_dodge(width = 0.6), width = 0.2) +
   theme_minimal() +
-  labs(title = "Effect of Cultural Capital on Interaction Frequency", y = "Log-Odds Estimate (Between-Person)", x = "Tie Type") +
-  theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
-ggsave(here("Plots", "kin_vs_nonkin.png"), width = 6, height = 4)
+  labs(title = "Effect of Cultural Capital on Interaction Frequency", y = "Log-Odds Estimate", x = "Tie Type", fill = "Effect Type") +
+  theme(plot.title = element_text(hjust = 0.5), legend.position = "bottom") +
+  scale_fill_manual(values = c("Between-Person (Mean)" = "#1f77b4", "Within-Person (Deviation)" = "#ff7f0e"))
+ggsave(here("Plots", "kin_vs_nonkin.png"), width = 7, height = 5)
 

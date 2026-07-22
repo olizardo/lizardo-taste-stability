@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.28)  22 JUL 2026 09:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.28)  22 JUL 2026 09:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -615,56 +615,75 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has 
                                                   \__shipout_drop_firstpage_...
 l.147 
       {/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
-<Plots/taste_retention.png, id=221, 578.16pt x 216.81pt>
+<Plots/taste_retention.png, id=221, 578.16pt x 361.35pt>
 File: Plots/taste_retention.png Graphic file (type png)
 <use Plots/taste_retention.png>
 Package pdftex.def Info: Plots/taste_retention.png  used on input line 150.
-(pdftex.def)             Requested size: 293.25209pt x 109.96953pt.
+(pdftex.def)             Requested size: 293.25209pt x 183.28256pt.
  [8
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.164 
-       <./Plots/taste_retention.png (PNG copy)>] (./Tabs/pcs_network_stability_modern.tex)
-<Plots/cultural_conversion_effects.png, id=239, 650.43pt x 325.215pt>
+l.162 
+       <./Plots/taste_retention.png (PNG copy)>] (./Tabs/pcs_network_stability_modern.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+<Plots/cultural_conversion_effects.png, id=239, 578.16pt x 361.35pt>
 File: Plots/cultural_conversion_effects.png Graphic file (type png)
 <use Plots/cultural_conversion_effects.png>
 Package pdftex.def Info: Plots/cultural_conversion_effects.png  used on input line 173.
-(pdftex.def)             Requested size: 293.2565pt x 146.62825pt.
+(pdftex.def)             Requested size: 293.25209pt x 183.28256pt.
  [9
-pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.181 
-      ]
-<Plots/kin_vs_nonkin.png, id=261, 433.62pt x 289.08pt>
+       <./Plots/cultural_conversion_effects.png (PNG copy)>]
+<Plots/kin_vs_nonkin.png, id=261, 505.89pt x 361.35pt>
 File: Plots/kin_vs_nonkin.png Graphic file (type png)
 <use Plots/kin_vs_nonkin.png>
 Package pdftex.def Info: Plots/kin_vs_nonkin.png  used on input line 186.
-(pdftex.def)             Requested size: 293.26312pt x 195.50874pt.
+(pdftex.def)             Requested size: 293.25429pt x 209.46736pt.
 
 
 LaTeX Warning: Reference `tab:kin_comparison' on page 10 undefined on input line 191.
 
-(./Tabs/pcs_kin_comparison.tex
+[10
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.192 
+      ] (./Tabs/pcs_kin_comparison.tex
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 34.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.196 
-       <./Plots/cultural_conversion_effects.png (PNG copy)>] [11
+))
+<Plots/within_formal_informal.png, id=274, 505.89pt x 361.35pt>
+File: Plots/within_formal_informal.png Graphic file (type png)
+<use Plots/within_formal_informal.png>
+Package pdftex.def Info: Plots/within_formal_informal.png  used on input line 199.
+(pdftex.def)             Requested size: 293.25429pt x 209.46736pt.
+
+
+LaTeX Warning: Reference `fig:within_formal_informal' on page 11 undefined on input line 204.
+
+[11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.196 
-       <./Plots/kin_vs_nonkin.png (PNG copy)>] [12] (./manuscript_research_note.bbl [13] [14] [15]) (./Tabs/descriptives.tex) [16] [17
+l.205 
+       <./Plots/kin_vs_nonkin.png (PNG copy)>] [12] [13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.214 T
+       heoretical implications of these findings point toward a decisive adv... <./Plots/within_formal_informal.png (PNG copy)>] (./manuscript_research_note.bbl [14] [15] [16]) (./Tabs/descriptives.tex [17]) [18
 pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.219 \end{document}
+l.226 \end{document}
                     ] (./manuscript_research_note.aux)
  ***********
 LaTeX2e <2026-06-01>
@@ -674,20 +693,23 @@ L3 programming layer <2026-06-18>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 18045 strings out of 469097
- 362458 string characters out of 5457857
- 756136 words of memory out of 5000000
- 46738 multiletter control sequences out of 15000+600000
+ 18055 strings out of 469097
+ 362773 string characters out of 5457857
+ 750373 words of memory out of 5000000
+ 46746 multiletter control sequences out of 15000+600000
  705283 words of font info for 96 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 88i,9n,112p,1433b,1219s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,9n,112p,1433b,1215s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri7.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on manuscript_research_note.pdf (17 pages, 700300 bytes).
+Output written on manuscript_research_note.pdf (18 pages, 826003 bytes).
 PDF statistics:
- 473 PDF objects out of 1000 (max. 8388607)
- 414 compressed objects within 5 object streams
- 98 named destinations out of 1000 (max. 500000)
- 136 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 479 PDF objects out of 1000 (max. 8388607)
+ 418 compressed objects within 5 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
