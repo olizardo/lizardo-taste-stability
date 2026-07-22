@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.28)  22 JUL 2026 08:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.28)  22 JUL 2026 09:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -481,18 +481,31 @@ Package: siunitx 2026-05-15 v3.5.5 A comprehensive (SI) units package
 \l__siunitx_sexagesimal_tmp_dim=\dimen298
 \l__siunitx_sexagesimal_marker_box=\box98
 \l__siunitx_sexagesimal_unit_box=\box99
-) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box100
+\UL@hyphenbox=\box101
+\UL@skip=\skip61
+\UL@hook=\toks29
+\UL@height=\dimen299
+\UL@pe=\count373
+\UL@pixel=\dimen300
+\ULC@box=\box102
+Package: ulem 2019/11/18
+\ULdepth=\dimen301
+)
+   defining Unicode char U+2212 (decimal 8722)
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count373
-\calc@Bcount=\count374
-\calc@Adimen=\dimen299
-\calc@Bdimen=\dimen300
-\calc@Askip=\skip61
-\calc@Bskip=\skip62
+\calc@Acount=\count374
+\calc@Bcount=\count375
+\calc@Adimen=\dimen302
+\calc@Bdimen=\dimen303
+\calc@Askip=\skip62
+\calc@Bskip=\skip63
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count375
-\calc@Cskip=\skip63
+\calc@Ccount=\count376
+\calc@Cskip=\skip64
 ) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
@@ -504,165 +517,177 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen301
-\Gin@req@width=\dimen302
+\Gin@req@height=\dimen304
+\Gin@req@width=\dimen305
 ) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip64
-\bibsep=\skip65
+\bibhang=\skip65
+\bibsep=\skip66
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count376
+\c@NAT@ctr=\count377
 ) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2026-05-21 v1.32 PDF bookmarks (HO)
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2026-05-21 v1.32 bookmark driver for pdfTeX (HO)
-\BKM@id=\count377
+\BKM@id=\count378
 )) (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 57.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 64.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./manuscript_research_note.aux)
 \openout1 = `manuscript_research_note.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-Package hyperref Info: Link coloring ON on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+Package hyperref Info: Link coloring ON on input line 64.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 59.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 66.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 59.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 66.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 59.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 66.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 59.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 66.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 59.
+(Font)              <17.28> on input line 66.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 59.
+(Font)              <12> on input line 66.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 59.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+(Font)              <10> on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 59.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 66.
  (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 59.
+(Font)              <8> on input line 66.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 59.
+(Font)              <6> on input line 66.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 59.
+(Font)              <5> on input line 66.
  [1
 
-{/home/omarlizardo/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-
-Package natbib Warning: Citation `mark1998birds-abd' on page 2 undefined on input line 66.
-
-
-Package natbib Warning: Citation `mark2003culture-ed5' on page 2 undefined on input line 66.
-
-
-Package natbib Warning: Citation `lazarsfeld1954' on page 2 undefined on input line 66.
-
-
-Package natbib Warning: Citation `mcpherson2001' on page 2 undefined on input line 66.
-
-
-Package natbib Warning: Citation `mark1998birds-abd' on page 2 undefined on input line 66.
-
-
-Package natbib Warning: Citation `burt2000' on page 2 undefined on input line 66.
-
-
-Package natbib Warning: Citation `suitor1997' on page 2 undefined on input line 66.
-
-
-Package natbib Warning: Citation `lizardo2006' on page 2 undefined on input line 66.
-
-
-Package natbib Warning: Citation `bourdieu1984' on page 2 undefined on input line 68.
-
-
-Package natbib Warning: Citation `holt1998' on page 2 undefined on input line 68.
-
-
-Package natbib Warning: Citation `lizardo2006' on page 2 undefined on input line 68.
-
-
-Package natbib Warning: Citation `jaeger2026' on page 2 undefined on input line 68.
-
-
-Package natbib Warning: Citation `meuleman2023' on page 2 undefined on input line 68.
-
-
-Package natbib Warning: Citation `lizardo2016why-418' on page 2 undefined on input line 68.
-
-
-Package natbib Warning: Citation `vanzella2022' on page 2 undefined on input line 68.
-
-
-Package natbib Warning: Citation `hachen2022generators-923' on page 2 undefined on input line 68.
-
-
-Package natbib Warning: Citation `meuleman2021' on page 2 undefined on input line 68.
-
-[2]
+{/home/omarlizardo/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 87.
- [3]
+(Font)              <7> on input line 94.
+ [3] [4] [5] [6] (./Tabs/pcs_taste_change_modern.tex) [7
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.147 
+      {/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
+<Plots/taste_retention.png, id=221, 578.16pt x 216.81pt>
+File: Plots/taste_retention.png Graphic file (type png)
+<use Plots/taste_retention.png>
+Package pdftex.def Info: Plots/taste_retention.png  used on input line 150.
+(pdftex.def)             Requested size: 293.25209pt x 109.96953pt.
+ [8
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.164 
+       <./Plots/taste_retention.png (PNG copy)>] (./Tabs/pcs_network_stability_modern.tex)
+<Plots/cultural_conversion_effects.png, id=239, 650.43pt x 325.215pt>
+File: Plots/cultural_conversion_effects.png Graphic file (type png)
+<use Plots/cultural_conversion_effects.png>
+Package pdftex.def Info: Plots/cultural_conversion_effects.png  used on input line 173.
+(pdftex.def)             Requested size: 293.2565pt x 146.62825pt.
+ [9
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.181 
+      ]
+<Plots/kin_vs_nonkin.png, id=261, 433.62pt x 289.08pt>
+File: Plots/kin_vs_nonkin.png Graphic file (type png)
+<use Plots/kin_vs_nonkin.png>
+Package pdftex.def Info: Plots/kin_vs_nonkin.png  used on input line 186.
+(pdftex.def)             Requested size: 293.26312pt x 195.50874pt.
 
-Package natbib Warning: Citation `hollstein2023' on page 4 undefined on input line 97.
+
+LaTeX Warning: Reference `tab:kin_comparison' on page 10 undefined on input line 191.
+
+(./Tabs/pcs_kin_comparison.tex
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 34.
+ (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) [10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.196 
+       <./Plots/cultural_conversion_effects.png (PNG copy)>] [11
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.196 
+       <./Plots/kin_vs_nonkin.png (PNG copy)>] [12] (./manuscript_research_note.bbl [13] [14] [15]) (./Tabs/descriptives.tex) [16] [17
+pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.219 \end{document}
+                    ] (./manuscript_research_note.aux)
+ ***********
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-06-18>
+ ***********
 
 
-Package natbib Warning: Citation `marsden2024' on page 4 undefined on input line 97.
+LaTeX Warning: There were undefined references.
 
+ ) 
+Here is how much of TeX's memory you used:
+ 18045 strings out of 469097
+ 362458 string characters out of 5457857
+ 756136 words of memory out of 5000000
+ 46738 multiletter control sequences out of 15000+600000
+ 705283 words of font info for 96 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 88i,9n,112p,1433b,1219s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri7.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+Output written on manuscript_research_note.pdf (17 pages, 700300 bytes).
+PDF statistics:
+ 473 PDF objects out of 1000 (max. 8388607)
+ 414 compressed objects within 5 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Package natbib Warning: Citation `vacchiano2024' on page 4 undefined on input line 97.
-
-
-Package natbib Warning: Citation `mcpherson1983' on page 4 undefined on input line 101.
-
-
-Package natbib Warning: Citation `mcpherson1987' on page 4 undefined on input line 101.
-
-
-Package n

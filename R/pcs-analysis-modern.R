@@ -62,7 +62,7 @@ m1 <- modelsummary(
   notes = list('Controls and SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
   output = here('Tabs', 'pcs_taste_change_modern.tex')
 )
-modelsummary(logit_models, vcov = lapply(logit_models, function(m) sandwich::vcovCL(m, cluster = m$data$id)), estimate = '{estimate}{stars}', statistic = NULL, stars = c('+' = 0.1, '*' = 0.05), coef_rename = coef_map_rename, coef_omit = 'Intercept|.*_start|female|white|as\.factor', gof_map = c('nobs'), title = 'Predictors of Taste Loss (Pooled Discrete-Time Logistic Regression)', notes = list('Controls and SEs omitted for space.', '+ p < 0.1, * p < 0.05'), output = here('Tabs', 'pcs_taste_change_modern.tex'))
+modelsummary(logit_models, vcov = lapply(logit_models, function(m) sandwich::vcovCL(m, cluster = m$data$id)), estimate = '{estimate}{stars}', statistic = NULL, stars = c('+' = 0.1, '*' = 0.05), coef_rename = coef_map_rename, coef_omit = 'Intercept|.*_start|female|white|as\\.factor', gof_map = c('nobs'), title = 'Predictors of Taste Loss (Pooled Discrete-Time Logistic Regression)', notes = list('Controls and SEs omitted for space.', '+ p < 0.1, * p < 0.05'), output = here('Tabs', 'pcs_taste_change_modern.tex'))
 
 # Mixed-Effects Models
 library(ordinal)

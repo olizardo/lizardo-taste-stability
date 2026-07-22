@@ -1,0 +1,10 @@
+{
+  "permission": {
+    "bash": {
+      "sed *": "allow",
+      "Rscript *": "allow",
+      "ls *": "allow",
+      "pdflatex *": "allow"
+    }
+  }
+}
