@@ -64,40 +64,6 @@ m1 <- modelsummary(
 )
 m1 |> kable_styling(latex_options = c('hold_position')) |> save_kable(here('tex', 'pcs_taste_change_modern.tex'))
 
-# Taste Acquisition Models
-logit_models_acq <- list()
-for (c in cultlist) {
-  # For acquisition, we look at people who seldom/never do it (>= 3) and see if they start doing it very often/sometimes (<= 2)
-  df_sub <- df_transitions %>% filter(.data[[paste0(c, '_start')]] >= 3) %>% mutate(event = ifelse(.data[[paste0(c, '_end')]] <= 2, 1, 0)) %>% drop_na(event, all_of(paste0(controls, '_start')), all_of(paste0(demchang, '_end')))
-  if (nrow(df_sub) > 0) {
-    vars_to_check <- c(paste0(demchang, '_end'), paste0(controls, '_start'), 'female', 'white', 'period')
-    valid_vars <- c()
-    for (v in vars_to_check) {
-      if (length(unique(df_sub[[v]])) > 1) {
-        if (v == 'period') { valid_vars <- c(valid_vars, 'as.factor(period)') } else { valid_vars <- c(valid_vars, v) }
-      }
-    }
-    if (length(valid_vars) > 0) {
-       f_str <- paste('event ~', paste(valid_vars, collapse=' + '))
-       m <- glm(as.formula(f_str), data = df_sub, family = binomial(link='logit'))
-       logit_models_acq[[c]] <- m
-    }
-  }
-}
-
-names(logit_models_acq) <- c('Music', 'Sports', 'Newspaper', 'Books')
-
-m_acq <- modelsummary(
-  logit_models_acq,
-  vcov = lapply(logit_models_acq, function(m) sandwich::vcovCL(m, cluster = m$data$id)),
-  estimate = '{estimate}{stars}', statistic = NULL, stars = c('+' = 0.1, '*' = 0.05),
-  coef_rename = coef_map_rename, coef_omit = 'Intercept|.*_start|female|white|as\\.factor', gof_map = c('nobs'),
-  title = 'Predictors of Taste Acquisition (Pooled Discrete-Time Logistic Regression)',
-  notes = list('Controls and SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
-  output = 'kableExtra'
-)
-m_acq |> kable_styling(latex_options = c('hold_position')) |> save_kable(here('tex', 'pcs_taste_acquisition.tex'))
-
 # Mixed-Effects Models
 library(ordinal)
 df_long <- df %>% mutate(across(everything(), haven::zap_labels)) %>% select(id, female, white, friends3, friends4, friends5, numsocmems3, numsocmems4, numsocmems5, numcult3, numcult4, numcult5, educ3, educ4, educ5, married3, married4, married5, childre3, childre4, childre5, bigcity3, bigcity4, bigcity5) %>% pivot_longer(cols = matches('3$|4$|5$'), names_to = c('.value', 'wave'), names_pattern = '(.*)(3|4|5)$') %>% mutate(wave = as.numeric(wave)) %>% mutate(across(c(friends, numsocmems, numcult, educ, married, childre, bigcity), ~ as.numeric(haven::zap_labels(.))))
