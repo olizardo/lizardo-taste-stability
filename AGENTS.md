@@ -14,13 +14,14 @@ You are an AI assistant helping Omar Lizardo modernize a legacy sociological dat
 - The project analyzes cultural capital and its reciprocal relationship with social networks using longitudinal panel data from the Project Canada Survey (PCS).
 - The original code was written in Stata circa 2008. It has been ported to modern R.
 - The main manuscript is the research note `manuscript_research_note.tex`. The legacy `taste-stability.tex` should be ignored.
-- The project previously included analyses of taste stability and loss via discrete-time event history models and network turnover indicators. These have been dropped to focus strictly on Mundlak mixed-effects models.
+- The project previously included analyses of taste stability and loss via discrete-time event history models and network turnover indicators. These have been dropped to focus strictly on Mundlak mixed-effects models predicting social connectedness indicators (friends, family, organizations) from specific cultural taste dimensions.
 
 ### Code and Analysis Guidelines
-- R scripts are stored in the `R/` directory.
-- The main data processing script is `R/pcs-data-processing.R`.
-- The main analysis scripts are `R/pcs-analysis-modern.R` and `R/kin_script.R`.
-- Visualization scripts include `R/visualize_results.R` and `R/plot_within_effects.R`.
+- R scripts are organized as a reproducible pipeline in the `R/` directory:
+  - `01_data_processing.R`: Harmonizes raw data, runs PCA for cultural dimensions, and creates the longitudinal Mundlak dataset (`pcs_processed.rds`).
+  - `02_model_fitting.R`: Fits the Mundlak mixed-effects models.
+  - `03_make_tables.R`: Generates summary statistics and regression tables using `modelsummary`.
+  - `04_make_plots.R`: Produces data visualizations like PCA loadings and within/between effects coefficient plots.
 - All table outputs go into the `Tabs/` directory.
 - All plot outputs go into the `Plots/` directory.
 - Use `renv` to manage dependencies. If you need a new package, run `renv::install()` and `renv::snapshot()`.
