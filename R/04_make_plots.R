@@ -54,6 +54,7 @@ p_unified <- ggplot(coefs, aes(x = Component, y = Estimate, fill = EffectType)) 
   geom_bar(stat = "identity", position = position_dodge(width = 0.6), width = 0.5) +
   geom_errorbar(aes(ymin = Estimate - 1.96*SE, ymax = Estimate + 1.96*SE), position = position_dodge(width = 0.6), width = 0.2) +
   geom_hline(yintercept = 0, linetype = "dashed", color = "black") +
+  coord_flip() +
   theme_minimal() +
   facet_wrap(~Outcome) +
   labs(
@@ -66,11 +67,10 @@ p_unified <- ggplot(coefs, aes(x = Component, y = Estimate, fill = EffectType)) 
   theme(
     plot.title = element_text(hjust = 0.5, face="bold"), 
     plot.subtitle = element_text(hjust = 0.5), 
-    legend.position = "bottom",
-    axis.text.x = element_text(angle = 45, hjust = 1)
+    legend.position = "bottom"
   ) +
   scale_fill_manual(values = c("Between-Person (Average)" = "#2c7bb6", "Within-Person (Spike)" = "#d7191c"))
 
-ggsave(here("Plots", "unified_cultural_effects.png"), p_unified, width = 10, height = 6)
+ggsave(here("Plots", "unified_cultural_effects.png"), p_unified, width = 10, height = 5)
 
 cat("Plots generated successfully in Plots/.\n")
