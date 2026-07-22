@@ -25,8 +25,11 @@ plots: R/04_make_plots.R models/m_friends.rds models/m_family.rds models/m_orgs.
 	Rscript R/04_make_plots.R
 
 # 5. Paper compilation
-# Depends on tables and plots and the tex file
+# We use a quick shell script to dynamically update the date and word count before building
 paper: tables plots manuscript_research_note.tex
+	@WORDS=$$(detex manuscript_research_note.tex | wc -w | awk '{print $$1}'); \
+	TODAY=$$(date +"%d-%b-%y"); \
+	sed -i -E "s/\\\\date\\{Words: ~[0-9,]+ \\\\\\\\ Last Revised: [0-9]{2}-[a-zA-Z]{3}-[0-9]{2}\\}/\\\\date\\{Words: ~$$WORDS \\\\\\\\ Last Revised: $$TODAY\\}/" manuscript_research_note.tex
 	pdflatex -interaction=nonstopmode manuscript_research_note.tex
 	pdflatex -interaction=nonstopmode manuscript_research_note.tex
 

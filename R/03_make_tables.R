@@ -6,7 +6,7 @@ library(ordinal)
 
 cat("Running 03_make_tables.R...\n")
 
-options(modelsummary_factory_latex = 'kableExtra')
+# options(modelsummary_factory_latex = 'kableExtra')
 
 # Data needed for descriptives
 df_mundlak <- readRDS(here("data", "pcs_cleaned_mundlak.rds"))
@@ -54,6 +54,15 @@ modelsummary(
 # Fix label in the generated tex file manually since modelsummary escapes it
 tex_file <- here('Tabs', 'pcs_network_stability_modern.tex')
 lines <- readLines(tex_file)
+# For tabularray output
+lines <- gsub(
+  "caption=\\{Mundlak Mixed-Effects Models for Network Connectivity \\(1985-1995\\)\\},", 
+  "caption={Mundlak Mixed-Effects Models for Network Connectivity (1985-1995)},\nlabel={tab:network_stability},", 
+  lines
+)
+# Fix the escaped less-than signs in the notes
+lines <- gsub("\\+ p < 0\\.1, \\* p < 0\\.05, \\*\\* p < 0\\.01", "+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01", lines)
+# For kableExtra fallback (if ever used)
 lines <- gsub(
   "\\\\caption\\{Mundlak Mixed-Effects Models for Network Connectivity \\(1985-1995\\)\\}", 
   "\\\\caption{Mundlak Mixed-Effects Models for Network Connectivity (1985-1995)\\\\label{tab:network_stability}}", 
