@@ -1,0 +1,515 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{tabularray,float,siunitx}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Culture consumption and social capital},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Culture consumption and social capital\footnote{\textsuperscript{*}Data for this project were obtained from the Association of Religion Data Archives at \url{http://www.thearda.com}. The author bears sole responsibility for the current interpretation, analyses and tabulations of these data. I would like to thank Paul DiMaggio, Bart Bonikowski, and the members of the Princeton seminar in cultural sociology for their very useful comments on previous drafts of this paper.}}
+\author{Omar Lizardo \\ LeRoy Neiman Term Chair Professor of Sociology \\ Department of Sociology \\ University of California, Los Angeles \\ \href{mailto:olizardo@soc.ucla.edu}{\nolinkurl{olizardo@soc.ucla.edu}} \\ \url{https://olizardo.github.io/mysite/}}
+\date{Words: 12,254 \\ Last Revised: 08-Feb-24}
+
+\begin{document}
+\maketitle
+
+
+
+\subsubsection{Abstract}\label{abstract}
+
+\section{Introduction}\label{introduction}
+
+Prevailing models of taste formation, transmission, and decay in the sociology of culture posit that current tastes are largely a product of the individual's current network configuration. The standard assumption is that tastes are transmitted through existing network ties, in particular those social connections characterized by sociodemographic similarity (Lazarsfeld and Merton 1954; McPherson, Smith-Lovin, and Cook 2001). From this perspective, tastes are not enduring aspects of the person but malleable, ``thin'' contents liable to change when network ties change (Mark 1998b, 2003). Given that personal networks are highly volatile (Burt 2000; Suitor, Wellman, and Morgan 1997), this network perspective implies that cultural tastes should also exhibit significant instability over time.
+
+In contrast, the cultural capital model (Bourdieu 1984; Holt 1998) conceives of cultural tastes as highly durable dispositions. Formed early in life, these embodied cultural practices are resistant to change and serve as stable resources to maintain and forge network connections (Lizardo 2006). Rather than being at the mercy of shifting networks, stable cultural tastes may act as a reciprocal driver of network maintenance, enabling individuals to sustain interaction across constantly shifting personal communities. 
+
+This research note empirically adjudicates between these divergent expectations using longitudinal panel data. Specifically, I address the following research questions: 
+(1) Do cultural tastes exhibit the high volatility implied by network transmission models, or the high stability expected by cultural capital models? 
+(2) When cultural taste loss does occur, is it primarily driven by life-course events associated with network turnover? 
+(3) Does a broad, stable repertoire of cultural tastes (cultural capital) longitudinally predict the maintenance of social connectivity, independent of reciprocal effects?
+
+By leveraging the Project Canada Survey (1985-1995) and employing modern panel data estimators (discrete-time pooled logits and Mundlak within-between Poisson models), this note provides a direct test of the cultural capital versus network transmission frameworks.
+
+\section{Data and variables}\label{data-and-variables}
+
+The data for this study come from the \emph{Project Canada Survey} (PCS). The PCS is a longitudinal study of the social attitudes and cultural practices of a representative sample of Canadian citizens extending from 1975-1995, conducted out of the University of Lethbridge. The project began data collection in 1975 with a total 1,917 respondents. Every five years since representative samples of similar size have been collected, with a ``core'' set of respondents that have participated in previous surveys. Because it collected data on cultural practices and patterns of social interaction and membership in important foci of social interaction (i.e. voluntary association memberships) over time for the same individuals, the PCS data provide an excellent opportunity to deal with issues of casual order in the relationship between cultural taste loss and life-course events associated with network turnover.
+
+In the following study, I use the longitudinal panel covering the core years of 1985, 1990, and 1995, focusing on the core set of respondents who participated across these waves. While previous analyses restricted themselves to the 1985--1990 window to avoid coding inconsistencies in 1995 and age-related taste declines, the use of modern longitudinal estimators (such as Mundlak within-between models with wave fixed-effects) allows us to gracefully handle both age-related secular trends and programmatic harmonization of the taste indicators across the entire panel timeframe.
+
+\emph{Data limitations}. While this data provide one of the few existing quantitative sources of information of cultural taste over-time for a large sample of respondents, there are some limitations that deserve mention: there are no direct measures of network connectivity (i.e., size of the personal network). The two measures available, frequency of interaction with friends and number of associational memberships, are important components of sociability but do not capture network properties entirely. To address the slight changes in the coding of cultural activities across waves (such as the shift to a 7-point frequency scale in 1995), all indicators have been programmatically harmonized back to the original 4-point scale (Very often, Sometimes, Seldom, Never) prior to estimation.
+
+\subsection{Variables}\label{variables}
+
+\subsubsection{Cultural Taste indicators}\label{cultural-taste-indicators}
+
+\emph{Cultural taste loss indicators}. The PCS collected information across the 1985, 1990, and 1995 waves related to the frequency of consumption of a variety of leisure culture activities and mass media outlets. To investigate the hypotheses related to cultural taste loss, I examine nine activities that encompass both at-home consumption and outside leisure (Alexander 2003; Crane 1993; DiMaggio 2000; van Eijck and van Rees 2000): (1) listening to music, (2) going to the movies, (3) attending a sporting event, (4) reading the newspaper, (5) reading books of fiction, (6) watching videos, (7) engaging in a hobby, (8) reading magazines, and (9) following a sports team. This broad selection captures a wide array of potential taste changes over time across different domains of cultural participation. Respondents were asked to report the frequency with which they engaged in each of these activities using the following prompt:\footnote{The various codebooks for all waves of the PCS survey (1975, 1980, 1985, 1990 and 1995) are available online at: http://www.thearda.com/Archive/IntSurveys.asp.}
+
+\emph{Thinking now of your life outside of formal work, how often would you estimate that you: [i.e. listen to music]?}
+
+Four categories of responses were allowed: (1) very often, (2) sometimes, (3) Seldom and (4) Never.\footnote{As noted above, the 1990 coded the same variables using a slightly more elaborate categorization. I recoded those variables to match the 1985 scheme.} Thus for each respondent (\emph{i}), for a given cultural activity (\emph{k}) at time (\emph{t}) is defined as their score in the respective ordered categorical variable y\textsubscript{\emph{ikt}.}
+
+\emph{Cultural taste breadth indicators}. To assess the hypotheses connected to the effects of cultural taste on indicators of sociability and social connectivity, I created a cultural taste breadth variable for the 1980, 1985, 1990, and 1995 waves. This is a simple additive index indicating participation in a wide range of cultural activities. Using the same set of items, the respondent receives one point in the cultural taste breadth scale if he or she reports engaging in the following cultural practices either ``very often'' or ``sometimes'': (1) listening to music, (2) going to the movies, (3) going to a theatric performance, (4) going to a sports event outside the home, (5) watching videos at home, (6) engaging in a hobby, (7) reading magazines, (8) following a sports team, (9) reading a novel or book, and (10) reading the newspaper.
+
+\subsubsection{Network turnover indicators}\label{network-turnover-indicators}
+
+As noted above, network theory and research provide several guidelines as to what life-course events are associated with radical changes in the personal network. The PCS contains two measures that tap more or less direct transformations of the personal network: (1) longitudinal changes in frequency of interaction with friends and (2) over-time changes in memberships across a variety of voluntary associations (McPherson 1983; McPherson and Smith-Lovin 1987). I also use five other indicators of personal network turnover based on positional shifts: (3) changes in educational status (Suitor and Keeton 1997) (4) changes in work status (Fischer and Oliker 1983), (5) changes in geographical location (Degenne and Lebeaux 2005), (6) changes in marital status (Fischer and Oliker 1983) and (7) changes in child rearing status (Munch, McPherson, and Smith-Lovin 1997). Since a non-negligible part of the individual's personal network comes from contacts that are often seen at work (Brass 1985; Ibarra 1992; Straits 1996), we should expect that either entrance into or exit from the labor force, or shifts from part-time to full-time work, should have a clear impact on the size and composition of the personal network over time (Bidart and Lavenu 2005). The same can be said of geographical mobility (Relish 1997), with geographically mobile respondents more likely to be subject to radical transformation of their personal networks from those who are not mobile.\footnote{The nominal employment status from which the binary indicator for changes in work status is constructed from has six categories (1) full time, (2) part time, (3) unemployed, (4) retired, (5) keeping house, and (6) other. The geographical mobility item is based on the region in which respondent reported residing in each wave. The marital status variable has five categories: (1) married, (2) cohabiting, (3) divorced, (4) widowed and (5) never married.} Finally, a large body of research shows that family status transitions, such as getting married or getting divorced (Gerstel 1988; Leslie and Grady 1985; Milardo 1987; Pahl and Pevalin 2005) and experiencing widowhood (Anderson 1984; Morgan, Carder, and Neal 1997; Morgan, Neal, and Carde 1997), have significant effects on the social networks of men and women. We should thus expect that transformations in family life, such as getting divorced, getting married or having children (Belsky and Rovine 1984; Bott 1971; Munch, McPherson, and Smith-Lovin 1997), should result in direct effects on the size and composition of the personal network.
+
+\subsubsection{Social connectedness indicators}\label{social-connectedness-indicators}
+
+In order to test the cultural capital hypotheses (3 and 4), I use two indicators of social connectivity: (a) the count of close friends with whom the respondent interacts, and (b) the ability to remain connected to important foci for social interaction, such as voluntary associations. 
+
+Retention of connections to important interaction foci is measured using a scale that simply counts the distinct types of voluntary associations the respondent belongs to in each wave of the survey: these include private clubs, sport clubs, service organizations, and hobby clubs. These types of memberships are the kinds of interaction foci in which mass media and arts-related culture-mediated social interaction is most likely to play a key role in the formation and maintenance of social contacts (Long 2003), and thus on the likelihood that the individual will retain or drop the membership (McPherson, Popielarz, and Drobnic 1992; Popielarz and McPherson 1995).
+
+\subsubsection{Sociodemographic controls}\label{sociodemographic-controls}
+
+The models shown below include the following sociodemographic controls: gender, age, education, city size, employment status, marital status, and presence of children in the household. The descriptive statistics of the variables are detailed in Table 4 of the Appendix.
+
+\subsection{Network driven taste loss}\label{network-driven-taste-loss}
+
+\subsubsection{Analytic Strategy}\label{analytic-strategy}
+
+The cultural taste loss model can be thought of as a discrete-time event history analysis spanning the pooled wave transitions (1985--1990 and 1990--1995) (Allison 1982). The dependent variable equals 1 if a cultural taste loss event is observed (the individual reported engaging in the activity ``very often'' in 1985, but ``seldom'' or ``never'' in the subsequent wave) and 0 otherwise. 
+
+To model this, I employ a pooled discrete-time logistic regression equation estimating the log odds of taste loss for each of the nine cultural activities. The predictors include a vector of network turnover indicators (e.g., changes in marital status, changes in work status, geographical mobility, changes in friends) as well as the standard matrix of sociodemographic controls. To account for the fact that observations for the same individual are not independent across time periods (unobserved heterogeneity within respondents), I estimate the models with cluster-robust standard errors (clustered by individual respondent). If the network hypothesis is correct (hypothesis 2), we should observe significant, positive coefficients for the network turnover indicators, implying that relational disruptions drive taste loss.
+
+\subsubsection{Results}\label{results}
+
+\emph{Frequency of Taste Loss.} Consistent with the cultural capital hypothesis, across all nine cultural taste domains, taste loss is a relatively rare event. This is the case whether this is defined in a ``strong'' form (from ``very often'' in the first wave to ``never'' in the second) or in a weaker form (from ``very often'' to \emph{either} ``seldom'' or ``never''). Less than 1\% of respondents go from having a strong taste in listening to music or reading the newspaper to losing that taste in the five-year period. A relatively larger number of respondents lose the taste for reading books (1.07\%) or following sports (1.43\%), but the main empirical finding here is that the great majority of respondents retain their tastes ($\approx$98\%). When taste loss is defined in a weaker form, the worst retention rate drops to about 95\% for reading books. This supports the cultural capital assumption that tastes are relatively stable over time, exhibiting stability rates that far exceed what is typically observed for personal networks (Suitor, Wellman, and Morgan 1997; Wellman \emph{et al.} 1997).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{tex/taste_retention.png}
+\caption{Extremely High Over-Time Taste Stability (5-Year Window). Most cultural practices show retention rates upwards of 95\%.}
+\label{fig:taste_retention}
+\end{figure}
+
+
+
+\emph{Taste loss Models.} The coefficient estimates of the discrete-time logistic regression models are shown in the Taste Change table below. All of the models have as the dependent variable a taste loss event defined according to the ``weak'' criterion above. Consistent with the expectations derived from the network-based taste transmission theory (Hypothesis 2), I find that---however rare---the cultural taste loss that can be observed is largely due to positional and social status changes associated with network turnover. 
+
+Thus, among the best predictors of cultural taste loss are changes in the frequency of \emph{social interaction with friends} and changes in the \emph{number of organizational memberships} (\emph{p}\textless0.05 or \emph{p}\textless0.10 for several cultural activities). Other important determinants of taste loss are status transitions that have been shown in the literature to be clearly associated with network turnover, such as changes in educational standing and changes in geographic location. The strongest effects in terms of magnitude are in accord with the view that tastes change when the personal network is transformed.
+
+Changes in work status also have the expected positive effects on taste loss for select domains (like videos), although they are not uniformly significant across the board. The weakest effect of the entire set of network turnover indicators on taste loss pertains to changes in family status. Changes in marital status is not a useful uniform predictor of taste loss once other sources of network turnover are held constant, and changes in the number of children in the household have little discernible uniform effect. Possible reasons for the paucity of effects of changes in marital status include measurement error due to underestimating family volatility or the fact that there is little net effect of family status changes left after the primary relational outcomes of these changes (shifts in the frequency of interaction with friends) are held constant.
+
+In all, it is safe to say that the network hypothesis is partially confirmed by these data. While the overall \emph{rates} of cultural taste loss are so low as to conflict with standard network theory's assumptions of high taste malleability, the \emph{sources} of taste loss when it does happen are largely those that we would expect: transformation of the personal network due to life-course changes associated with network turnover.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{tex/taste_loss_forest_plot.png}
+\caption{Network Turnover Predicts Cultural Taste Loss. Point estimates and 95\% confidence intervals from pooled discrete-time logistic regressions.}
+\label{fig:taste_loss}
+\end{figure}
+
+
+
+\input{tex/pcs_taste_change_modern.tex}
+
+\subsection{Longitudinal Culture conversion model}\label{longitudinal-culture-conversion-model}
+
+\subsubsection{Analytic Strategy}\label{analytic-strategy-1}
+
+In this section, I estimate the potential causal effect of cultural capital (as measured by taste diversity) on the maintenance of network connectivity over time. Estimating this reciprocal effect longitudinally presents two major methodological challenges: unobserved individual heterogeneity (time-invariant individual-level factors correlated with both variables) and simultaneity bias.
+
+To deal with these issues and properly model count-based network outcomes, I present a unified longitudinal modeling framework:
+
+\emph{Mundlak (Within-Between) Poisson Models}. I employ a Mundlak (within-between) specification using a Poisson regression framework. Standard random-effects models require the stringent assumption that unobserved individual-level heterogeneity is entirely uncorrelated with the regressors. The Mundlak approach relaxes this assumption by explicitly including the person-specific longitudinal means (the "between" effect) of the time-varying covariates alongside the group-mean-centered deviations (the "within" effect). 
+
+This allows us to cleanly disentangle the ``within-person'' effect (how temporary changes in an individual's cultural taste over time affect changes in their social connectivity) from the ``between-person'' effect (how stable, average differences in cultural tastes between individuals relate to average differences in social connectivity), thereby minimizing omitted variable bias. 
+
+Furthermore, because the primary outcome variables for social connectivity (the number of friends and the number of voluntary association memberships) are discrete, non-negative integer counts rather than continuous normal variables, these models are estimated using Poisson regressions. This ensures that the estimates correctly respect the variance structure of the count data.
+
+\subsubsection{Results}\label{results-1}
+
+The culture conversion model (Lizardo 2006) implies that individuals who have command of a wide variety of tastes will be able to sustain larger and sparser personal networks over time, allowing them to reap the benefits of those social connections in the form of higher than average rates of social interaction and a higher ability to remain connected to important social foci where new contacts are made and old ones are sustained. 
+
+The results of the Mundlak (within-between) Poisson models of the effect of cultural capital (in the form of ``omnivore'' taste breadth) on network outcomes across time periods are shown below.
+
+\input{tex/pcs_network_stability_modern.tex}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{tex/cultural_conversion_effects.png}
+\caption{Cultural Breadth Sustains Social Connectivity Over Time. Predicted counts from Mundlak Between-Person Effects.}
+\label{fig:culture_conversion}
+\end{figure}
+
+
+
+The results are highly consistent with the culture conversion model, particularly when examining the robust between-person differences (the `mean` effects). I find that persons who display a persistently wide variety of tastes (a higher longitudinal mean of cultural breadth) sustain higher frequencies of social interaction with friends (\emph{p}\textless0.05). While this cross-sectional ``between'' effect does not offer definitive evidence of strict causality, it cements in a robust longitudinal modeling framework the results previously reported by Lizardo (2006). Broad cultural tastes are strongly associated with sustaining larger and more active patterns of interpersonal engagement over time. 
+
+Furthermore, having a high average repertoire of tastes is not only useful in sustaining higher levels of informal social connectivity, but it also significantly raises the chances of remaining tied to important social foci of interaction, such as voluntary associations (\emph{p}\textless0.05). Because recruitment (and the over-time stability of membership) into these foci is largely a matter of keeping alive the network ties that bind the individual to other members of the group (Popielarz and McPherson 1995), it is no surprise that whatever resource helps the individual to sustain social connections to other persons will also appear to sustain his or her connection to these larger social entities.
+
+The Mundlak specification also allows us to evaluate the within-person effects---whether a temporary spike in an individual's cultural tastes over their own average translates to immediate gains in connectivity. The within-person effects for cultural taste breadth are smaller and only marginally significant for interaction with friends (\emph{p}\textless0.1) and non-significant for organizational memberships. This suggests that it is the durable, trait-like possession of cultural capital (the between-person effect), rather than short-term fluctuations in cultural activity, that primarily drives sustained social connectivity and organizational integration over the life course.
+
+\section{Discussion and Conclusion}\label{discussion-and-conclusion}
+
+This research note aimed to test competing predictions from network transmission and cultural capital models regarding the longitudinal stability of cultural tastes and their reciprocal relationship with social networks. 
+
+The results reveal a clear pattern: cultural tastes exhibit remarkably high levels of stability over time (with roughly 98\% retention over five-year periods), strongly contradicting the volatility corollary of traditional network transmission models. Tastes behave as durable forms of embodied cultural capital. However, the network-theoretic assumption that relational disruption drives taste loss receives strong support; when individuals do lose a taste, it is significantly predicted by network turnover events such as changes in friendship interaction, organizational memberships, and geographic mobility. 
+
+Furthermore, the Mundlak Poisson models provide robust evidence for the culture conversion model (Lizardo 2006). Between-person differences in cultural taste breadth significantly predict the maintenance of both informal social interactions (friends) and formal ties (organizational memberships) over time. The lack of significant within-person effects suggests that it is the stable, trait-like possession of cultural capital that maintains social connectivity, rather than short-term fluctuations in cultural activity.
+
+Theoretical implications of these findings point toward a synthesis of the two models: tastes and networks operate in a feedback loop. Durable cultural tastes act as selective filters and stabilizing assets that help individuals maintain social ties (choice homophily), but structural shocks that disrupt these networks can subsequently erode cultural practices. 
+
+A limitation of this study is the reliance on proxy measures for network size (frequency of interaction and organizational memberships) rather than full ego-network data. Future research should utilize more granular, multi-wave personal network generators alongside detailed cultural consumption diaries to further untangle the micro-dynamics of how cultural capital sustains specific dyadic ties during life-course transitions.
+
+\subsection{References}\label{references}
+
+Alexander, Victoria D. 2003. \emph{Sociology of the Arts: Exploring Fine and Popular Forms}. Malden: Blackwell.
+
+Allison, Paul D. 1982. " Discrete-Time Methods for the Analysis of Event Histories." \emph{Sociological Methodology} 13: 61-98.
+
+Anderson, Trudy B. 1984. "Widowhood as a Life Transition: Its Impact on Kinship Ties." \emph{Journal of Marriage and the Family} 46:105-114.
+
+Belsky, Jay and Michael Rovine. 1984. "Social-Network Contact, Family Support, and the Transition to Parenthood." \emph{Journal of Marriage and the Family} 46:455-462.
+
+Bennett, Andy. 2004. "New Tales from Canterbury: the Making of Virtual Scene." Pp. 205-220 in \emph{Music Scenes: Local, Translocal and Virtual}, edited by A. Bennett and R. A. Peterson. Nashville: Vanderbilt University Press.
+
+Bennett, Tony, Michael Emmison, and John Frow. 1999. \emph{Accounting for Tastes: Australian Everyday Cultures}. Cambridge: Cambridge University Press.
+
+Berkowitz, S. D. 1982. \emph{An Introduction to Structural Analysis: The Network Approach to Social Research}. Toronto: Butterworths.
+
+\_\_\_\_\_\_. 1988. "Afterword: Toward a Formal Structural Sociology." Pp. 477-497 in \emph{Social Structures a Network Approach}, edited by B. Wellman and S. D. Berkowitz. Cambridge: Cambridge University Press.
+
+Bidart, Claire and Alain Degenne. 2005. "Introduction: the dynamics of personal networks." \emph{Social Networks} 27:283-287.
+
+Bidart, Claire and Daniel Lavenu. 2005. "Evolutions of personal networks and life events." \emph{Social Networks} 27:359-376.
+
+Blau, Peter M. 1977. "A Macrostructural Theory of Social Structure." \emph{American Journal of Sociology} 83:26-54.
+
+Borgatti, Stephen P. 2005. "Centrality and network flow." \emph{Social Networks} 27:55-71.
+
+Bott, Elizabeth. 1971. \emph{Family and Social Network}. London: Tavistock Institute of Human Relations.
+
+Bourdieu, Pierre. 1984. \emph{Distinction: a Social Critique of the Judgment of Taste}. Translated by R. Nice. Cambridge: Harvard University Press.
+
+\_\_\_\_\_\_. 1986. "The Forms of Capital." Pp. 241-258 in \emph{Handbook of Theory and Research for the Sociology of Education}, edited by J. Richardson. New York: Greenwood Press.
+
+\_\_\_\_\_\_. 1990. \emph{The Logic of Practice}. Cambridge: Polity Press.
+
+\_\_\_\_\_\_. 2000. \emph{Pascalian Meditations}. Stanford: Stanford University Press.
+
+Brass, Daniel J. 1985. "Men\textquotesingle s and Women\textquotesingle s Networks: A Study of Interaction Patterns and Influence in an Organization." \emph{The Academy of Management Journal} 28:327-343.
+
+Bryson, Bethany. 1997. "What about the Univores? Musical Dislikes and Group-Based Identity Construction among Americans with Low Levels of Education." \emph{Poetics} 25:141-156.
+
+Burt, Ronald S. 2000. "Decay Functions." \emph{Social Networks} 22:1-28.
+
+\_\_\_\_\_\_. 2002. "Bridge Decay." \emph{Social Networks} 24: 333-363.
+
+\_\_\_\_\_\_. 2005. \emph{Brokerage and Closure}. Oxford: Oxford University Press.
+
+Cardon, Dominique and Fabien Granjon. 2005. "Social networks and cultural practices A case study of young avid screen users in France." \emph{Social Networks}:301-315.
+
+Carley, Kathleen M. 1991. "A Theory of Group Stability." \emph{American Sociological Review} 56:331-354.
+
+\_\_\_\_\_\_. 1995. "Communication Technologies and Their Effect on Cultural Homogeneity, Consensus, and the Diffusion of New Ideas." \emph{Sociological Perspectives} 38: 547-571.
+
+Clogg, Clifford C. 1982. "Using Association Models in Sociological Research: Some Examples." \emph{American Journal of Sociology} 88:114-134.
+
+Collins, Randall. 2004. \emph{Interaction Ritual Chains}. Princeton: Princeton University Press.
+
+Coser, Rose Laub. 1991. \emph{In Defense of Modernity: Role Complexity and Individual Autonomy}. Stanford: Stanford University Press.
+
+Crane, Diana. 1993. "High Culture versus Popular Culture Revisited: Toward a Reconceptualization of Recorded Cultures." Pp. 58-74 in \emph{Cultivating Differences: Symbolic Boundaries and the Making of Inequality}, edited by M. Lamont and M. Fournier. Chicago: Chicago University Press.
+
+Crook, Christopher J. 1997. "The Dimensionality of Stratification-Related Cultural Practices in Australia." \emph{Journal of Sociology} 33:226-238.
+
+Degenne, Alain and Marie-Odile Lebeaux. 2005. "The dynamics of personal networks at the time of entry into adult life." \emph{Social Networks} 27:337-358.
+
+DiMaggio, Paul. 1987. "Classification in Art." \emph{American Sociological Review} 52:440-455.
+
+\_\_\_\_\_\_. 1993. "Nadel\textquotesingle s Paradox Revisited: Relational and Cultural Aspects of Organizational Structure." Pp. 118-142 in \emph{Networks and Organizations}, edited by N. Nohria and R. G. Eccles. Boston: Harvard Business School Press.
+
+\_\_\_\_\_\_. 1996. "Are art-museum visitors different from other people? The relationship between attendance and social and political attitudes in the United States." \emph{Poetics} 24:161-180.
+
+\_\_\_\_\_\_. 2000. "Social Structure Institutions and Cultural Goods: The Case of the United States." Pp. 38-62 in \emph{The Politics of Culture}, edited by G. Bradford, M. Gary, and G. Wallach. New York: New Press.
+
+DiMaggio, Paul and John Mohr. 1985. "Cultural Capital, Educational Attainment, and Marital Selection." \emph{American Journal of Sociology} 90:1231-1261.
+
+Dimaggio, Paul and Michael Useem. 1978. "Social Class and Arts Consumption: The Origins and Consequences of Class Differences in Exposure to the Arts in America." \emph{Theory and Society} 5:141-161.
+
+Douglas, Mary and Baron Isherwood. 1996. \emph{The World of Goods: Towards an Anthropology of Consumption}. New York: Routledge.
+
+Erickson, Bonnie H. 1982. "Networks, Ideologies and Belief Systems." Pp. 159-172 in \emph{Social Structures and Network Analysis}, edited by P. Marsden and N. Lin. Beverly Hills, CA: Sage.
+
+\_\_\_\_\_\_. 1988. "The Relational Basis of Attitudes." Pp. 99-121 in \emph{Social Structures a Network Approach}, edited by B. Wellman and S. D. Berkowitz. Cambridge: Cambridge University Press.
+
+\_\_\_\_\_\_. 1996. "Culture, Class, and Connections." \emph{American Journal of Sociology} 102:217-252.
+
+Feld, Scott L. 1981. "The Focused Organization of Social Ties." \emph{American Journal of Sociology} 86:1015-1035.
+
+\_\_\_\_\_\_. 1982. "Social Structural Determinants of Similarity among Associates." \emph{American Sociological Review} 47:797-801.
+
+Fine, Gary Alan. 1979. "Small Groups and Culture Creation: The Idioculture of Little League Baseball Teams." \emph{American Sociological Review} 44: 733-745.
+
+Fischer, Claude S. 1982. \emph{To Dwell among Friends: Personal Networks in Town and City}. Chicago: University of Chicago Press.
+
+Fischer, Claude S. and Stacey J. Oliker. 1983. "A Research Note on Friendship, Gender, and the Life Cycle." \emph{Social Forces} 62:124-133.
+
+Frith, Simon. 1998. \emph{Performing Rites: On the Value of Popular Music}. Cambridge: Harvard University Press.
+
+Gerstel, Naomi. 1988. "Divorce and Kin Ties: The Importance of Gender." \emph{Journal of Marriage and the Family} 50:209-219.
+
+Goodman, Leo A. 1979. "Simple Models for the Analysis of Association in Cross-Classifications having Ordered Categories." \emph{Journal of the American Statistical Association} 74:537-552.
+
+Granovetter, Mark. 2002. " theoretical agenda for economic sociology." Pp. 35-60 in \emph{The new economic sociology: Developments in an emerging field}, edited by M. F. Guillén, R. Collins, P. England, and M. Meyer. New York: Russell Sage.
+
+Hannan, Michael T., Glenn R. Carroll, and László Pólos. 2003. "The Organizational Niche." \emph{Sociological Theory} 21:309-340.
+
+Holbrook, Morris B. and Robert M. Schindler. 1989. "Some Exploratory Findings on the Development of Musical Tastes." \emph{Journal of Consumer Research} 16:119-124.
+
+Holt, Douglas B. 1998. "Does Cultural Capital Structure American Consumption?" \emph{Journal of Consumer Research} 25:1-25.
+
+Holt, Douglas B. 1997. "Distinction in America? Recovering Bourdieu's Theory of Tastes from Its Critics." \emph{Poetics} 25:93-120.
+
+Homans, George C. 1950. \emph{The Human Group}. New York: Harcourt Brace.
+
+Ibarra, Herminia. 1992. "Sex Differences in Network Structure and Access in an Advertising Firm." \emph{Administrative Science Quarterly} 37:422-447.
+
+Illouz, Eva. 1998. \emph{Consuming the Romantic Utopia: Love and the Cultural Contradictions of Capitalism}. Berkeley, CA: University of California Press.
+
+Kane, Danielle. 2004. "A network approach to the puzzle of women\textquotesingle s cultural participation." \emph{Poetics} 32:105-127.
+
+Kracman, Kimberly. 1996. "The Effects of School-Based Arts Instruction on Attendance at Museums and the Performing Arts." \emph{Poetics} 24:203-218.
+
+Lang, Frieder R. 2000. "Endings and Continuity of Social Relationships: Maximizing Intrinsic Benefits within Personal Networks when Feeling Near to Death." \emph{Journal of Social and Personal Relationship} 17:155-182.
+
+Lazarsfeld, Paul F. and Robert K. Merton. 1954. "Friendship as a social process: A substantive and methodological analysis." Pp. 18-66 in \emph{Freedom and Control in Modern Society}, edited by M. Berger, T. Abel, and C. Page. New York: Van Nostrand.
+
+Leslie, Leigh A. and Katherine Grady. 1985. "Changes in Mothers\textquotesingle{} Social Networks and Social Support following Divorce." \emph{Journal of Marriage and the Family} 47:663-673.
+
+Lin, Nan and Mary Dumin. 1986. "Access to Occupations through Social Ties." \emph{Social Networks} 8:365--385.
+
+Lizardo, Omar. 2006. "How Cultural Tastes Shape Personal Networks." \emph{American Sociological Review} 71:778-807.
+
+Long, Elizabeth. 2003. \emph{Book Clubs: Women and the Uses of Reading in Everyday Life}. Chicago: University of Chicago Press.
+
+Mark, Noah P. 1998a. "Beyond Individual Differences: Social Differentiation from First Principles." \emph{American Sociological Review} 63:309-330.
+
+\_\_\_\_\_\_. 1998b. "Birds of a Feather Sing Together." \emph{Social Forces} 77:453-485.
+
+\_\_\_\_\_\_. 2003. "Culture and Competition: Homophily and Distancing Explanations for Cultural Niches." \emph{American Sociological Review} 68:319-345.
+
+McPherson, J. Miller, Pamela A. Popielarz, and Sonja Drobnic. 1992. "Social Networks and Organizational Dynamics." \emph{American Sociological Review} 57:153-170.
+
+McPherson, Miller. 1983. "An Ecology of Affiliation." \emph{American Sociological Review} 48:519-532.
+
+\_\_\_\_\_\_. 2004. "A Blau Space Primer: Prolegomenon to an Ecology of Affiliation." \emph{Industrial and Corporate Change} 13: 263-280.
+
+McPherson, Miller and Lynn Smith-Lovin. 1987. "Homophily in Voluntary Organizations: Status Distance and the Composition of Face-to-Face Groups." \emph{American Sociological Review} 52:370-379.
+
+McPherson, Miller, Lynn Smith-Lovin, and James M. Cook. 2001. "Birds of a Feather: Homophily in Social Networks." \emph{Annual Review of Sociology} 27:415-444.
+
+Milardo, Robert M. 1987. "Changes In Social Networks Of Women And Men Following Divorce: A Review." \emph{Journal of Family Issues} 8: 78-96.
+
+Mische, Ann. 2003. "Cross-talk in Movements: Reconceiving the Culture-Network Link." Pp. 258-280 in \emph{Social Movements and Networks: Relational Approaches to Collective Action}, edited by M. Diani and D. McAdam. London: Oxford University Press.
+
+Morgan, David, Paula Carder, and Margaret Neal. 1997. "Are Some Relationships more Useful than Others? The Value of Similar Others in the Networks of Recent Widows." \emph{Journal of Social and Personal Relationships} 14:745-759.
+
+Morgan, David L., Margaret B. Neal, and Paula Carde. 1997. "The stability of core and peripheral networks over time." \emph{Social Networks} 19:9-25.
+
+Munch, Allison, J. Miller McPherson, and Lynn Smith-Lovin. 1997. "Gender, Children, and Social Contact: The Effects of Childrearing for Men and Women." \emph{American Sociological Review} 62:509-520.
+
+Ostrower, Francie. 1998. "The Arts as Cultural Capital among Elites: Bourdieu\textquotesingle s Theory Reconsidered." \emph{Poetics} 26:43-53.
+
+Pahl, Ray and David J. Pevalin. 2005. "Between family and friends: a longitudinal study of friendship choice." \emph{British Journal of Sociology} 56:433--450.
+
+Peterson, Richard A. 1992. "Understanding Audience Segmentation: From Elite and Popular to Omnivore and Univore." \emph{Poetics} 21:243-258.
+
+\_\_\_\_\_\_. 1997. "The Rise and Fall of Highbrow Snobbery as a Status Marker." \emph{Poetics} 25:75-92.
+
+\_\_\_\_\_\_. 2005. "Problems in Comparative Research: The Example of Omnivorousness." \emph{Poetics} 33:257-282.
+
+Popielarz, Pamela A. and J. Miller McPherson. 1995. "On the Edge or In Between: Niche Position, Niche Overlap, and the Duration of Voluntary Association Memberships." \emph{American Journal of Sociology} 101:698-720.
+
+Relish, Michael. 1997. "It\textquotesingle s Not All Education: Network Measures as Sources of Cultural Competency." \emph{Poetics} 25:121-139.
+
+Simmel, Georg. 1949. "The Sociology of Sociability." \emph{American Journal of Sociology} 55:254-261.
+
+Simon, Herbert A. 1952. "Comments on the Theory of Organizations." \emph{American Political Science Review} 46:1130-1139.
+
+Smith, Tom W. 1995. "Generational Differences in Musical Preferences." \emph{Popular Music and Society} 18:43-59.
+
+Stinchcombe, Arthur L. 1965. "Social Structure and Organizations." Pp. 142-193 in \emph{Handbook of Organizations}, edited by J. G. March. Chicago: Rand McNally.
+
+Straits, Bruce C. 1996. "Ego-Net Diversity: Same- and Cross-Sex Coworker Ties." \emph{Social Networks} 18:29-45.
+
+Suitor, J. Jill, Barry Wellman, and David L. Morgan. 1997. "It\textquotesingle s about time: How, why, and when networks change." \emph{Social Networks} 19:1-7.
+
+Suitor, Jill and Shirley Keeton. 1997. "Once a friend, always a friend? Effects of homophily on women\textquotesingle s support networks across a decade." \emph{Social Networks} 19:51-62.
+
+van Eijck, Koen and Kees van Rees. 2000. "Media Orientation and Media Use: Television Viewing Behavior of Specific Reader Types from 1975 to 1995." \emph{Communication Research} 27:574-616.
+
+van Rees, Kees, Jeroen K. Vermunt, and Marc Verboord. 1999. "Cultural Classifications Under Discussion: Latent Class Analysis of Highbrow and Lowbrow Reading." \emph{Poetics} 26:349-365.
+
+Wali, Alaka, Rebecca Severson, and Mario Longoni. 2002. \emph{Informal Arts: Finding Cohesion, Capacity and Other Cultural Benefits in Unexpected Places}. Chicago: Chicago Center for Arts Policy.
+
+Wellman, Barry. 1979. "The Community Question: The Intimate Networks of East Yorkers." \emph{American Journal of Sociology} 84:1201-1231.
+
+\_\_\_\_\_\_. 1983. "Network Analysis: Some Basic Principles." \emph{Sociological Theory} 1:155-200.
+
+\_\_\_\_\_\_. 1988. "Structural Analysis: from Method and Metaphor to Theory and Substance." Pp. 19-61 in \emph{Social Structures a Network Approach}, edited by B. Wellman and S. D. Berkowitz. Cambridge: Cambridge University Press.
+
+Wellman, Barry and S. D. Berkowitz. 1988. "Introduction: Studying Social Structures." Pp. 1-18 in \emph{Social Structures a Network Approach}, edited by B. Wellman and S. D. Berkowitz. Cambridge: Cambridge University Press.
+
+Wellman, Barry, Peter J. Carrington, and Alan Hall. 1988. "Networks as personal communities." Pp. 130-184 in \emph{Social Structures: a Network Approach}, edited by B. Wellman and S. D. Berkowitz. Cambridge: Cambridge University Press.
+
+Wellman, Barry, Renita Yuk-Lin Wong, David Tindall, and Nancy Nazer. 1997. "A Decade of Network Change: Turnover, Persistence and Stability in Personal Communities." \emph{Social Networks} 19:27--50.
+
+Wellman, Barry and Scot Wortley. 1990. "Different Strokes from Different Folks: Community Ties and Social Support." \emph{American Journal of Sociology} 96:558-588.
+
+
+
+
+
+
+
+
+\input{tex/pcs_taste_change_modern.tex}
+
+\input{tex/pcs_network_stability_modern.tex}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{tex/cultural_conversion_effects.png}
+\caption{Cultural Breadth Sustains Social Connectivity Over Time. Predicted counts from Mundlak Between-Person Effects.}
+\label{fig:culture_conversion}
+\end{figure}
+
+
+
+Table 4. Means, standard deviations and range of the variables used in the analysis. Project Canada Survey 1985-1995
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.5016}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0740}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1255}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1356}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0792}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0842}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Variable
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+N
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Mean
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Std Dev.
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Min
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Max
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+$\Delta$ Social Interaction & 561 & 0.81 & -\/- & 0 & 1 \\
+$\Delta$ Organizational Memberships & 561 & 0.79 & -\/- & 0 & 1 \\
+$\Delta$ Educational Status & 561 & 0.33 & -\/- & 0 & 1 \\
+$\Delta$ Geographic Location & 561 & 0.53 & -\/- & 0 & 1 \\
+$\Delta$ Work Status & 561 & 0.24 & -\/- & 0 & 1 \\
+$\Delta$ Marital Status & 561 & 0.08 & -\/- & 0 & 1 \\
+$\Delta$ N. of Children & 561 & 0.08 & -\/- & 0 & 1 \\
+Marital Status in 1985 (Married=1) & 561 & 0.83 & -\/- & 0 & 1 \\
+Marital Status in 1990 (Married=1) & 561 & 0.81 & -\/- & 0 & 1 \\
+Work Status in 1985 (Employed=1) & 561 & 0.65 & -\/- & 0 & 1 \\
+Work Status in 1990 (Employed=1) & 561 & 0.58 & -\/- & 0 & 1 \\
+Gender (Women=1) & 561 & 0.67 & -\/- & 0 & 1 \\
+City Size in 1985 (Large City=1) & 561 & 0.53 & -\/- & 0 & 1 \\
+City Size in 1990 (Large City=1) & 561 & 0.52 & -\/- & 0 & 1 \\
+Education in 1985 & 561 & 2.71 & 1.30 & 0 & 5 \\
+Education in 1990 & 561 & 2.85 & 1.29 & 0 & 5 \\
+Age in 1985 & 561 & 51.53 & 13.30 & 19 & 87 \\
+Age in 1990 & 561 & 55.96 & 14.12 & 24 & 88 \\
+N. of Organizational Memberships in 1985 & 561 & 1.97 & 1.40 & 0 & 6 \\
+N. of Organizational Memberships in 1990 & 561 & 1.89 & 1.36 & 0 & 9 \\
+Freq. of Social Interaction in 1985 & 561 & 1.54 & 0.58 & 1 & 3 \\
+Freq. of Social Interaction in 1990 & 561 & 2.78 & 1.02 & 1 & 5 \\
+Culture Consumption Scale in 1980 & 339 & 6.76 & 1.19 & 3 & 8 \\
+Culture Consumption Scale in 1985 & 560 & 6.43 & 1.72 & 1 & 10 \\
+Culture Consumption Scale in in 1990 & 556 & 3.74 & 1.40 & 0 & 8 \\
+\end{longtable}
+
+It is well known that measurement error attenuates the relationships between variables. This means that the relationship between two observed variables which are subject to measurement error will generally be weaker than their true relationship. For the analysis of change, this phenomenon implies that when the observed states are subject to measurement error, the strength of the relationships among the true states occupied at two subsequent points in time will be underestimated, or in other words, the amount of change will be overestimated. When the data are subject to measurement error, the observed transitions are, in fact, a mixture of true change and spurious change resulting from measurement error (Hagenaars, 1992; Van de Pol \& De Leeuw, 1986). The latent Markov model makes it possible to separate true change and spurious change caused by measurement error (Vermunt et al, 1999: 184).
+
+\#
+
+Mixed Markov Latent Class Models
+
+\# Frank van de Pol and Rolf Langeheine
+
+\# Sociological Methodology, Vol. 20, (1990), pp. 213-247
+
+\end{document}
