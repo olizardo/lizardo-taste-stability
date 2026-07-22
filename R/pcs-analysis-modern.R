@@ -62,7 +62,7 @@ m1 <- modelsummary(
   notes = list('Controls and SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
   output = 'kableExtra'
 )
-m1 |> kable_styling(latex_options = c('hold_position')) |> save_kable(here('tex', 'pcs_taste_change_modern.tex'))
+writeLines(as.character(m1 |> kable_styling(latex_options = c('hold_position'))), here('tex', 'pcs_taste_change_modern.tex'))
 
 # Mixed-Effects Models
 library(ordinal)
@@ -84,5 +84,5 @@ m2 <- modelsummary(
   notes = list('Wave fixed effects and intercept omitted for space.', 'SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
   output = 'kableExtra'
 )
-m2 |> kable_styling(latex_options = c('hold_position')) |> save_kable(here('tex', 'pcs_network_stability_modern.tex'))
+writeLines(as.character(m2 |> kable_styling(latex_options = c('hold_position'))), here('tex', 'pcs_network_stability_modern.tex'))
 

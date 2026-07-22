@@ -55,7 +55,7 @@ m2 <- modelsummary(
   notes = list('Wave fixed effects and threshold coefficients omitted for space.', 'SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
   output = 'kableExtra'
 )
-m2 |> kableExtra::kable_styling(latex_options = c('hold_position')) |> kableExtra::save_kable(here('tex', 'pcs_kin_comparison.tex'))
+writeLines(as.character(m2 |> kableExtra::kable_styling(latex_options = c('hold_position'))), here('tex', 'pcs_kin_comparison.tex'))
 
 # Build simple coefficient plot
 library(ggplot2)
