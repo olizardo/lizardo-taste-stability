@@ -13,7 +13,7 @@ You are an AI assistant helping Omar Lizardo modernize a legacy sociological dat
 ### Key Project Context
 - The project analyzes cultural taste stability and social networks using the Project Canada Survey (PCS).
 - The original code was written in Stata circa 2008. It has been ported to modern R.
-- The main manuscript is `manuscript.tex` (converted from Word).
+- The main manuscript is the research note `manuscript_research_note.tex`. The legacy `manuscript.tex` should be ignored.
 
 ### Code and Analysis Guidelines
 - R scripts are stored in the `R/` directory.
@@ -29,7 +29,7 @@ You are an AI assistant helping Omar Lizardo modernize a legacy sociological dat
 - Use `modelsummary` to generate LaTeX tables.
 
 ### LaTeX Guidelines
-- The main file is `manuscript.tex`.
+- The main file is `manuscript_research_note.tex`.
 - Ensure math formulas are properly escaped if writing Python regex scripts to patch text.
 - Do not manually insert tables; use `\input{tex/filename.tex}` where possible.
 - Ensure proper paragraph spacing (avoid hard wrapping that breaks LaTeX paragraphs).
