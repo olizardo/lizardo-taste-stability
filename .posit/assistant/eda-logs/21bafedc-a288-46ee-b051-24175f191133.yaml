@@ -13,6 +13,60 @@ directions:
       - "Added 15% confidence intervals to predicted counts in R/visualize_results.R"
       - "Updated geom_errorbar to show vertical intervals"
     ref: "27072f16-9e10-495a-935e-b5640981cc70"
+  - area: "Manuscript structure & figure interpretation"
+    status: Explored
+    notes:
+      - "Moved Figure 2 (within-person effects) and its discussion into Section 3.1"
+      - "Added explicit interpretation referencing Figure 1's steep positive slope"
+      - "Resolved out-of-order figure placement relative to Section 3.2"
+    ref: "4f34ea11-d952-48ed-91cc-fcd8b7f9bb09"
+  - area: "Kin vs. Non-Kin interpretation correction"
+    status: Explored
+    notes:
+      - "Corrected Section 3.2 discussion to reflect significant kin effects in Table 2"
+      - "Between effect is 0.47 for friends vs 0.21 for family"
+      - "Within effects significant for both friends (0.31) and family (0.23)"
+      - "Updated the Abstract to reflect these nuanced kin findings"
+      - "Fixed introductory framing of Figure 3 to appear after results are discussed"
+    ref: "4b870d89-a52e-471d-a8cc-86eaf2c45716"
+  - area: "Figure 1 Y-axis correction"
+    status: Explored
+    notes:
+      - "Changed y-axis from predicted counts to a standardized linear index scale"
+      - "Modified R/visualize_results.R to plot linear combinations of fixed effects"
+      - "Added explanatory parenthetical in manuscript explaining link scales (log-odds vs log count)"
+    ref: "677e7b73-3c00-4d8f-adf1-dd25073f177a"
+  - area: "Unified Network Connectivity Table"
+    status: Explored
+    notes:
+      - "Merged the family/kin model into the main pcs-analysis-modern.R script"
+      - "Generated a single Table 1 with all three outcomes (Friends, Orgs, Family)"
+      - "Standardized the analytic sample to N=1509 for all models"
+      - "Deleted the now-redundant Table 2 import from the manuscript"
+      - "Added Between-Person Variance and Intra-Class Correlation (ICC) to the unified table"
+    ref: "391eac0d-534f-4161-8131-c21abfd75341"
+  - area: "Broken cross-references"
+    status: Explored
+    notes:
+      - "Fixed LaTeX cross-reference for Table 1"
+      - "modelsummary was stripping/escaping the \\label{} tag in the caption"
+      - "Moved the table environment wrapping and \\label command directly into the .tex manuscript"
+    ref: "451ba974-ec3d-4797-8419-71648fecd0ad"
+  - area: "Unified Coefficient Plot"
+    status: Explored
+    notes:
+      - "Replaced Figures 1, 2, and 3 with a single unified coefficient plot"
+      - "Bar chart groups estimates by Outcome (Friends, Family, Orgs)"
+      - "Side-by-side bars for Between (Average) vs Within (Spike) effects with 95% CIs"
+      - "Updated LaTeX source to remove old figures and point all discussion to Figure 1"
+    ref: "cf21dbb5-30ac-4d9e-931c-0b1d9b921383"
+  - area: "Sociodemographic controls elaboration"
+    status: Explored
+    notes:
+      - "Expanded Section 2.1.3 to detail the exact coding of control variables"
+      - "Noted Female (1/0), White (1/0), Education (ordinal treated as continuous), Married (1/0), Children (1/0), and Big City (>100k, 1/0)"
+      - "Removed Age and Employment status from the text as they weren't in the final model specification"
+    ref: "8238dd32-fe27-41af-9695-71875549467d"
 suggestions:
-  - "Check other plots for missing error bars"
-  - "Review the manuscript text for any remaining positional references"
+  - "Check the manuscript layout to ensure the single table and figure fit well"
+  - "Review abstract to ensure it aligns with the finalized visual narrative"

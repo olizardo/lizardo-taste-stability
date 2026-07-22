@@ -57,7 +57,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 
-\title{Examining the Dynamics of Changing Tastes\footnote{\textsuperscript{*}Data for this project were obtained from the Association of Religion Data Archives at \url{http://www.thearda.com}. The author bears sole responsibility for the current interpretation, analyses and tabulations of these data. I would like to thank Paul DiMaggio, Bart Bonikowski, and the members of the Princeton seminar in cultural sociology for their very useful comments on previous drafts of this paper.}}
+\title{The Effect of Cultural Taste Breadth on Formal and Informal Connectivity: A Longitudinal Investigation\footnote{\textsuperscript{*}Data for this project were obtained from the Association of Religion Data Archives at \url{http://www.thearda.com}. The author bears sole responsibility for the current interpretation, analyses and tabulations of these data. I would like to thank Paul DiMaggio, Bart Bonikowski, and the members of the Princeton seminar in cultural sociology for their very useful comments on previous drafts of this paper.}}
 \author{Omar Lizardo \\ Department of Sociology \\ University of California, Los Angeles \\ \href{mailto:olizardo@soc.ucla.edu}{\nolinkurl{olizardo@soc.ucla.edu}} \\ \url{https://olizardo.github.io/mysite/}}
 \date{Words: ~6,300 \\ Last Revised: 21-Jul-26}
 
@@ -65,7 +65,7 @@
 \maketitle
 
 \begin{abstract}
-Does cultural taste primarily flow from shifting social networks, or do durable cultural tastes help stabilize personal communities over time? Network transmission models posit that tastes are volatile and decay when social ties are disrupted, whereas cultural capital models posit that tastes are enduring dispositions that facilitate tie maintenance. Using longitudinal panel data from the Project Canada Survey (1985--1995), I adjudicate between these frameworks via Mundlak (within-between) mixed-effects models. I find that holding durable cultural breadth (omnivore tastes) longitudinally predicts higher rates of maintained social connectivity, specifically for ``elective'' ties (friends) rather than structurally ``prescribed'' ties (family). Furthermore, within-person temporary expansions in cultural repertoires yield immediate boosts to informal socializing, but not to formal organizational integration. These findings point toward a decisive advantage for the cultural capital model: tastes act as durable, selective filters that maintain voluntary social ties, while remaining highly resilient to network shocks.
+Does cultural taste primarily flow from shifting social networks, or do durable cultural tastes help stabilize personal communities over time? Network transmission models posit that tastes are volatile and decay when social ties are disrupted, whereas cultural capital models posit that tastes are enduring dispositions that facilitate tie maintenance. Using longitudinal panel data from the Project Canada Survey (1985--1995), I adjudicate between these frameworks via Mundlak (within-between) mixed-effects models. I find that holding durable cultural breadth (omnivore tastes) longitudinally predicts higher rates of maintained social connectivity, operating strongly for ``elective'' ties (friends) while also significantly aiding structurally ``prescribed'' ties (family). Furthermore, within-person temporary expansions in cultural repertoires yield immediate boosts to informal socializing with both friends and family, but not to formal organizational integration. These findings point toward a decisive advantage for the cultural capital model: tastes act as durable, selective filters that maintain voluntary social ties, while remaining highly resilient to network shocks.
 \end{abstract}
 
 \newpage
@@ -99,7 +99,7 @@ Retention of connections to important interaction foci is measured using a scale
 
 \subsubsection{Sociodemographic controls}\label{sociodemographic-controls}
 
-The models include the following sociodemographic controls: gender, age, education, city size, employment status, marital status, and presence of children in the household. The descriptive statistics of the variables are detailed in the Appendix (Table \ref{tab:descriptives}).
+The models include the following sociodemographic controls, measured consistently across the waves. \emph{Gender} is a time-invariant binary indicator (1 = Female, 0 = Male). \emph{Race} is a time-invariant binary indicator (1 = White, 0 = Non-White). \emph{Education} is an ordinal measure capturing the respondent's highest level of degree attainment across categories ranging from ``Some high school'' to ``Post-graduate degree''; it was treated as a continuous variable to capture incremental status gains. \emph{Marital status} is a time-varying binary indicator (1 = Married, 0 = Not married/Divorced/Widowed). \emph{Presence of children} is a time-varying binary indicator reflecting whether children currently live in the respondent's household (1 = Yes, 0 = No). Finally, \emph{City size} (Big City) is a time-varying binary indicator for whether the respondent lives in a major metropolitan area with a population over 100,000 (1 = Yes, 0 = No). The descriptive statistics for these variables are detailed in the Appendix (Table \ref{tab:descriptives}).
 
 \subsection{Longitudinal Culture conversion model}\label{longitudinal-culture-conversion-model}
 
@@ -115,40 +115,29 @@ Furthermore, because the two sets of primary outcome variables for social connec
 \subsection{Formal and Informal Connectivity}
 The culture conversion model \citep{lizardo2006, lewis2018conversion-9be, joseph2014check-ins-26e, jaeger2026} implies that individuals who have command of a wide variety of tastes will be able to sustain larger and sparser personal networks over time, allowing them to reap the benefits of those social connections in the form of higher than average rates of social interaction and a higher ability to remain connected to important social foci where new contacts are made and old ones are sustained. The results of the Mundlak (within-between) mixed-effects models of the effect of cultural capital (in the form of ``omnivore'' taste breadth) on network outcomes across time periods are presented in Table \ref{tab:network_stability}.
 
+\begin{table}[htbp]
 \input{Tabs/pcs_network_stability_modern.tex}
+\label{tab:network_stability}
+\end{table}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{Plots/cultural_conversion_effects.png}
-\caption{Cultural Breadth Sustains Social Connectivity Over Time. Predicted counts from Mundlak Between-Person Effects.}
-\label{fig:culture_conversion}
+\includegraphics[width=0.85\textwidth]{Plots/unified_cultural_effects.png}
+\caption{Effects of Cultural Breadth on Network Connectivity (Estimates on Log Link Scale and 95\% CIs).}
+\label{fig:unified_cultural_effects}
 \end{figure}
 
-The results are highly consistent with the culture conversion model, particularly when examining the between-person differences (the person-mean effects). I find that persons who display a persistently wide variety of tastes (a higher longitudinal mean of cultural breadth) sustain significantly higher frequencies of social interaction with friends ($p < 0.001$). While this cross-sectional ``between'' effect does not offer definitive evidence of strict causality, it cements in a longitudinal modeling framework the results previously reported by other analysts using cross-sectional data \citep{lizardo2006, cebula2023social-fe1, jaeger2026, cebula2024structure-f21}. Broad cultural tastes are strongly associated with sustaining larger and more active patterns of interpersonal engagement over time. 
+The results are highly consistent with the culture conversion model, particularly when examining the between-person differences (the person-mean effects). As visualized in Figure \ref{fig:unified_cultural_effects}, I find that persons who display a persistently wide variety of tastes (a higher longitudinal mean of cultural breadth) sustain significantly higher frequencies of social interaction with friends ($p < 0.001$). While this cross-sectional ``between'' effect does not offer definitive evidence of strict causality, it cements in a longitudinal modeling framework the results previously reported by other analysts using cross-sectional data \citep{lizardo2006, cebula2023social-fe1, jaeger2026, cebula2024structure-f21}. Broad cultural tastes are strongly associated with sustaining larger and more active patterns of interpersonal engagement over time. 
 
 Furthermore, having a high average repertoire of tastes is not only useful in sustaining higher levels of informal social connectivity, but it also significantly raises the chances of remaining tied to important social foci of interaction, such as voluntary associations ($p < 0.001$). Because recruitment (and the over-time stability of membership) into these foci is largely a matter of keeping alive the network ties that bind the individual to other members of the group \citep{popielarz1995, brashears2017organizations-7d4}, it is no surprise that whatever resource helps the individual to sustain social connections to other persons will also appear to sustain his or her connection to these larger social entities.
 
-\subsection{Tie-Specific Buffering: Kin vs. Non-Kin} As shown in Figure \ref{fig:kin_vs_nonkin}, the culture conversion hypothesis posits that cultural capital provides conversational resources to maintain relationships. However, sociological theory differentiates between ``Elective'' ties (friends) maintained by homophily, and structurally ``prescribed'' ties (family) maintained by duty. To test this, I compare the effect of cultural breadth on interaction frequencies for friends versus family using parallel Mundlak cumulative link models (Table \ref{tab:kin_comparison}).
+The Mundlak specification also allows us to evaluate the \textit{within}-person effects---whether a temporary spike in an individual's cultural tastes over their own average translates to immediate gains in connectivity. Here, the dynamics differ by tie type (Figure \ref{fig:unified_cultural_effects}). For informal interaction with friends, the within-person effect is highly significant ($p < 0.001$), indicating that when an individual temporarily expands their cultural taste breadth above their own baseline, they experience a simultaneous boost in socializing with friends. However, for organizational memberships, the within-person effect is not significant ($p = 0.119$). This suggests that while temporary spikes in cultural engagement immediately boost fluid, informal socializing, it is the durable, trait-like possession of cultural capital (the between-person effect) that is required to sustain structural integration into formal organizations.
 
-\input{Tabs/pcs_kin_comparison.tex}
+\subsection{Tie-Specific Buffering: Kin vs. Non-Kin} 
 
-Consistent with expectations, the between-person effect of average cultural breadth on friendship interaction is substantial and highly significant ($\beta \approx 0.47, p < 0.001$). In stark contrast, cultural breadth has virtually no effect on the frequency of interacting with family members ($\beta \approx 0.05, p = 0.407$). Cultural capital operates exactly as theorized: it is a tool specifically used to generate and maintain weak or Elective ties in modern societies; it offers no structural advantage for maintaining family relationships, which operate on a logic of structural obligation rather than shared cultural homophily.
+The culture conversion hypothesis posits that cultural capital provides conversational resources to maintain relationships. However, sociological theory differentiates between ``Elective'' ties (friends) maintained by homophily, and structurally ``prescribed'' ties (family) maintained by duty. To test this, I compare the effect of cultural breadth on interaction frequencies for friends versus family using the parallel Mundlak cumulative link models presented in Table \ref{tab:network_stability}.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.85\textwidth]{Plots/within_formal_informal.png}
-\caption{Within-Person Spikes in Cultural Capital Boost Informal but Not Formal Connectivity.}
-\label{fig:within_formal_informal}
-\end{figure}
-
-The Mundlak specification also allows us to evaluate the \textit{within}-person effects---whether a temporary spike in an individual's cultural tastes over their own average translates to immediate gains in connectivity. Here, the dynamics differ by tie type (Figure \ref{fig:within_formal_informal}). For informal interaction with friends, the within-person effect is highly significant ($p < 0.001$), indicating that when an individual temporarily expands their cultural taste breadth above their own baseline, they experience a simultaneous boost in socializing with friends. However, for organizational memberships, the within-person effect is not significant ($p = 0.119$). This suggests that while temporary spikes in cultural engagement immediately boost fluid, informal socializing, it is the durable, trait-like possession of cultural capital (the between-person effect) that is required to sustain structural integration into formal organizations.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.85\textwidth]{Plots/kin_vs_nonkin.png}
-\caption{Cultural Capital Maintains Elective Ties Over Prescribed Ties.}
-\label{fig:kin_vs_nonkin}
-\end{figure}
+Consistent with expectations, the between-person effect of average cultural breadth on friendship interaction is substantial and highly significant ($\beta \approx 0.47, p < 0.001$). However, the data challenge the strict expectation that cultural capital is irrelevant for family ties. Cultural breadth also has a significant, positive effect on the frequency of interacting with family members ($\beta \approx 0.21, p < 0.05$), though the effect size is less than half the magnitude of the effect on friends. Furthermore, within-person temporary expansions in cultural repertoires yield significant immediate boosts to informal socializing for both friends ($\beta \approx 0.31, p < 0.05$) and family ($\beta \approx 0.23, p < 0.05$). As visually summarized in Figure \ref{fig:unified_cultural_effects}, these differential effect sizes underscore that cultural capital operates on dual tracks. It serves as an essential engine for navigating and sustaining choice-based friendships in modern societies, while also providing meaningful, though much weaker, interactional resources for family relationships beyond strict structural obligation.
 
 \section{Discussion and Conclusion}\label{discussion-and-conclusion}
 

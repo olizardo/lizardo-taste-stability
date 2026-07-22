@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.28)  22 JUL 2026 09:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.28)  22 JUL 2026 10:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -609,58 +609,27 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 {/home/omarlizardo/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [2] [3] [4] (./Tabs/pcs_network_stability_modern.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 10.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+(Font)              <7> on input line 7.
 )
-<Plots/cultural_conversion_effects.png, id=130, 578.16pt x 361.35pt>
-File: Plots/cultural_conversion_effects.png Graphic file (type png)
-<use Plots/cultural_conversion_effects.png>
-Package pdftex.def Info: Plots/cultural_conversion_effects.png  used on input line 122.
+Overfull \hbox (68.22289pt too wide) in paragraph at lines 3--121
+ [][] 
+ []
+
+<Plots/unified_cultural_effects.png, id=132, 578.16pt x 361.35pt>
+File: Plots/unified_cultural_effects.png Graphic file (type png)
+<use Plots/unified_cultural_effects.png>
+Package pdftex.def Info: Plots/unified_cultural_effects.png  used on input line 125.
 (pdftex.def)             Requested size: 293.25209pt x 183.28256pt.
- [5{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
-<Plots/kin_vs_nonkin.png, id=159, 505.89pt x 361.35pt>
-File: Plots/kin_vs_nonkin.png Graphic file (type png)
-<use Plots/kin_vs_nonkin.png>
-Package pdftex.def Info: Plots/kin_vs_nonkin.png  used on input line 133.
-(pdftex.def)             Requested size: 293.25429pt x 209.46736pt.
- (./Tabs/pcs_kin_comparison.tex
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 35.
- (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [6
-pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.143 
-      {/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [7
+[5{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}] [6{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.143 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+l.131 
+       <./Plots/unified_cultural_effects.png (PNG copy)>] [7] (./manuscript_research_note.bbl [8] [9]) (./Tabs/descriptives.tex [10]) [11
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.143 
-       <./Plots/cultural_conversion_effects.png (PNG copy)> <./Plots/kin_vs_nonkin.png (PNG copy)>] [8]
-<Plots/within_formal_informal.png, id=183, 505.89pt x 361.35pt>
-File: Plots/within_formal_informal.png Graphic file (type png)
-<use Plots/within_formal_informal.png>
-Package pdftex.def Info: Plots/within_formal_informal.png  used on input line 146.
-(pdftex.def)             Requested size: 293.25429pt x 209.46736pt.
- [9
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.158 
-       <./Plots/within_formal_informal.png (PNG copy)>] (./manuscript_research_note.bbl [10] [11]) (./Tabs/descriptives.tex) [12] [13
-pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.171 \end{document}
+l.160 \end{document}
                     ] (./manuscript_research_note.aux)
  ***********
 LaTeX2e <2026-06-01>
@@ -668,18 +637,18 @@ L3 programming layer <2026-06-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 17930 strings out of 469097
- 360645 string characters out of 5457857
- 756953 words of memory out of 5000000
- 46660 multiletter control sequences out of 15000+600000
- 701015 words of font info for 95 fonts, out of 8000000 for 9000
+ 17255 strings out of 469097
+ 345928 string characters out of 5457857
+ 740731 words of memory out of 5000000
+ 45999 multiletter control sequences out of 15000+600000
+ 695252 words of font info for 93 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 88i,10n,112p,1508b,1175s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,10n,93p,1508b,1163s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on manuscript_research_note.pdf (13 pages, 616190 bytes).
+Output written on manuscript_research_note.pdf (11 pages, 422729 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
- 296 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
- 104 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 337 PDF objects out of 1000 (max. 8388607)
+ 292 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 110 words of extra memory for PDF output out of 10000 (max. 10000000)
 
