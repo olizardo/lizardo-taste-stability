@@ -80,7 +80,7 @@ m2 <- modelsummary(
     list("raw" = "Between-Person Variance", "clean" = "Between-Person Variance", "fmt" = 2),
     list("raw" = "ICC (Between Prop.)", "clean" = "ICC (Between-Person Prop.)", "fmt" = 2)
   ),
-  title = 'Mundlak Mixed-Effects Models for Network Connectivity (1985-1995)',
+  title = 'Mundlak Mixed-Effects Models for Network Connectivity (1985-1995)\\label{tab:network_stability}',
   notes = list('Wave fixed effects and threshold coefficients omitted for space.', 'SEs omitted for space.', '+ p < 0.1, * p < 0.05, ** p < 0.01', 'Within-person variance for count/ordinal models is fixed by their theoretical link functions.'),
   output = here('Tabs', 'pcs_network_stability_modern.tex')
 )
