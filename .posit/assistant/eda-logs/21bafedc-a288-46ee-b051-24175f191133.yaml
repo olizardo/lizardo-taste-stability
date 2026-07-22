@@ -1,0 +1,18 @@
+title: "Taste Stability Manuscript"
+conversationId: "21bafedc-a288-46ee-b051-24175f191133"
+directions:
+  - area: "Manuscript LaTeX references"
+    status: Explored
+    notes:
+      - "Replaced positional references ('below') with proper cross-references"
+      - "Added labels and updated captions in table files"
+    ref: "b729bb2e-20cd-4d52-84d9-ba132dc49891"
+  - area: "Figure 1 error bars"
+    status: Explored
+    notes:
+      - "Added 15% confidence intervals to predicted counts in R/visualize_results.R"
+      - "Updated geom_errorbar to show vertical intervals"
+    ref: "27072f16-9e10-495a-935e-b5640981cc70"
+suggestions:
+  - "Check other plots for missing error bars"
+  - "Review the manuscript text for any remaining positional references"
