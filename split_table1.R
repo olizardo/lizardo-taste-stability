@@ -1,4 +1,11 @@
+library(dplyr)
+library(modelsummary)
+library(kableExtra)
+library(here)
 
+lines <- readLines("R/pcs-analysis-modern.R")
+
+new_script <- "
 library(dplyr)
 library(tidyr)
 library(lme4)
@@ -12,7 +19,7 @@ options(modelsummary_factory_latex = 'kableExtra')
 
 df <- readRDS(here('R', 'pcs_processed.rds'))
 
-cultlist <- c('music', 'sports', 'paper', 'books')
+cultlist <- c('music', 'movie', 'play', 'sports', 'paper', 'books', 'spevent', 'videos', 'hobby', 'mags')
 controls <- c('agegrp', 'educ', 'income', 'married', 'childre', 'working', 'bigcity')
 demchang <- c('chngfriends', 'chngorgs', 'chngeduc', 'chngmarital', 'chngchildre', 'chngwrkstat', 'chngareanam')
 
@@ -39,9 +46,12 @@ for (c in cultlist) {
   }
 }
 
-names(logit_models) <- c('Music', 'Sports', 'Newspaper', 'Books')
+names(logit_models) <- c('Music', 'Movies', 'Play', 'Sports', 'Paper', 'Books', 'Sp.Event', 'Videos', 'Hobby', 'Mags')[1:length(logit_models)]
 
 # Split logit_models in two
+half <- ceiling(length(logit_models) / 2)
+models_part1 <- logit_models[1:half]
+models_part2 <- logit_models[(half+1):length(logit_models)]
 
 coef_map_rename <- c(
     'chngfriends_endTRUE' = 'Change in Friends',
@@ -53,16 +63,28 @@ coef_map_rename <- c(
     'chngareanam_endTRUE' = 'Geographic Mobility'
 )
 
-m1 <- modelsummary(
-  logit_models,
-  vcov = lapply(logit_models, function(m) sandwich::vcovCL(m, cluster = m$data$id)),
+m1a <- modelsummary(
+  models_part1,
+  vcov = lapply(models_part1, function(m) sandwich::vcovCL(m, cluster = m$data$id)),
   estimate = '{estimate}{stars}', statistic = NULL, stars = c('+' = 0.1, '*' = 0.05),
-  coef_rename = coef_map_rename, coef_omit = 'Intercept|.*_start|female|white|as\\.factor', gof_map = c('nobs'),
-  title = 'Predictors of Taste Loss (Pooled Discrete-Time Logistic Regression)',
+  coef_rename = coef_map_rename, coef_omit = 'Intercept|.*_start|female|white|as\\\\.factor', gof_map = c('nobs'),
+  title = 'Predictors of Taste Loss (Part 1)',
   notes = list('Controls and SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
   output = 'kableExtra'
 )
-m1 |> kable_styling(latex_options = c('hold_position')) |> save_kable(here('tex', 'pcs_taste_change_modern.tex'))
+m1a |> kable_styling(latex_options = c('scale_down', 'hold_position')) |> save_kable(here('tex', 'pcs_taste_change_modern_pt1.tex'))
+
+m1b <- modelsummary(
+  models_part2,
+  vcov = lapply(models_part2, function(m) sandwich::vcovCL(m, cluster = m$data$id)),
+  estimate = '{estimate}{stars}', statistic = NULL, stars = c('+' = 0.1, '*' = 0.05),
+  coef_rename = coef_map_rename, coef_omit = 'Intercept|.*_start|female|white|as\\\\.factor', gof_map = c('nobs'),
+  title = 'Predictors of Taste Loss (Part 2)',
+  notes = list('Controls and SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
+  output = 'kableExtra'
+)
+m1b |> kable_styling(latex_options = c('scale_down', 'hold_position')) |> save_kable(here('tex', 'pcs_taste_change_modern_pt2.tex'))
+
 
 # Poisson Models
 df_long <- df %>% mutate(across(everything(), haven::zap_labels)) %>% select(id, female, white, friends3, friends4, friends5, numsocmems3, numsocmems4, numsocmems5, numcult3, numcult4, numcult5, educ3, educ4, educ5, married3, married4, married5, childre3, childre4, childre5, bigcity3, bigcity4, bigcity5) %>% pivot_longer(cols = matches('3$|4$|5$'), names_to = c('.value', 'wave'), names_pattern = '(.*)(3|4|5)$') %>% mutate(wave = as.numeric(wave)) %>% mutate(across(c(friends, numsocmems, numcult, educ, married, childre, bigcity), ~ as.numeric(haven::zap_labels(.))))
@@ -80,5 +102,7 @@ m2 <- modelsummary(
   notes = list('Wave fixed effects and intercept omitted for space.', 'SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
   output = 'kableExtra'
 )
-m2 |> kable_styling(latex_options = c('hold_position')) |> save_kable(here('tex', 'pcs_network_stability_modern.tex'))
+m2 |> kable_styling(latex_options = c('scale_down', 'hold_position')) |> save_kable(here('tex', 'pcs_network_stability_modern.tex'))
 
+"
+writeLines(new_script, "R/pcs-analysis-modern.R")

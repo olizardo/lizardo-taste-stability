@@ -1,48 +1,23 @@
-
 library(dplyr)
-library(tidyr)
-library(lme4)
-library(modelsummary)
-library(lmtest)
-library(sandwich)
-library(here)
-library(kableExtra)
 
-options(modelsummary_factory_latex = 'kableExtra')
+lines <- readLines("R/pcs-analysis-modern.R")
 
-df <- readRDS(here('R', 'pcs_processed.rds'))
-
-cultlist <- c('music', 'sports', 'paper', 'books')
-controls <- c('agegrp', 'educ', 'income', 'married', 'childre', 'working', 'bigcity')
-demchang <- c('chngfriends', 'chngorgs', 'chngeduc', 'chngmarital', 'chngchildre', 'chngwrkstat', 'chngareanam')
-
-p1 <- df %>% select(id, female, white, all_of(paste0(cultlist, '3')), all_of(paste0(cultlist, '4')), all_of(paste0(controls, '3')), all_of(paste0(demchang, '4'))) %>% mutate(period = 1) %>% rename_with(~gsub('3$', '_start', .), ends_with('3')) %>% rename_with(~gsub('4$', '_end', .), ends_with('4'))
-p2 <- df %>% select(id, female, white, all_of(paste0(cultlist, '4')), all_of(paste0(cultlist, '5')), all_of(paste0(controls, '4')), all_of(paste0(demchang, '5'))) %>% mutate(period = 2) %>% rename_with(~gsub('4$', '_start', .), ends_with('4')) %>% rename_with(~gsub('5$', '_end', .), ends_with('5'))
-df_transitions <- bind_rows(p1, p2)
-
-logit_models <- list()
-for (c in cultlist) {
-  df_sub <- df_transitions %>% filter(.data[[paste0(c, '_start')]] == 1) %>% mutate(event = ifelse(.data[[paste0(c, '_end')]] >= 3, 1, 0)) %>% drop_na(event, all_of(paste0(controls, '_start')), all_of(paste0(demchang, '_end')))
-  if (nrow(df_sub) > 0) {
-    vars_to_check <- c(paste0(demchang, '_end'), paste0(controls, '_start'), 'female', 'white', 'period')
-    valid_vars <- c()
-    for (v in vars_to_check) {
-      if (length(unique(df_sub[[v]])) > 1) {
-        if (v == 'period') { valid_vars <- c(valid_vars, 'as.factor(period)') } else { valid_vars <- c(valid_vars, v) }
-      }
+new_lines <- character(0)
+for(line in lines) {
+    if (grepl("cultlist <- c\\(", line)) {
+        new_lines <- c(new_lines, "cultlist <- c('music', 'sports', 'paper', 'books')")
+    } else if (grepl("names\\(logit_models\\)", line)) {
+        new_lines <- c(new_lines, "names(logit_models) <- c('Music', 'Sports', 'Newspaper', 'Books')")
+    } else if (grepl("half <- ceiling\\(length\\(logit_models\\) / 2\\)", line)) {
+        # Skip the split table logic entirely, we'll revert to a single table
+        break
+    } else {
+        new_lines <- c(new_lines, line)
     }
-    if (length(valid_vars) > 0) {
-       f_str <- paste('event ~', paste(valid_vars, collapse=' + '))
-       m <- glm(as.formula(f_str), data = df_sub, family = binomial(link='logit'))
-       logit_models[[c]] <- m
-    }
-  }
 }
 
-names(logit_models) <- c('Music', 'Sports', 'Newspaper', 'Books')
-
-# Split logit_models in two
-
+# Add back the single table generation for Table 1
+new_lines <- c(new_lines, "
 coef_map_rename <- c(
     'chngfriends_endTRUE' = 'Change in Friends',
     'chngorgs_endTRUE' = 'Change in Org. Memberships',
@@ -57,7 +32,7 @@ m1 <- modelsummary(
   logit_models,
   vcov = lapply(logit_models, function(m) sandwich::vcovCL(m, cluster = m$data$id)),
   estimate = '{estimate}{stars}', statistic = NULL, stars = c('+' = 0.1, '*' = 0.05),
-  coef_rename = coef_map_rename, coef_omit = 'Intercept|.*_start|female|white|as\\.factor', gof_map = c('nobs'),
+  coef_rename = coef_map_rename, coef_omit = 'Intercept|.*_start|female|white|as\\\\.factor', gof_map = c('nobs'),
   title = 'Predictors of Taste Loss (Pooled Discrete-Time Logistic Regression)',
   notes = list('Controls and SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
   output = 'kableExtra'
@@ -81,4 +56,6 @@ m2 <- modelsummary(
   output = 'kableExtra'
 )
 m2 |> kable_styling(latex_options = c('hold_position')) |> save_kable(here('tex', 'pcs_network_stability_modern.tex'))
+")
 
+writeLines(new_lines, "R/pcs-analysis-modern.R")

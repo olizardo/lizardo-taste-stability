@@ -1,0 +1,5 @@
+library(dplyr)
+library(here)
+df <- readRDS(here("R", "pcs_processed.rds"))
+cat("Cross-tab of childre3 and childre4:\n")
+print(table(df$childre3, df$childre4, useNA="always"))

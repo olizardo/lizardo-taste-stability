@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.28)  21 JUL 2026 19:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.28)  21 JUL 2026 20:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,25 +661,18 @@ File: tex/taste_loss_forest_plot.png Graphic file (type png)
 <use tex/taste_loss_forest_plot.png>
 Package pdftex.def Info: tex/taste_loss_forest_plot.png  used on input line 167.
 (pdftex.def)             Requested size: 293.25209pt x 183.28256pt.
- (./tex/pcs_taste_change_modern.tex
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 31.
- (/home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [7 <./tex/taste_loss_forest_plot.png (PNG copy)>] [8{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] (./tex/pcs_network_stability_modern.tex
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 33.
-)
-<tex/cultural_conversion_effects.png, id=86, 578.16pt x 361.35pt>
+ (./tex/pcs_taste_change_modern.tex) [7 <./tex/taste_loss_forest_plot.png (PNG copy)>] (./tex/pcs_network_stability_modern.tex)
+<tex/cultural_conversion_effects.png, id=72, 578.16pt x 361.35pt>
 File: tex/cultural_conversion_effects.png Graphic file (type png)
 <use tex/cultural_conversion_effects.png>
 Package pdftex.def Info: tex/cultural_conversion_effects.png  used on input line 200.
 (pdftex.def)             Requested size: 293.25209pt x 183.28256pt.
- [9] [10 <./tex/cultural_conversion_effects.png (PNG copy)>] [11] [12] [13] [14] [15] [16] (./tex/pcs_taste_change_modern.tex) (./tex/pcs_network_stability_modern.tex)
+ [8] [9 <./tex/cultural_conversion_effects.png (PNG copy)>] [10] [11] [12] [13] [14] [15] [16] (./tex/pcs_taste_change_modern.tex) (./tex/pcs_network_stability_modern.tex)
 File: tex/cultural_conversion_effects.png Graphic file (type png)
 <use tex/cultural_conversion_effects.png>
 Package pdftex.def Info: tex/cultural_conversion_effects.png  used on input line 444.
 (pdftex.def)             Requested size: 293.25209pt x 183.28256pt.
- [17] [18] [19] [20] (./manuscript_research_note.aux)
+ [17{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}] [18] (./manuscript_research_note.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
@@ -690,18 +683,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 20302 strings out of 469097
- 404310 string characters out of 5457857
- 882988 words of memory out of 5000000
- 48761 multiletter control sequences out of 15000+600000
- 726928 words of font info for 231 fonts, out of 8000000 for 9000
+ 18931 strings out of 469097
+ 375298 string characters out of 5457857
+ 821904 words of memory out of 5000000
+ 47429 multiletter control sequences out of 15000+600000
+ 713669 words of font info for 215 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 88i,12n,117p,2647b,2563s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri7.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy9.pfb>
-Output written on manuscript_research_note.pdf (20 pages, 835516 bytes).
+ 88i,8n,93p,2647b,1180s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri7.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+Output written on manuscript_research_note.pdf (18 pages, 778896 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 57480 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 253 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 49288 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -1,0 +1,8 @@
+library(dplyr)
+library(haven)
+library(here)
+raw_pcs <- read_dta(here("PCS", "pc1980-85-90-95.dta"))
+cat("music4:\n"); print(table(raw_pcs$music4, useNA="always"))
+cat("paper4:\n"); print(table(raw_pcs$paper4, useNA="always"))
+cat("sports4:\n"); print(table(raw_pcs$sports4, useNA="always"))
+cat("books4:\n"); print(table(raw_pcs$books4, useNA="always"))
