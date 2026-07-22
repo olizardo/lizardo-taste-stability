@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: manuscript_research_note.aux
+The style file: apalike.bst
+Database file #1: references.bib
+Warning--empty booktitle in lazarsfeld1954
+Warning--empty publisher in lazarsfeld1954
+You've used 34 entries,
+            1935 wiz_defined-function locations,
+            638 strings with 8310 characters,
+and the built_in function-call counts, 10429 in all, are:
+= -- 1029
+> -- 355
+< -- 32
++ -- 118
+- -- 108
+* -- 713
+:= -- 1964
+add.period$ -- 130
+call.type$ -- 34
+change.case$ -- 221
+chr.to.int$ -- 34
+cite$ -- 36
+duplicate$ -- 451
+empty$ -- 712
+format.name$ -- 172
+if$ -- 1985
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 37
+newline$ -- 201
+num.names$ -- 102
+pop$ -- 174
+preamble$ -- 1
+purify$ -- 224
+quote$ -- 0
+skip$ -- 369
+stack$ -- 0
+substring$ -- 453
+swap$ -- 33
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 198
+warning$ -- 2
+while$ -- 72
+width$ -- 0
+write$ -- 468
+(There were 2 warnings)
