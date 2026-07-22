@@ -1,0 +1,35 @@
+\begin{table}
+\centering
+\begin{talltblr}[         %% tabularray outer open
+caption={Mundlak Mixed-Effects Models for Kin and Non-Kin Interaction},
+note{}={Wave fixed effects and threshold coefficients omitted for space.},
+note{ }={SEs omitted for space.},
+note{  }={+ p < 0.1, * p < 0.05},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]},
+hline{2}={1-3}{solid, black, 0.05em},
+hline{16}={1-3}{solid, black, 0.05em},
+hline{1}={1-3}{solid, black, 0.08em},
+hline{17}={1-3}{solid, black, 0.08em},
+column{2-3}={}{halign=c},
+column{1}={}{halign=l},
+}                     %% tabularray inner close
+& Friends (Non-Kin) & Family (Kin) \\
+Seldom/Never|Sometimes & \num{-1.302}+ & \num{-1.828}* \\
+Sometimes|Very Often & \num{1.744}* & \num{-0.122} \\
+Cultural Breadth (Within) & \num{0.306}* & \num{0.226}* \\
+Education (Within) & \num{0.079} & \num{0.203} \\
+Married (Within) & \num{-0.609} & \num{0.850} \\
+Children (Within) & \num{0.149} & \num{0.274} \\
+Big City (Within) & \num{-0.645} & \num{-0.768} \\
+Cultural Breadth (Between) & \num{0.470}* & \num{0.207}* \\
+Education (Between) & \num{-0.007} & \num{0.239}* \\
+Married (Between) & \num{-0.326} & \num{1.590}* \\
+Children (Between) & \num{0.012} & \num{0.009} \\
+Big City (Between) & \num{-0.147} & \num{-0.047} \\
+Female & \num{-0.725}* & \num{-0.575}* \\
+White & \num{-0.124} & \num{-0.510} \\
+Num.Obs. & \num{1509} & \num{1509} \\
+\end{talltblr}
+\end{table}

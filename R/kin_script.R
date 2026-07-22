@@ -53,9 +53,9 @@ m2 <- modelsummary(
   coef_omit = 'Intercept|wave', gof_map = c('nobs'),
   title = 'Mundlak Mixed-Effects Models for Kin and Non-Kin Interaction',
   notes = list('Wave fixed effects and threshold coefficients omitted for space.', 'SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
-  output = 'kableExtra'
+  output = here('Tabs', 'pcs_kin_comparison.tex')
 )
-writeLines(as.character(m2 |> kableExtra::kable_styling(latex_options = c('hold_position'))), here('tex', 'pcs_kin_comparison.tex'))
+writeLines(as.character(m2 |> kableExtra::kable_styling(latex_options = c('hold_position'))), here('Tabs', 'pcs_kin_comparison.tex'))
 
 # Build simple coefficient plot
 library(ggplot2)
@@ -71,5 +71,5 @@ ggplot(coefs, aes(x = Model, y = Estimate, fill=Model)) +
   theme_minimal() +
   labs(title = "Effect of Cultural Capital on Interaction Frequency", y = "Log-Odds Estimate (Between-Person)", x = "Tie Type") +
   theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
-ggsave(here("tex", "kin_vs_nonkin.png"), width = 6, height = 4)
+ggsave(here("Tabs", "kin_vs_nonkin.png"), width = 6, height = 4)
 

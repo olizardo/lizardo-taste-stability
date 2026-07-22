@@ -134,11 +134,13 @@ Because taste loss events are fundamentally expected by network transmission the
 
 \emph{Frequency of Taste Loss.} Consistent with the cultural capital hypothesis, across all four cultural taste domains, taste loss is a remarkably rare event. Less than 2\% of respondents who start out listening to music or reading the newspaper ``very often'' in 1985 drop to ``seldom'' or ``never'' over the entire 10-year period leading up to 1995. A slightly larger proportion lose the taste for reading books (3.6\%) or following sports (4.3\%), but the main empirical finding here is that the great majority of respondents retain their core tastes across a full decade. 
 
+\input{Tabs/pcs_taste_change_modern.tex}
+
 This supports the cultural capital assumption that tastes are highly stable over time, exhibiting stability rates that far exceed what is typically observed for personal networks \citep{suitor1997, wellman1997}. Because the absolute rate of taste shedding is close to zero, it is not possible for network turnover (which occurs frequently) to be systematically driving mass abandonment of cultural practices. The network hypothesis of taste volatility is thus poorly supported by these data; tastes behave as durable dispositions rather than malleable contents subject to relational disruptions.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{tex/taste_retention.png}
+\includegraphics[width=0.85\textwidth]{Plots/taste_retention.png}
 \caption{The Durability of Cultural Capital. Cultural tastes exhibit remarkably high retention rates over time.}
 \label{fig:taste_retention}
 \end{figure}
@@ -157,11 +159,11 @@ Furthermore, because the two primary outcome variables for social connectivity h
 
 The culture conversion model \citep{lizardo2006, lewis2018conversion-9be, joseph2014check-ins-26e} implies that individuals who have command of a wide variety of tastes will be able to sustain larger and sparser personal networks over time, allowing them to reap the benefits of those social connections in the form of higher than average rates of social interaction and a higher ability to remain connected to important social foci where new contacts are made and old ones are sustained. The results of the Mundlak (within-between) mixed-effects models of the effect of cultural capital (in the form of ``omnivore'' taste breadth) on network outcomes across time periods are shown below.
 
-\input{tex/pcs_network_stability_modern.tex}
+\input{Tabs/pcs_network_stability_modern.tex}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{tex/cultural_conversion_effects.png}
+\includegraphics[width=0.85\textwidth]{Plots/cultural_conversion_effects.png}
 \caption{Cultural Breadth Sustains Social Connectivity Over Time. Predicted counts from Mundlak Between-Person Effects.}
 \label{fig:culture_conversion}
 \end{figure}
@@ -174,11 +176,16 @@ Furthermore, having a high average repertoire of tastes is not only useful in su
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{tex/kin_vs_nonkin.png}
+\includegraphics[width=0.85\textwidth]{Plots/kin_vs_nonkin.png}
 \caption{Cultural Capital Maintains Chosen Ties Over Obligated Ties.}
 \label{fig:kin_vs_nonkin}
 \end{figure}
 
+\emph{Tie-Specific Buffering: Kin vs. Non-Kin.} As shown in Figure \ref{fig:kin_vs_nonkin}, the culture conversion hypothesis posits that cultural capital provides conversational resources to maintain relationships. However, sociological theory differentiates between ``chosen'' ties (friends) maintained by homophily, and structurally ``obligated'' ties (family) maintained by duty. To test this, I compare the effect of cultural breadth on interaction frequencies for friends versus family using parallel Mundlak cumulative link models (Table \ref{tab:kin_comparison}).
+
+\input{Tabs/pcs_kin_comparison.tex}
+
+Consistent with expectations, the between-person effect of average cultural breadth on friendship interaction is substantial and highly significant ($\beta \approx 0.47, p < 0.001$). In stark contrast, cultural breadth has virtually no effect on the frequency of interacting with family members ($\beta \approx 0.05, p = 0.407$). Cultural capital operates exactly as theorized: it is a tool specifically used to generate and maintain weak or chosen ties in modern societies; it offers no structural advantage for maintaining family relationships, which operate on a logic of structural obligation rather than shared cultural homophily.
 
 The Mundlak specification also allows us to evaluate the \textit{within}-person effects---whether a temporary spike in an individual's cultural tastes over their own average translates to immediate gains in connectivity. Here, the dynamics differ by tie type. For informal interaction with friends, the within-person effect is highly significant ($p < 0.001$), indicating that when an individual temporarily expands their cultural taste breadth above their own baseline, they experience a simultaneous boost in socializing with friends. However, for organizational memberships, the within-person effect is not significant ($p = 0.119$). This suggests that while temporary spikes in cultural engagement immediately boost fluid, informal socializing, it is the durable, trait-like possession of cultural capital (the between-person effect) that is required to sustain structural integration into formal organizations.
 
@@ -190,10 +197,6 @@ The results reveal a clear pattern: cultural tastes exhibit remarkably high leve
 
 Furthermore, the Mundlak mixed-effects models provide robust evidence for the culture conversion model \citep{lizardo2006}. Between-person differences in cultural taste breadth significantly predict the maintenance of both informal social interactions (friends) and formal ties (organizational memberships) over time. Furthermore, the presence of significant within-person effects for friendships---but not for organizational memberships---suggests that fluid, informal socializing responds dynamically to temporary spikes in cultural engagement, whereas structural integration into formal organizations relies entirely on the durable, trait-like possession of cultural capital.
 
-\emph{Tie-Specific Buffering: Kin vs. Non-Kin.} The culture conversion hypothesis posits that cultural capital provides conversational resources to maintain relationships. However, sociological theory differentiates between ``chosen'' ties (friends) maintained by homophily, and structurally ``obligated'' ties (family) maintained by duty. To test this, I compare the effect of cultural breadth on interaction frequencies for friends versus family using parallel Mundlak cumulative link models.
-
-Consistent with expectations, the between-person effect of average cultural breadth on friendship interaction is substantial and highly significant ($\beta \approx 0.47, p < 0.001$). In stark contrast, cultural breadth has virtually no effect on the frequency of interacting with family members ($\beta \approx 0.05, p = 0.407$). Cultural capital operates exactly as theorized: it is a tool specifically used to generate and maintain weak or chosen ties in modern societies; it offers no structural advantage for maintaining family relationships, which operate on a logic of structural obligation rather than shared cultural homophily (see Appendix for full comparative tables).
-
 Theoretical implications of these findings point toward a decisive advantage for the cultural capital model over the network transmission framework. Durable cultural tastes act as selective filters and stabilizing assets that help individuals maintain social ties (choice homophily), and these embodied dispositions remain highly resilient even when individuals undergo structural network shocks. This aligns with recent work demonstrating that "cultural talk" and shared highbrow participation serve as fundamental mechanisms for enhancing network stability and quality over time \citep{jaeger2026, meuleman2023}. By acting as structural opportunities for positive social exchange \citep{vanzella2022}, deep cultural repertoires allow individuals to navigate the inevitable network churn driven by life-course transitions (like marriage or shifting jobs) without suffering a collapse in overall sociability \citep{lin2022, weiss2022}. Because cultural breadth is also linked to accessing higher socioeconomic resources within networks \citep{meuleman2021}, maintaining this capital across network disruptions provides compounding social advantages over the life course.
 
 A limitation of this study is the reliance on proxy measures for network size (frequency of interaction and organizational memberships) rather than full ego-network data. Future research should utilize more granular, multi-wave personal network generators \citep[e.g.,][]{hollstein2023, vacchiano2024} alongside detailed cultural consumption diaries to further untangle the micro-dynamics of how cultural capital sustains specific dyadic ties during life-course transitions.
@@ -204,7 +207,6 @@ A limitation of this study is the reliance on proxy measures for network size (f
 \bibliography{references}
 
 \section*{Appendix}
-\input{tex/descriptives.tex}
-\input{tex/pcs_kin_comparison.tex}
+\input{Tabs/descriptives.tex}
 
 \end{document}

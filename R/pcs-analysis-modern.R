@@ -60,9 +60,9 @@ m1 <- modelsummary(
   coef_rename = coef_map_rename, coef_omit = 'Intercept|.*_start|female|white|as\\.factor', gof_map = c('nobs'),
   title = 'Predictors of Taste Loss (Pooled Discrete-Time Logistic Regression)',
   notes = list('Controls and SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
-  output = 'kableExtra'
+  output = here('Tabs', 'pcs_taste_change_modern.tex')
 )
-writeLines(as.character(m1 |> kable_styling(latex_options = c('hold_position'))), here('tex', 'pcs_taste_change_modern.tex'))
+modelsummary(logit_models, vcov = lapply(logit_models, function(m) sandwich::vcovCL(m, cluster = m$data$id)), estimate = '{estimate}{stars}', statistic = NULL, stars = c('+' = 0.1, '*' = 0.05), coef_rename = coef_map_rename, coef_omit = 'Intercept|.*_start|female|white|as\.factor', gof_map = c('nobs'), title = 'Predictors of Taste Loss (Pooled Discrete-Time Logistic Regression)', notes = list('Controls and SEs omitted for space.', '+ p < 0.1, * p < 0.05'), output = here('Tabs', 'pcs_taste_change_modern.tex'))
 
 # Mixed-Effects Models
 library(ordinal)
@@ -73,7 +73,7 @@ df_mundlak$friends_ord <- factor(df_mundlak$friends, levels = c(3, 2, 1), labels
 
 m_friends <- clmm(friends_ord ~ numcult_within + educ_within + married_within + childre_within + bigcity_within + numcult_mean + educ_mean + married_mean + childre_mean + bigcity_mean + female + white + as.factor(wave) + (1 | id), data = df_mundlak)
 m_orgs <- glmer(numsocmems ~ numcult_within + educ_within + married_within + childre_within + bigcity_within + numcult_mean + educ_mean + married_mean + childre_mean + bigcity_mean + female + white + as.factor(wave) + (1 | id), data = df_mundlak, family = poisson, control = glmerControl(optimizer = 'bobyqa'))
-
+  output = here('Tabs', 'pcs_network_stability_modern.tex')
 
 m2 <- modelsummary(
   list('Friends' = m_friends, 'Org. Memberships' = m_orgs),
@@ -82,7 +82,7 @@ m2 <- modelsummary(
   coef_omit = 'Intercept|wave', gof_map = c('nobs'),
   title = 'Mundlak Mixed-Effects Models for Network Connectivity (1985-1995)',
   notes = list('Wave fixed effects and intercept omitted for space.', 'SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
-  output = 'kableExtra'
+  output = here('Tabs', 'pcs_taste_change_modern.tex')
 )
-writeLines(as.character(m2 |> kable_styling(latex_options = c('hold_position'))), here('tex', 'pcs_network_stability_modern.tex'))
+writeLines(as.character(m2 |> kable_styling(latex_options = c('hold_position'))), here('Tabs', 'pcs_network_stability_modern.tex'))
 
