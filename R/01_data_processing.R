@@ -26,7 +26,7 @@ cult_vars_w5 <- paste0(cult_vars_base, "5")
 
 df <- df %>%
   mutate(across(any_of(c(cult_vars_w2, cult_vars_w3, cult_vars_w4, cult_vars_w5)), clean_cult)) %>%
-  mutate(across(any_of(cult_vars_w4), ~ case_match(., 4 ~ 3, 5 ~ 4, .default = .))) %>%
+  mutate(across(any_of(cult_vars_w4), ~ case_match(., 4 ~ 2, 5 ~ 4, .default = .))) %>%
   mutate(across(any_of(cult_vars_w5), ~ case_match(., 1:3 ~ 1, 4:5 ~ 2, 6 ~ 3, 7 ~ 4, .default = .))) %>%
   mutate(
     friends3 = ifelse(friends3 == 4, 3, friends3),
