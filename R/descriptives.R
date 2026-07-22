@@ -5,21 +5,21 @@ library(kableExtra)
 library(here)
 
 df <- readRDS(here('R', 'pcs_processed.rds'))
-source(here('R', 'pcs-analysis-modern.R'))
+
+df_long <- df %>% mutate(across(everything(), haven::zap_labels)) %>% select(id, female, white, friends3, friends4, friends5, family3, family4, family5, numsocmems3, numsocmems4, numsocmems5, numcult3, numcult4, numcult5, educ3, educ4, educ5, married3, married4, married5, childre3, childre4, childre5, bigcity3, bigcity4, bigcity5, age3, age4, age5, working3, working4, working5) %>% pivot_longer(cols = matches('3$|4$|5$'), names_to = c('.value', 'wave'), names_pattern = '(.*)(3|4|5)$') %>% mutate(wave = as.numeric(wave)) %>% mutate(across(c(friends, family, numsocmems, numcult, educ, married, childre, bigcity, age, working), ~ as.numeric(haven::zap_labels(.))))
+
 
 df_desc_num <- df_long %>%
-  select(friends, numsocmems, numcult) %>%
+  select(friends, family, numsocmems, numcult, age, educ) %>%
   drop_na()
 
-df_desc_cat <- df_transitions %>%
-  select(female, white, chngfriends_end, chngorgs_end, 
-         chngeduc_end, chngmarital_end, 
-         chngchildre_end, chngwrkstat_end, 
-         chngareanam_end, married_start, 
-         working_start, bigcity_start)
+df_desc_cat <- df_long %>%
+  select(female, white, married, bigcity, working) %>%
+  drop_na()
 
-sink(here('tex', 'descriptives.tex'))
+sink(here('Tabs', 'descriptives.tex'))
 cat("\\begin{table}[htbp]\n\\centering\n\\caption{Descriptive Statistics of Variables Used in the Analysis}\n")
+cat("\\label{tab:descriptives}\n")
 cat("\\begin{tabular}{l c c c c}\n\\toprule\n")
 cat("Numeric Variables & Mean & SD & Min & Max \\\\\n\\midrule\n")
 cat(sprintf("Frequency of Interaction with Friends & %.2f & %.2f & %d & %d \\\\\n", mean(df_long$friends, na.rm=T), sd(df_long$friends, na.rm=T), min(df_long$friends, na.rm=T), max(df_long$friends, na.rm=T)))
@@ -30,19 +30,10 @@ cat(sprintf("Age & %.2f & %.2f & %d & %d \\\\\n", mean(df_long$age, na.rm=T), sd
 cat(sprintf("Education & %.2f & %.2f & %d & %d \\\\\n", mean(df_long$educ, na.rm=T), sd(df_long$educ, na.rm=T), min(df_long$educ, na.rm=T), max(df_long$educ, na.rm=T)))
 cat("\\midrule\n")
 cat("Categorical Variables (Binary) & \\multicolumn{4}{c}{\\% (Mean $\\times$ 100)} \\\\\n\\midrule\n")
-cat(sprintf("Female & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_long$female, na.rm=T)*100))
+cat(sprintf("Women & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_long$female, na.rm=T)*100))
 cat(sprintf("White & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_long$white, na.rm=T)*100))
 cat(sprintf("Married & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_long$married, na.rm=T)*100))
 cat(sprintf("Big City Resident & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_long$bigcity, na.rm=T)*100))
-cat(sprintf("Working & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_transitions$working_start, na.rm=T)*100))
-
-cat(sprintf("Change in Friends & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_transitions$chngfriends_end, na.rm=T)*100))
-cat(sprintf("Change in Org. Memberships & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_transitions$chngorgs_end, na.rm=T)*100))
-cat(sprintf("Change in Educ. Standing & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_transitions$chngeduc_end, na.rm=T)*100))
-cat(sprintf("Change in Marital Status & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_transitions$chngmarital_end, na.rm=T)*100))
-cat(sprintf("Change in Children & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_transitions$chngchildre_end, na.rm=T)*100))
-cat(sprintf("Change in Work Status & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_transitions$chngwrkstat_end, na.rm=T)*100))
-cat(sprintf("Geographic Mobility & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_transitions$chngareanam_end, na.rm=T)*100))
-
+cat(sprintf("Employed & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_long$working, na.rm=T)*100))
 cat("\\bottomrule\n\\end{tabular}\n\\end{table}\n")
 sink()

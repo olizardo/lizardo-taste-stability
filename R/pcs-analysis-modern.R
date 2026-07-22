@@ -73,7 +73,7 @@ m2 <- modelsummary(
   list('Friends' = m_friends, 'Kin' = m_family, 'Org. Mem.' = m_orgs),
   align = 'lccc',
   estimate = '{estimate}{stars}', statistic = NULL, stars = c('+' = 0.1, '*' = 0.05, '**' = 0.01),
-  coef_rename = c('numcult_mean' = 'Cultural Breadth (Between)', 'educ_mean' = 'Education (Between)', 'married_mean' = 'Married (Between)', 'childre_mean' = 'Children (Between)', 'bigcity_mean' = 'Big City (Between)', 'working_mean' = 'Employed (Between)', 'age_mean' = 'Age (Between)', 'numcult_within' = 'Cultural Breadth (Within)', 'educ_within' = 'Education (Within)', 'married_within' = 'Married (Within)', 'childre_within' = 'Children (Within)', 'bigcity_within' = 'Big City (Within)', 'working_within' = 'Employed (Within)', 'age_within' = 'Age (Within)', 'female' = 'Female', 'white' = 'White'),
+  coef_rename = c('numcult_mean' = 'Cultural Breadth (Between)', 'educ_mean' = 'Education (Between)', 'married_mean' = 'Married (Between)', 'childre_mean' = 'Children (Between)', 'bigcity_mean' = 'Big City (Between)', 'working_mean' = 'Employed (Between)', 'age_mean' = 'Age (Between)', 'numcult_within' = 'Cultural Breadth (Within)', 'educ_within' = 'Education (Within)', 'married_within' = 'Married (Within)', 'childre_within' = 'Children (Within)', 'bigcity_within' = 'Big City (Within)', 'working_within' = 'Employed (Within)', 'age_within' = 'Age (Within)', 'female' = 'Women', 'white' = 'White'),
   coef_omit = 'Intercept|wave|\\|', 
   gof_map = list(
     list("raw" = "nobs", "clean" = "Num. Observations", "fmt" = 0),
