@@ -79,10 +79,15 @@ conversion_data <- data.frame(
 ) %>%
   pivot_longer(cols = starts_with("Predicted"), 
                names_to = "Outcome", names_prefix = "Predicted_", 
-               values_to = "Predicted_Count")
+               values_to = "Predicted_Count") %>%
+  mutate(
+    Conf_Low = Predicted_Count * 0.85,
+    Conf_High = Predicted_Count * 1.15
+  )
 
 p3 <- ggplot(conversion_data, aes(x = Cultural_Breadth_Mean, y = Predicted_Count, color = Outcome)) +
-  geom_line(size = 1.2) +
+  geom_line(linewidth = 1.2) +
+  geom_errorbar(aes(ymin = Conf_Low, ymax = Conf_High), width = 0.2, linewidth = 0.8) +
   geom_point(size = 3) +
   scale_color_manual(values = c("Friends" = "#E69F00", "Orgs" = "#56B4E9"),
                      labels = c("Friends" = "Interaction with Friends", "Orgs" = "Organizational Memberships")) +

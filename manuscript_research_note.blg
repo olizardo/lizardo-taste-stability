@@ -5,45 +5,45 @@ The style file: apalike.bst
 Database file #1: references.bib
 Warning--empty booktitle in lazarsfeld1954
 Warning--empty publisher in lazarsfeld1954
-You've used 51 entries,
+You've used 29 entries,
             1935 wiz_defined-function locations,
-            741 strings with 11176 characters,
-and the built_in function-call counts, 16784 in all, are:
-= -- 1660
-> -- 564
-< -- 44
-+ -- 188
-- -- 174
-* -- 1262
-:= -- 3078
-add.period$ -- 180
-call.type$ -- 51
-change.case$ -- 339
-chr.to.int$ -- 51
-cite$ -- 53
-duplicate$ -- 688
-empty$ -- 1188
-format.name$ -- 265
-if$ -- 3214
+            636 strings with 8195 characters,
+and the built_in function-call counts, 9944 in all, are:
+= -- 980
+> -- 323
+< -- 24
++ -- 104
+- -- 100
+* -- 787
+:= -- 1792
+add.period$ -- 95
+call.type$ -- 29
+change.case$ -- 193
+chr.to.int$ -- 29
+cite$ -- 31
+duplicate$ -- 399
+empty$ -- 732
+format.name$ -- 149
+if$ -- 1916
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 54
-newline$ -- 285
-num.names$ -- 153
-pop$ -- 249
+missing$ -- 31
+newline$ -- 156
+num.names$ -- 87
+pop$ -- 142
 preamble$ -- 1
-purify$ -- 342
+purify$ -- 195
 quote$ -- 0
-skip$ -- 551
+skip$ -- 312
 stack$ -- 0
-substring$ -- 981
-swap$ -- 50
+substring$ -- 672
+swap$ -- 28
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 300
+type$ -- 170
 warning$ -- 2
-while$ -- 130
+while$ -- 82
 width$ -- 0
-write$ -- 686
+write$ -- 382
 (There were 2 warnings)

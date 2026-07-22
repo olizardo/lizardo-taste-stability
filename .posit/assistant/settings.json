@@ -5,6 +5,9 @@
       "Rscript *": "allow",
       "ls *": "allow",
       "pdflatex *": "allow"
+    },
+    "edit": {
+      "*.tex": "allow"
     }
   }
 }
