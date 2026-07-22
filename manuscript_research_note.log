@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.28)  21 JUL 2026 20:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.28)  21 JUL 2026 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -651,47 +651,37 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 {/home/omarlizardo/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 115.
- [3] [4] [5]
-<tex/taste_retention.png, id=165, 578.16pt x 216.81pt>
+ [3] [4] [5] [6{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
+<tex/taste_retention.png, id=204, 578.16pt x 216.81pt>
 File: tex/taste_retention.png Graphic file (type png)
 <use tex/taste_retention.png>
-Package pdftex.def Info: tex/taste_retention.png  used on input line 153.
+Package pdftex.def Info: tex/taste_retention.png  used on input line 169.
 (pdftex.def)             Requested size: 293.25209pt x 109.96953pt.
- [6{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
-<tex/taste_loss_forest_plot.png, id=178, 578.16pt x 361.35pt>
-File: tex/taste_loss_forest_plot.png Graphic file (type png)
-<use tex/taste_loss_forest_plot.png>
-Package pdftex.def Info: tex/taste_loss_forest_plot.png  used on input line 168.
-(pdftex.def)             Requested size: 293.25209pt x 183.28256pt.
- (./tex/pcs_taste_change_modern.tex) [7 <./tex/taste_retention.png (PNG copy)>] [8 <./tex/taste_loss_forest_plot.png (PNG copy)>] (./tex/pcs_network_stability_modern.tex)
-<tex/cultural_conversion_effects.png, id=195, 578.16pt x 361.35pt>
+ [7 <./tex/taste_retention.png (PNG copy)>] (./tex/pcs_network_stability_modern.tex)
+<tex/cultural_conversion_effects.png, id=217, 650.43pt x 325.215pt>
 File: tex/cultural_conversion_effects.png Graphic file (type png)
 <use tex/cultural_conversion_effects.png>
-Package pdftex.def Info: tex/cultural_conversion_effects.png  used on input line 201.
-(pdftex.def)             Requested size: 293.25209pt x 183.28256pt.
- [9 <./tex/cultural_conversion_effects.png (PNG copy)>] (./manuscript_research_note.bbl [10] [11]) (./tex/descriptives.tex [12]) [13{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] (./manuscript_research_note.aux)
+Package pdftex.def Info: tex/cultural_conversion_effects.png  used on input line 198.
+(pdftex.def)             Requested size: 293.2565pt x 146.62825pt.
+ [8 <./tex/cultural_conversion_effects.png (PNG copy)>] [9] (./manuscript_research_note.bbl [10] [11] [12]) (./tex/descriptives.tex) [13{/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] (./manuscript_research_note.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 19375 strings out of 469097
- 381681 string characters out of 5457857
- 813792 words of memory out of 5000000
- 47866 multiletter control sequences out of 15000+600000
- 711944 words of font info for 200 fonts, out of 8000000 for 9000
+ 19407 strings out of 469097
+ 382103 string characters out of 5457857
+ 812076 words of memory out of 5000000
+ 47885 multiletter control sequences out of 15000+600000
+ 712361 words of font info for 204 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 88i,8n,93p,3532b,1189s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,8n,93p,1271b,1231s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri7.pfb></home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on manuscript_research_note.pdf (13 pages, 735251 bytes).
+Output written on manuscript_research_note.pdf (13 pages, 632825 bytes).
 PDF statistics:
- 366 PDF objects out of 1000 (max. 8388607)
- 312 compressed objects within 4 object streams
- 72 named destinations out of 1000 (max. 500000)
- 49288 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 412 PDF objects out of 1000 (max. 8388607)
+ 359 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 49283 words of extra memory for PDF output out of 51595 (max. 10000000)
 
