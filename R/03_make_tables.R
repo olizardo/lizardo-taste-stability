@@ -46,10 +46,20 @@ modelsummary(
     list("raw" = "Between-Person Variance", "clean" = "Between-Person Variance", "fmt" = 2),
     list("raw" = "ICC (Between Prop.)", "clean" = "ICC (Between-Person Prop.)", "fmt" = 2)
   ),
-  title = 'Mundlak Mixed-Effects Models for Network Connectivity (1985-1995)\\label{tab:network_stability}',
+  title = 'Mundlak Mixed-Effects Models for Network Connectivity (1985-1995)',
   notes = list('Wave fixed effects and threshold coefficients omitted for space.', 'SEs omitted for space.', '+ p < 0.1, * p < 0.05, ** p < 0.01', 'Within-person variance for count/ordinal models is fixed by their theoretical link functions.'),
   output = here('Tabs', 'pcs_network_stability_modern.tex')
 )
+
+# Fix label in the generated tex file manually since modelsummary escapes it
+tex_file <- here('Tabs', 'pcs_network_stability_modern.tex')
+lines <- readLines(tex_file)
+lines <- gsub(
+  "\\\\caption\\{Mundlak Mixed-Effects Models for Network Connectivity \\(1985-1995\\)\\}", 
+  "\\\\caption{Mundlak Mixed-Effects Models for Network Connectivity (1985-1995)\\\\label{tab:network_stability}}", 
+  lines
+)
+writeLines(lines, tex_file)
 
 # 2. Descriptives Table
 sink(here('Tabs', 'descriptives.tex'))
@@ -73,15 +83,6 @@ cat(sprintf("Employed & \\multicolumn{4}{c}{%.1f\\%%} \\\\\n", mean(df_mundlak$w
 cat("\\bottomrule\n\\end{tabular}\n\\end{table}\n")
 sink()
 
-# 3. Kin Comparison Table (similar to kin_script.R)
-modelsummary(
-  list('Friends (Non-Kin)' = m_friends, 'Family (Kin)' = m_family),
-  estimate = '{estimate}{stars}', statistic = NULL, stars = c('+' = 0.1, '*' = 0.05),
-  coef_rename = c('numcult_mean' = 'Cultural Breadth (Between)', 'educ_mean' = 'Education (Between)', 'married_mean' = 'Married (Between)', 'childre_mean' = 'Children (Between)', 'bigcity_mean' = 'Big City (Between)', 'numcult_within' = 'Cultural Breadth (Within)', 'educ_within' = 'Education (Within)', 'married_within' = 'Married (Within)', 'childre_within' = 'Children (Within)', 'bigcity_within' = 'Big City (Within)', 'female' = 'Female', 'white' = 'White'),
-  coef_omit = 'Intercept|wave', gof_map = c('nobs'),
-  title = 'Mundlak Mixed-Effects Models for Kin and Non-Kin Interaction',
-  notes = list('Wave fixed effects and threshold coefficients omitted for space.', 'SEs omitted for space.', '+ p < 0.1, * p < 0.05'),
-  output = here('Tabs', 'pcs_kin_comparison.tex')
-)
+
 
 cat("Tables generated successfully in Tabs/.\n")
