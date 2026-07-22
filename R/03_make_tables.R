@@ -39,7 +39,28 @@ modelsummary(
   list('Friends' = m_friends, 'Kin' = m_family, 'Org. Mem.' = m_orgs),
   align = 'lccc',
   estimate = '{estimate}{stars}', statistic = NULL, stars = c('+' = 0.1, '*' = 0.05, '**' = 0.01),
-  coef_rename = c('numcult_mean' = 'Cultural Breadth (Between)', 'educ_mean' = 'Education (Between)', 'married_mean' = 'Married (Between)', 'childre_mean' = 'Children (Between)', 'bigcity_mean' = 'Big City (Between)', 'working_mean' = 'Employed (Between)', 'age_mean' = 'Age (Between)', 'numcult_within' = 'Cultural Breadth (Within)', 'educ_within' = 'Education (Within)', 'married_within' = 'Married (Within)', 'childre_within' = 'Children (Within)', 'bigcity_within' = 'Big City (Within)', 'working_within' = 'Employed (Within)', 'age_within' = 'Age (Within)', 'female' = 'Women', 'white' = 'White'),
+  coef_rename = c(
+    'pca_read_mean' = 'Reading/Homebound (Between)', 
+    'pca_sports_mean' = 'Sports Culture (Between)', 
+    'pca_arts_mean' = 'Arts/Entertainment (Between)', 
+    'educ_mean' = 'Education (Between)', 
+    'married_mean' = 'Married (Between)', 
+    'childre_mean' = 'Children (Between)', 
+    'bigcity_mean' = 'Big City (Between)', 
+    'working_mean' = 'Employed (Between)', 
+    'age_mean' = 'Age (Between)', 
+    'pca_read_within' = 'Reading/Homebound (Within)', 
+    'pca_sports_within' = 'Sports Culture (Within)', 
+    'pca_arts_within' = 'Arts/Entertainment (Within)', 
+    'educ_within' = 'Education (Within)', 
+    'married_within' = 'Married (Within)', 
+    'childre_within' = 'Children (Within)', 
+    'bigcity_within' = 'Big City (Within)', 
+    'working_within' = 'Employed (Within)', 
+    'age_within' = 'Age (Within)', 
+    'female' = 'Women', 
+    'white' = 'White'
+  ),
   coef_omit = 'Intercept|wave|\\|', 
   gof_map = list(
     list("raw" = "nobs", "clean" = "Num. Observations", "fmt" = 0),
@@ -79,7 +100,9 @@ cat("Numeric Variables & Mean & SD & Min & Max \\\\\n\\midrule\n")
 cat(sprintf("Frequency of Interaction with Friends & %.2f & %.2f & %d & %d \\\\\n", mean(df_mundlak$friends, na.rm=T), sd(df_mundlak$friends, na.rm=T), min(df_mundlak$friends, na.rm=T), max(df_mundlak$friends, na.rm=T)))
 cat(sprintf("Frequency of Interaction with Family & %.2f & %.2f & %d & %d \\\\\n", mean(df_mundlak$family, na.rm=T), sd(df_mundlak$family, na.rm=T), min(df_mundlak$family, na.rm=T), max(df_mundlak$family, na.rm=T)))
 cat(sprintf("Voluntary Organization Memberships & %.2f & %.2f & %d & %d \\\\\n", mean(df_mundlak$numsocmems, na.rm=T), sd(df_mundlak$numsocmems, na.rm=T), min(df_mundlak$numsocmems, na.rm=T), max(df_mundlak$numsocmems, na.rm=T)))
-cat(sprintf("Cultural Taste Breadth & %.2f & %.2f & %d & %d \\\\\n", mean(df_mundlak$numcult, na.rm=T), sd(df_mundlak$numcult, na.rm=T), min(df_mundlak$numcult, na.rm=T), max(df_mundlak$numcult, na.rm=T)))
+cat(sprintf("Reading/Homebound (RC1) & %.2f & %.2f & %.2f & %.2f \\\\\n", mean(df_mundlak$pca_read, na.rm=T), sd(df_mundlak$pca_read, na.rm=T), min(df_mundlak$pca_read, na.rm=T), max(df_mundlak$pca_read, na.rm=T)))
+cat(sprintf("Sports Culture (RC2) & %.2f & %.2f & %.2f & %.2f \\\\\n", mean(df_mundlak$pca_sports, na.rm=T), sd(df_mundlak$pca_sports, na.rm=T), min(df_mundlak$pca_sports, na.rm=T), max(df_mundlak$pca_sports, na.rm=T)))
+cat(sprintf("Arts/Entertainment (RC3) & %.2f & %.2f & %.2f & %.2f \\\\\n", mean(df_mundlak$pca_arts, na.rm=T), sd(df_mundlak$pca_arts, na.rm=T), min(df_mundlak$pca_arts, na.rm=T), max(df_mundlak$pca_arts, na.rm=T)))
 cat(sprintf("Age & %.2f & %.2f & %d & %d \\\\\n", mean(df_mundlak$age, na.rm=T), sd(df_mundlak$age, na.rm=T), min(df_mundlak$age, na.rm=T), max(df_mundlak$age, na.rm=T)))
 cat(sprintf("Education & %.2f & %.2f & %d & %d \\\\\n", mean(df_mundlak$educ, na.rm=T), sd(df_mundlak$educ, na.rm=T), min(df_mundlak$educ, na.rm=T), max(df_mundlak$educ, na.rm=T)))
 cat("\\midrule\n")

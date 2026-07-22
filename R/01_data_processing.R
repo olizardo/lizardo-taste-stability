@@ -3,6 +3,7 @@ library(haven)
 library(dplyr)
 library(tidyr)
 library(here)
+library(psych)
 
 cat("Running 01_data_processing.R...\n")
 
@@ -41,7 +42,7 @@ df$family5 <- df$family5
 
 df <- df %>%
   mutate(across(c(family3, family4, family5), clean_cult)) %>%
-  mutate(across(c(family4), ~ case_match(., 4 ~ 3, 5 ~ 4, .default = .))) %>%
+  mutate(across(c(family4), ~ case_match(., 4 ~ 2, 5 ~ 4, .default = .))) %>%
   mutate(across(c(family5), ~ case_match(., 1:3 ~ 1, 4:5 ~ 2, 6 ~ 3, 7 ~ 4, .default = .))) %>%
   mutate(
     family3 = ifelse(family3 == 4, 3, family3),
@@ -98,31 +99,44 @@ df$numsocmems5[is.na(df$mempriv5)] <- NA
 df$chngorgs4 <- df$numsocmems4 != df$numsocmems3
 df$chngorgs5 <- df$numsocmems5 != df$numsocmems4
 
-# Create cultural breadth variables
-df <- df %>%
-  mutate(
-    numcult2 = rowSums(select(., all_of(cult_vars_w2)) < 3, na.rm = TRUE),
-    numcult3 = rowSums(select(., all_of(setdiff(cult_vars_w3, c("tv3", "friends3")))) < 3, na.rm = TRUE),
-    numcult4 = rowSums(select(., all_of(setdiff(cult_vars_w4, c("tv4", "friends4")))) < 3, na.rm = TRUE),
-    numcult5 = rowSums(select(., all_of(setdiff(cult_vars_w5, c("tv5", "friends5")))) < 3, na.rm = TRUE)
-  )
-df$numcult2[is.na(df$music2)] <- NA
-df$numcult3[is.na(df$music3)] <- NA
-df$numcult4[is.na(df$music4)] <- NA
-df$numcult5[is.na(df$music5)] <- NA
+# (Cultural breadth variables replaced by PCA below)
 
 # Reshape to long format and create Mundlak vars (moved from analysis scripts)
 df_long <- df %>% 
   mutate(across(everything(), haven::zap_labels)) %>% 
-  select(id, female, white, friends3, friends4, friends5, family3, family4, family5, numsocmems3, numsocmems4, numsocmems5, numcult3, numcult4, numcult5, educ3, educ4, educ5, married3, married4, married5, childre3, childre4, childre5, bigcity3, bigcity4, bigcity5, age3, age4, age5, working3, working4, working5) %>% 
+  select(id, female, white, friends3, friends4, friends5, family3, family4, family5, numsocmems3, numsocmems4, numsocmems5, educ3, educ4, educ5, married3, married4, married5, childre3, childre4, childre5, bigcity3, bigcity4, bigcity5, age3, age4, age5, working3, working4, working5) %>% 
   pivot_longer(cols = matches('3$|4$|5$'), names_to = c('.value', 'wave'), names_pattern = '(.*)(3|4|5)$') %>% 
   mutate(wave = as.numeric(wave)) %>% 
-  mutate(across(c(friends, family, numsocmems, numcult, educ, married, childre, bigcity, age, working), ~ as.numeric(haven::zap_labels(.))))
+  mutate(across(c(friends, family, numsocmems, educ, married, childre, bigcity, age, working), ~ as.numeric(haven::zap_labels(.))))
+
+# Extract Cultural Items for PCA
+items_base <- c("music", "movie", "play", "spevent", "videos", "hobby", "mags", "sports", "books", "paper")
+items_w3 <- paste0(items_base, "3")
+items_w4 <- paste0(items_base, "4")
+items_w5 <- paste0(items_base, "5")
+
+df_bin <- df %>%
+  mutate(across(all_of(c(items_w3, items_w4, items_w5)), ~ ifelse(. < 3, 1, 0)))
+
+df_long_cult <- df_bin %>%
+  select(id, all_of(c(items_w3, items_w4, items_w5))) %>%
+  pivot_longer(cols = -id, names_to = c(".value", "wave"), names_pattern = "(.*)(3|4|5)") %>%
+  mutate(wave = as.numeric(wave))
+
+pca_res <- principal(df_long_cult %>% select(all_of(items_base)), nfactors = 3, rotate = "varimax", scores = TRUE)
+
+df_pca <- df_long_cult %>% select(id, wave)
+df_pca$pca_read <- pca_res$scores[,1]
+df_pca$pca_sports <- pca_res$scores[,2]
+df_pca$pca_arts <- pca_res$scores[,3]
+
+# Merge into main long dataset
+df_long <- df_long %>% left_join(df_pca, by = c("id", "wave"))
 
 df_mundlak <- df_long %>% 
   drop_na() %>% 
   group_by(id) %>% 
-  mutate(across(c(numcult, educ, married, childre, bigcity, age, working), list(mean = ~ mean(., na.rm = TRUE), within = ~ . - mean(., na.rm = TRUE)))) %>% 
+  mutate(across(c(pca_read, pca_sports, pca_arts, educ, married, childre, bigcity, age, working), list(mean = ~ mean(., na.rm = TRUE), within = ~ . - mean(., na.rm = TRUE)))) %>% 
   ungroup()
 
 df_mundlak$friends_ord <- factor(df_mundlak$friends, levels = c(3, 2, 1), labels=c("Seldom/Never", "Sometimes", "Very Often"), ordered = TRUE)

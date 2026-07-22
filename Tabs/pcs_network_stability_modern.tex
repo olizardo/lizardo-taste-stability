@@ -1,35 +1,45 @@
 \begin{table}
 \centering
-\caption{Mundlak Mixed-Effects Models for Network Connectivity (1985-1995)\label{tab:network_stability}}
-\centering
-\begin{tabular}[t]{lccc}
-\toprule
-  & Friends & Kin & Org. Mem.\\
-\midrule
-Cultural Breadth (Within) & \num{0.155}** & \num{0.168}* & \num{0.042}\\
-Education (Within) & \num{0.089} & \num{0.207} & \num{0.054}\\
-Married (Within) & \num{-0.432} & \num{0.885} & \num{-0.323}\\
-Children (Within) & \num{0.030} & \num{0.253} & \num{-0.083}\\
-Big City (Within) & \num{-0.638} & \num{-0.822} & \num{-0.080}\\
-Employed (Within) & \num{-0.134} & \num{-0.229} & \num{0.025}\\
-Age (Within) & \num{0.007} & \num{-0.026} & \num{0.000}\\
-Cultural Breadth (Between) & \num{0.300}** & \num{0.153}* & \num{0.201}**\\
-Education (Between) & \num{0.021} & \num{0.212}** & \num{0.080}*\\
-Married (Between) & \num{-0.137} & \num{1.367}** & \num{0.179}\\
-Children (Between) & \num{-0.051} & \num{0.099} & \num{-0.000}\\
-Big City (Between) & \num{-0.186} & \num{0.067} & \num{-0.088}\\
-Employed (Between) & \num{-0.297} & \num{0.042} & \num{-0.016}\\
-Age (Between) & \num{0.012}* & \num{-0.035}** & \num{0.006}\\
-Women & \num{-0.668}** & \num{-0.492}* & \num{0.267}**\\
-White & \num{-0.355} & \num{-0.358} & \num{0.406}\\
-\midrule
-Num. Observations & \num{1509} & \num{1509} & \num{1509}\\
-Between-Person Variance & \num{0.43} & \num{1.80} & \num{0.31}\\
-ICC (Between-Person Prop.) & \num{0.12} & \num{0.35} & \\
-\bottomrule
-\multicolumn{4}{l}{\rule{0pt}{1em}Wave fixed effects and threshold coefficients omitted for space.}\\
-\multicolumn{4}{l}{\rule{0pt}{1em}SEs omitted for space.}\\
-\multicolumn{4}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01}\\
-\multicolumn{4}{l}{\rule{0pt}{1em}Within-person variance for count/ordinal models is fixed by their theoretical link functions.}\\
-\end{tabular}
+\begin{talltblr}[         %% tabularray outer open
+caption={Mundlak Mixed-Effects Models for Network Connectivity (1985-1995)},
+label={tab:network_stability},
+note{}={Wave fixed effects and threshold coefficients omitted for space.},
+note{ }={SEs omitted for space.},
+note{  }={+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01},
+note{   }={Within-person variance for count/ordinal models is fixed by their theoretical link functions.},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]},
+hline{2}={1-4}{solid, black, 0.05em},
+hline{22}={1-4}{solid, black, 0.05em},
+hline{1}={1-4}{solid, black, 0.08em},
+hline{25}={1-4}{solid, black, 0.08em},
+column{2-4}={}{halign=c},
+column{1}={}{halign=l},
+}                     %% tabularray inner close
+& Friends & Kin & Org. Mem. \\
+Reading/Homebound (Within) & \num{0.161} & \num{0.257}* & \num{0.037} \\
+Sports Culture (Within) & \num{0.171} & \num{-0.092} & \num{0.036} \\
+Arts/Entertainment (Within) & \num{0.222}* & \num{0.090} & \num{0.039} \\
+Reading/Homebound (Between) & \num{0.292}** & \num{0.519}** & \num{0.100}+ \\
+Sports Culture (Between) & \num{0.156}* & \num{0.078} & \num{0.295}** \\
+Arts/Entertainment (Between) & \num{0.381}** & \num{-0.087} & \num{0.173}** \\
+Education (Within) & \num{0.053} & \num{0.224} & \num{0.025} \\
+Married (Within) & \num{-0.531} & \num{0.688} & \num{-0.422} \\
+Children (Within) & \num{0.020} & \num{0.432} & \num{-0.012} \\
+Big City (Within) & \num{-0.697} & \num{-1.153} & \num{-0.038} \\
+Employed (Within) & \num{-0.169} & \num{-0.249} & \num{-0.017} \\
+Age (Within) & \num{0.008} & \num{-0.021} & \num{0.002} \\
+Education (Between) & \num{0.016} & \num{0.138} & \num{0.101}** \\
+Married (Between) & \num{-0.007} & \num{1.337}** & \num{0.196} \\
+Children (Between) & \num{-0.060} & \num{0.116} & \num{0.001} \\
+Big City (Between) & \num{-0.217}+ & \num{0.115} & \num{-0.075} \\
+Employed (Between) & \num{-0.308} & \num{-0.119} & \num{0.010} \\
+Age (Between) & \num{0.010} & \num{-0.047}** & \num{0.007}+ \\
+Women & \num{-0.622}** & \num{-0.299} & \num{0.154} \\
+White & \num{-0.344} & \num{-0.286} & \num{0.461}+ \\
+Num. Observations & \num{1419} & \num{1419} & \num{1419} \\
+Between-Person Variance & \num{0.41} & \num{1.95} & \num{0.28} \\
+ICC (Between-Person Prop.) & \num{0.11} & \num{0.37} &  \\
+\end{talltblr}
 \end{table}
