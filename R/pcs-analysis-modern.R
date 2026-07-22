@@ -1,11 +1,10 @@
-# Modernized Data Analysis Workflow for PCS (1980-1985-1990)
+# Modernized Data Analysis Workflow for PCS (1980-1995)
 library(dplyr)
 library(tidyr)
 library(lme4)
 library(modelsummary)
 library(lmtest)
 library(sandwich)
-library(lavaan)
 library(here)
 
 # 1. Load Processed Data
@@ -14,126 +13,132 @@ df <- readRDS(here("R", "pcs_processed.rds"))
 # =====================================================================
 # PART A: TASTE CHANGE (Discrete-Time Survival / Clustered Logit)
 # =====================================================================
+# We pool transitions: 1985->1990 (Wave 3->4) and 1990->1995 (Wave 4->5)
+
 cultlist <- c("music", "movie", "play", "sports", "paper", "books", "spevent", "videos", "hobby", "mags")
-controls <- c("agegrp3", "educ3", "income3", "married3", "childre3", "working3", "bigcity3", "female", "white")
-demchang <- c("chngfriends", "chorgs4", "chngeduc", "chngmarital", "chngchildre", "chngwrkstat", "chngareanam")
+controls <- c("agegrp", "educ", "income", "married", "childre", "working", "bigcity")
+demchang <- c("chngfriends", "chngorgs", "chngeduc", "chngmarital", "chngchildre", "chngwrkstat", "chngareanam")
 
-models_change <- list()
+# Create a stacked person-period dataset for the logit models
+# Period 1: wave 3->4
+p1 <- df %>% select(id, female, white,
+                    all_of(paste0(cultlist, "3")), all_of(paste0(cultlist, "4")),
+                    all_of(paste0(controls, "3")),
+                    all_of(paste0(demchang, "4"))) %>%
+             mutate(period = 1) %>%
+             rename_with(~gsub("3$", "_start", .), ends_with("3")) %>%
+             rename_with(~gsub("4$", "_end", .), ends_with("4"))
 
-# Calculate binary change and run clustered standard errors
-for (cult in cultlist) {
-  var3 <- paste0(cult, "3")
-  var4 <- paste0(cult, "4")
-  
-  # Recode 4=3, 5=4 to match original Stata logic
-  df[[var3]] <- ifelse(df[[var3]] == 4, 3, ifelse(df[[var3]] == 5, 4, df[[var3]]))
-  df[[var4]] <- ifelse(df[[var4]] == 4, 3, ifelse(df[[var4]] == 5, 4, df[[var4]]))
-  
-  chng_var <- paste0("chng_", cult)
-  df[[chng_var]] <- ifelse(!is.na(df[[var3]]) & !is.na(df[[var4]]), 
-                           as.numeric(df[[var3]] != df[[var4]]), NA)
-  
-  # Standard Logit Model
-  formula_str <- paste(chng_var, "~", paste(c(demchang, controls), collapse = " + "))
-  mod <- glm(as.formula(formula_str), data = df, family = binomial(link = "logit"))
-  
-  # Store the model; modelsummary will handle clustering via vcov = ~id
-  models_change[[cult]] <- mod
+# Period 2: wave 4->5
+p2 <- df %>% select(id, female, white,
+                    all_of(paste0(cultlist, "4")), all_of(paste0(cultlist, "5")),
+                    all_of(paste0(controls, "4")),
+                    all_of(paste0(demchang, "5"))) %>%
+             mutate(period = 2) %>%
+             rename_with(~gsub("4$", "_start", .), ends_with("4")) %>%
+             rename_with(~gsub("5$", "_end", .), ends_with("5"))
+
+df_transitions <- bind_rows(p1, p2)
+
+logit_models <- list()
+for (c in cultlist) {
+  # Taste loss event: started "very often" (1) and became "seldom" (3) or "never" (4)
+  # Exclude those who didn't start at "very often" to match event history logic
+  # Or just model event = (end >= 3) for subset where start == 1
+  df_sub <- df_transitions %>%
+    filter(.data[[paste0(c, "_start")]] == 1) %>%
+    mutate(event = ifelse(.data[[paste0(c, "_end")]] >= 3, 1, 0)) %>%
+    drop_na(event, all_of(paste0(controls, "_start")), all_of(paste0(demchang, "_end")))
+
+
+  if (nrow(df_sub) > 0) {
+    # Only include variables with variance
+    vars_to_check <- c(paste0(demchang, "_end"), paste0(controls, "_start"), "female", "white", "period")
+    valid_vars <- c()
+    for (v in vars_to_check) {
+      if (length(unique(df_sub[[v]])) > 1) {
+        if (v == "period") {
+           valid_vars <- c(valid_vars, "as.factor(period)")
+        } else {
+           valid_vars <- c(valid_vars, v)
+        }
+      }
+    }
+    
+    if (length(valid_vars) > 0) {
+       f_str <- paste("event ~", paste(valid_vars, collapse=" + "))
+       m <- glm(as.formula(f_str), data = df_sub, family = binomial(link="logit"))
+       logit_models[[c]] <- m
+    }
+  }
+
 }
 
+# Export clustered SEs using sandwich vcov = ~id
+modelsummary(
+  logit_models,
+  vcov = lapply(logit_models, function(m) sandwich::vcovCL(m, cluster = m$data$id)),
+  stars = c("+" = 0.1, "*" = 0.05),
+  output = here("tex", "pcs_taste_change_modern.tex"),
+  title = "Pooled Discrete-Time Logistic Regression of Taste Change (with Clustered SEs)",
+  gof_map = c("nobs", "aic", "bic", "logLik", "rmse")
+)
+
 # =====================================================================
-# PART B: NETWORK STABILITY (Mundlak Within-Between Poisson Models)
+# PART B: LONGITUDINAL CONNECTIVITY (Mundlak Poisson Models)
 # =====================================================================
-# Reshape to long format for panel estimation
+# Pivot waves 3, 4, 5 for longitudinal analysis
 df_long <- df %>%
-  select(id, female, white, all_of(demchang), 
-         friends3, friends4, numsocmems3, numsocmems4, 
-         numcult3, numcult4, numcult2, 
-         educ3, educ4, married3, married4, childre3, childre4, bigcity3, bigcity4) %>%
+  mutate(across(everything(), haven::zap_labels)) %>%
+  select(id, female, white, 
+         friends3, friends4, friends5,
+         numsocmems3, numsocmems4, numsocmems5,
+         numcult3, numcult4, numcult5,
+         educ3, educ4, educ5,
+         married3, married4, married5,
+         childre3, childre4, childre5,
+         bigcity3, bigcity4, bigcity5) %>%
   pivot_longer(
-    cols = matches("3$|4$"),
+    cols = matches("3$|4$|5$"),
     names_to = c(".value", "wave"),
-    names_pattern = "(.*)(3|4)$"
+    names_pattern = "(.*)(3|4|5)$"
   ) %>%
   mutate(wave = as.numeric(wave)) %>%
-  # Ensure haven_labelled types are coerced to numeric properly via unclass
+  # Ensure haven_labelled types are coerced to numeric
   mutate(across(c(friends, numsocmems, numcult, educ, married, childre, bigcity), ~ as.numeric(haven::zap_labels(.))))
 
-# Calculate Person-Means and Within-Person Centered Variables (Mundlak approach)
+# Create Mundlak (Within-Between) variables
 df_mundlak <- df_long %>%
+  drop_na() %>%
   group_by(id) %>%
-  mutate(
-    # Person Means
-    numcult_mean = mean(numcult, na.rm = TRUE),
-    educ_mean = mean(educ, na.rm = TRUE),
-    married_mean = mean(married, na.rm = TRUE),
-    childre_mean = mean(childre, na.rm = TRUE),
-    bigcity_mean = mean(bigcity, na.rm = TRUE),
-    
-    # Within-Person Centered (Deviations from the mean)
-    numcult_within = numcult - numcult_mean,
-    educ_within = educ - educ_mean,
-    married_within = married - married_mean,
-    childre_within = childre - childre_mean,
-    bigcity_within = bigcity - bigcity_mean
-  ) %>%
+  mutate(across(
+    c(numcult, educ, married, childre, bigcity),
+    list(
+      mean = ~ mean(., na.rm = TRUE),
+      within = ~ . - mean(., na.rm = TRUE)
+    )
+  )) %>%
   ungroup()
 
-# Model 1: Friends (Assuming friends is a count/ordinal metric, using Poisson)
-# The "within" effects give us the causal Fixed Effect estimates.
-# The "mean" effects test for between-person contextual differences.
-mod_friends_mundlak <- glmer(
+m_friends <- glmer(
   friends ~ numcult_within + educ_within + married_within + childre_within + bigcity_within + 
             numcult_mean + educ_mean + married_mean + childre_mean + bigcity_mean + 
             female + white + as.factor(wave) + (1 | id), 
   data = df_mundlak, family = poisson, control = glmerControl(optimizer = "bobyqa")
 )
 
-# Model 2: Organizational Memberships (Poisson count model)
-mod_mems_mundlak <- glmer(
+m_orgs <- glmer(
   numsocmems ~ numcult_within + educ_within + married_within + childre_within + bigcity_within + 
                numcult_mean + educ_mean + married_mean + childre_mean + bigcity_mean + 
                female + white + as.factor(wave) + (1 | id), 
   data = df_mundlak, family = poisson, control = glmerControl(optimizer = "bobyqa")
 )
 
-
-# =====================================================================
-# PART C: LATENT CULTURAL BREADTH (Confirmatory Factor Analysis)
-# =====================================================================
-# Instead of additive indices, we can construct a measurement model for 1985
-cfa_model <- '
-  # Latent Cultural Breadth 1985
-  cult_breadth_85 =~ music3 + movie3 + sports3 + paper3 + books3 + spevent3 + videos3 + hobby3 + mags3
-'
-# Note: we use ordered = TRUE because these are Likert scales
-fit_cfa <- cfa(cfa_model, data = df, ordered = c("music3", "movie3", "sports3", "paper3", "books3", "spevent3", "videos3", "hobby3", "mags3"))
-
-
-# =====================================================================
-# OUTPUT RESULTS
-# =====================================================================
-# 1. Taste Change Models (Clustered SEs)
 modelsummary(
-  models_change,
-  vcov = ~id, # Computes cluster-robust SEs automatically
-  output = here("tex", "pcs_taste_change_modern.tex"),
-  stars = c('*' = .05, '+' = .1),
-  title = "Logistic Regression of Taste Change (with Clustered SEs)"
-)
-
-# 2. Network Stability (Mundlak Poisson Models)
-modelsummary(
-  list("Friends (Mundlak Poisson)" = mod_friends_mundlak, 
-       "Org. Memberships (Mundlak Poisson)" = mod_mems_mundlak),
+  list("Friends (Mundlak Poisson)" = m_friends, "Org. Memberships (Mundlak Poisson)" = m_orgs),
+  stars = c("+" = 0.1, "*" = 0.05),
   output = here("tex", "pcs_network_stability_modern.tex"),
-  stars = c('*' = .05, '+' = .1),
-  title = "Mundlak (Within-Between) Poisson Models for Network Stability"
+  title = "Mundlak (Within-Between) Poisson Models for Network Stability (1985-1995)",
+  gof_map = c("nobs", "r.squared", "aic", "bic", "icc", "rmse")
 )
 
-# Summarize CFA
-sink(here("tex", "cfa_summary.txt"))
-summary(fit_cfa, fit.measures = TRUE, standardized = TRUE)
-sink()
-
-print("Modernized analysis complete! Outputs saved to the tex/ folder.")
