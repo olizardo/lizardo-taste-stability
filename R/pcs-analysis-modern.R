@@ -70,17 +70,18 @@ glance_custom.glmerMod <- function(x, ...) {
 }
 
 m2 <- modelsummary(
-  list('Friends' = m_friends, 'Org. Memberships' = m_orgs, 'Family (Kin)' = m_family),
-  estimate = '{estimate}{stars}', statistic = NULL, stars = c('+' = 0.1, '*' = 0.05),
+  list('Friends' = m_friends, 'Kin' = m_family, 'Org. Mem.' = m_orgs),
+  align = 'lccc',
+  estimate = '{estimate}{stars}', statistic = NULL, stars = c('+' = 0.1, '*' = 0.05, '**' = 0.01),
   coef_rename = c('numcult_mean' = 'Cultural Breadth (Between)', 'educ_mean' = 'Education (Between)', 'married_mean' = 'Married (Between)', 'childre_mean' = 'Children (Between)', 'bigcity_mean' = 'Big City (Between)', 'working_mean' = 'Employed (Between)', 'age_mean' = 'Age (Between)', 'numcult_within' = 'Cultural Breadth (Within)', 'educ_within' = 'Education (Within)', 'married_within' = 'Married (Within)', 'childre_within' = 'Children (Within)', 'bigcity_within' = 'Big City (Within)', 'working_within' = 'Employed (Within)', 'age_within' = 'Age (Within)', 'female' = 'Female', 'white' = 'White'),
-  coef_omit = 'Intercept|wave', 
+  coef_omit = 'Intercept|wave|\\|', 
   gof_map = list(
     list("raw" = "nobs", "clean" = "Num. Observations", "fmt" = 0),
     list("raw" = "Between-Person Variance", "clean" = "Between-Person Variance", "fmt" = 2),
     list("raw" = "ICC (Between Prop.)", "clean" = "ICC (Between-Person Prop.)", "fmt" = 2)
   ),
   title = 'Mundlak Mixed-Effects Models for Network Connectivity (1985-1995)',
-  notes = list('Wave fixed effects and threshold coefficients omitted for space.', 'SEs omitted for space.', '+ p < 0.1, * p < 0.05', 'Within-person variance for count/ordinal models is fixed by their theoretical link functions.'),
+  notes = list('Wave fixed effects and threshold coefficients omitted for space.', 'SEs omitted for space.', '+ p < 0.1, * p < 0.05, ** p < 0.01', 'Within-person variance for count/ordinal models is fixed by their theoretical link functions.'),
   output = here('Tabs', 'pcs_network_stability_modern.tex')
 )
 

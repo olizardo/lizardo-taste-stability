@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex manuscript_research_note"] 1784741124.01122 "manuscript_research_note.aux" "manuscript_research_note.bbl" "manuscript_research_note" 1784741124.63372 0
+["bibtex manuscript_research_note"] 1784743347.37297 "manuscript_research_note.aux" "manuscript_research_note.bbl" "manuscript_research_note" 1784743348.01709 0
   "./references.bib" 1784733770.05672 31522 60309c1e61691faf3561bfa4f94a1274 ""
   "/home/omarlizardo/.TinyTeX/texmf-dist/bibtex/bst/base/apalike.bst" 1782672754.0784 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "manuscript_research_note.aux" 1784741124.52839 10306 0c5b455ac2124beba98e385968c77f5f "pdflatex"
+  "manuscript_research_note.aux" 1784743347.94067 10385 d640fcaed0d742e6215ba17ed847cb7a "pdflatex"
   (generated)
   "manuscript_research_note.bbl"
   "manuscript_research_note.blg"
   (rewritten before read)
-["pdflatex"] 1784741124.02864 "/home/omarlizardo/CULTURE PROJECTS/OMAR PROJECTS/lizardo-taste-stability/manuscript_research_note.tex" "manuscript_research_note.pdf" "manuscript_research_note" 1784741124.63387 0
+["pdflatex"] 1784743347.40144 "/home/omarlizardo/CULTURE PROJECTS/OMAR PROJECTS/lizardo-taste-stability/manuscript_research_note.tex" "manuscript_research_note.pdf" "manuscript_research_note" 1784743348.01725 0
   "/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1782672756.40142 2375 baa924870cfb487815765f9094cf3728 ""
   "/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1782672756.40242 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1782672756.40242 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -142,13 +142,13 @@
   "/home/omarlizardo/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1782751696 490110 afd372a4502e003df73309b8cb2a84c6 ""
   "/home/omarlizardo/.TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1782673841 2306334 2ab474859f481f82b81b7a3ab8e9a5be ""
   "/home/omarlizardo/.TinyTeX/texmf.cnf" 1782672756.56742 637 edd806fb06a89761a6034e1968af9017 ""
-  "/home/omarlizardo/CULTURE PROJECTS/OMAR PROJECTS/lizardo-taste-stability/manuscript_research_note.tex" 1784741045.81847 23197 192acc78e49bdc8a033ae62e8633351d ""
-  "Plots/unified_cultural_effects.png" 1784741072.06311 118830 e36631949ecb54a4d0db89d7d02694d2 ""
+  "/home/omarlizardo/CULTURE PROJECTS/OMAR PROJECTS/lizardo-taste-stability/manuscript_research_note.tex" 1784742882.90116 24078 93a1033ac8713cf92671f2a17f8b562d ""
+  "Plots/unified_cultural_effects.png" 1784742311.58317 118830 e36631949ecb54a4d0db89d7d02694d2 ""
   "Tabs/descriptives.tex" 1784737981.14015 1106 20037b5b5b9bba864f430f20cf36318b ""
-  "Tabs/pcs_network_stability_modern.tex" 1784740862.82999 1570 0a937d638822b29db94a9f3d61728db9 ""
-  "manuscript_research_note.aux" 1784741124.52839 10306 0c5b455ac2124beba98e385968c77f5f "pdflatex"
-  "manuscript_research_note.bbl" 1784741124.02539 6722 cf9f74185088888f75a65a03e9b003aa "bibtex manuscript_research_note"
-  "manuscript_research_note.tex" 1784741045.81847 23197 192acc78e49bdc8a033ae62e8633351d ""
+  "Tabs/pcs_network_stability_modern.tex" 1784743256.5636 1814 bd452172a6c58ea8d67b659ac2baeeb5 ""
+  "manuscript_research_note.aux" 1784743347.94067 10385 d640fcaed0d742e6215ba17ed847cb7a "pdflatex"
+  "manuscript_research_note.bbl" 1784743347.39168 6722 cf9f74185088888f75a65a03e9b003aa "bibtex manuscript_research_note"
+  "manuscript_research_note.tex" 1784742882.90116 24078 93a1033ac8713cf92671f2a17f8b562d ""
   (generated)
   "manuscript_research_note.aux"
   "manuscript_research_note.log"

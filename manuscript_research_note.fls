@@ -236,8 +236,8 @@ INPUT ./Plots/unified_cultural_effects.png
 INPUT ./Plots/unified_cultural_effects.png
 INPUT ./Plots/unified_cultural_effects.png
 INPUT ./Plots/unified_cultural_effects.png
-INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT ./manuscript_research_note.bbl
 INPUT ./manuscript_research_note.bbl
