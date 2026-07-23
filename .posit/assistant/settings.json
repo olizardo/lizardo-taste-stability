@@ -4,11 +4,17 @@
       "sed *": "allow",
       "Rscript *": "allow",
       "ls *": "allow",
-      "pdflatex *": "allow"
+      "pdflatex *": "allow",
+      "curl *": "allow",
+      "grep *": "allow",
+      "pdftotext *": "allow"
     },
     "edit": {
       "*.tex": "allow",
       "*.R": "allow"
+    },
+    "executeCode": {
+      "*": "allow"
     }
   }
 }
