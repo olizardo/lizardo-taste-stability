@@ -195,6 +195,7 @@ INPUT /home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
+INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/lmmi8.tfm
@@ -213,15 +214,15 @@ INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/symbols/ms
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ts1-lmr6.tfm
-INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmr9.tfm
-INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmbx9.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmr9.tfm
+INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmbx9.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
+INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/lmmi7.tfm
@@ -229,6 +230,11 @@ INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/lmsy7.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmr7.tfm
+INPUT ./Plots/pca_loadings.png
+INPUT ./Plots/pca_loadings.png
+INPUT ./Plots/pca_loadings.png
+INPUT ./Plots/pca_loadings.png
+INPUT ./Plots/pca_loadings.png
 INPUT ./Tabs/pcs_network_stability_modern.tex
 INPUT ./Tabs/pcs_network_stability_modern.tex
 INPUT Tabs/pcs_network_stability_modern.tex
@@ -244,6 +250,7 @@ INPUT ./Plots/unified_cultural_effects.png
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmri8.tfm
 INPUT ./manuscript_research_note.bbl
 INPUT ./manuscript_research_note.bbl
 INPUT manuscript_research_note.bbl
@@ -264,4 +271,6 @@ INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb
+INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb
+INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb
 INPUT /home/omarlizardo/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb

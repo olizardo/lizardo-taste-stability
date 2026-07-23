@@ -16,6 +16,27 @@ Cebula, M. (2023).
 \newblock Social class, social networks and variety of weak and strong practices.
 \newblock {\em Sociology compass}.
 
+\bibitem[Dimaggio and Useem, 1978]{dimaggio1978}
+Dimaggio, P. and Useem, M. (1978).
+\newblock Social class and arts consumption: The origins and consequences of class differences in exposure to the arts in america.
+\newblock {\em Theory and Society}.
+\newblock 5:141-161.
+
+\bibitem[Erickson, 1996]{erickson1996culture-940}
+Erickson, B.~H. (1996).
+\newblock Culture, class, and connections.
+\newblock {\em American journal of sociology}, 102(1):217--251.
+
+\bibitem[Gardner et~al., 1995]{gardner1995regression-3ad}
+Gardner, W., Mulvey, E.~P., and Shaw, E.~C. (1995).
+\newblock Regression analyses of counts and rates: Poisson, overdispersed poisson, and negative binomial models.
+\newblock {\em Psychological Bulletin}, 118(3):392--404.
+
+\bibitem[Griswold, 2008]{griswold2008regionalism-7d8}
+Griswold, W. (2008).
+\newblock {\em Regionalism and the Reading Class}.
+\newblock University of Chicago Press.
+
 \bibitem[Hachen et~al., 2022]{hachen2022generators-923}
 Hachen, D., Wang, C., Sepulvado, B., and Lizardo, O. (2022).
 \newblock Generators or diffusers? examining differences in the dynamic coupling of context and social ties across multiple types of foci.
@@ -142,5 +163,10 @@ Vanzella-Yang, A. and Abrutyn, S. (2022).
 Weiss, J., Lawton, L., and Fischer, C. (2022).
 \newblock Life course transitions and changes in network ties among younger and older adults.
 \newblock {\em Advances in Life Course Research}, 52:100466.
+
+\bibitem[Winship and Mare, 1984]{winship1984regression-edb}
+Winship, C. and Mare, R.~D. (1984).
+\newblock Regression models with ordinal variables.
+\newblock {\em American Sociological Review}, 49(4):512.
 
 \end{thebibliography}
