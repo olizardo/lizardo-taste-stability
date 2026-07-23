@@ -3,44 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: manuscript_research_note.aux
 The style file: apalike.bst
 Database file #1: references.bib
-You've used 28 entries,
+Warning--can't use both volume and number fields in joseph2015
+You've used 33 entries,
             1935 wiz_defined-function locations,
-            631 strings with 7910 characters,
-and the built_in function-call counts, 9497 in all, are:
-= -- 932
-> -- 316
-< -- 23
-+ -- 100
-- -- 98
-* -- 747
-:= -- 1723
-add.period$ -- 92
-call.type$ -- 28
-change.case$ -- 186
-chr.to.int$ -- 28
-cite$ -- 28
-duplicate$ -- 382
-empty$ -- 692
-format.name$ -- 146
-if$ -- 1828
+            663 strings with 8730 characters,
+and the built_in function-call counts, 11757 in all, are:
+= -- 1174
+> -- 357
+< -- 30
++ -- 114
+- -- 110
+* -- 948
+:= -- 2071
+add.period$ -- 106
+call.type$ -- 33
+change.case$ -- 218
+chr.to.int$ -- 33
+cite$ -- 34
+duplicate$ -- 476
+empty$ -- 894
+format.name$ -- 165
+if$ -- 2297
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 31
-newline$ -- 151
-num.names$ -- 84
-pop$ -- 137
+missing$ -- 35
+newline$ -- 173
+num.names$ -- 99
+pop$ -- 161
 preamble$ -- 1
-purify$ -- 189
+purify$ -- 220
 quote$ -- 0
-skip$ -- 301
+skip$ -- 365
 stack$ -- 0
-substring$ -- 617
-swap$ -- 28
-text.length$ -- 0
+substring$ -- 865
+swap$ -- 44
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 162
-warning$ -- 0
-while$ -- 77
+type$ -- 194
+warning$ -- 1
+while$ -- 103
 width$ -- 0
-write$ -- 369
+write$ -- 433
+(There was 1 warning)

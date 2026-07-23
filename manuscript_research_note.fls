@@ -266,14 +266,13 @@ INPUT ./Plots/unified_cultural_effects.png
 INPUT ./Plots/unified_cultural_effects.png
 INPUT ./Plots/unified_cultural_effects.png
 INPUT ./Plots/unified_cultural_effects.png
-INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri8.tfm
 INPUT ./manuscript_research_note.bbl
 INPUT ./manuscript_research_note.bbl
 INPUT manuscript_research_note.bbl
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ts1-lmr10.tfm
 INPUT ./Tabs/descriptives.tex
 INPUT ./Tabs/descriptives.tex
 INPUT Tabs/descriptives.tex

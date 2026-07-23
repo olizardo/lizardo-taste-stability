@@ -1,21 +1,22 @@
 \begin{thebibliography}{}
 
-\bibitem[Bourdieu, 1984]{bourdieu1984}
-Bourdieu, P. (1984).
-\newblock {\em Distinction: a Social Critique of the Judgment of Taste}.
-\newblock Translated by R. Nice. Cambridge: Harvard University Press.
-
-\bibitem[Burt, 2000]{burt2000}
-Burt, R.~S. (2000).
-\newblock Decay functions.
-\newblock {\em Social Networks}.
-\newblock 22:1-28.
+\bibitem[Cebula, 2022]{cebula2022}
+Cebula, M. (2022).
+\newblock Inequality in social capital: assessing the importance of structural
+  factors and cultural consumption for social advantage. a case from poland.
+\newblock {\em International Review of Sociology}, 32(1):1--24.
 
 \bibitem[Cebula, 2023]{cebula2023social-fe1}
 Cebula, M. (2023).
 \newblock Social class, social networks and variety of weak and strong
   practices.
 \newblock {\em Sociology compass}.
+
+\bibitem[Cebula, 2024]{cebula2024structure-f21}
+Cebula, M. (2024).
+\newblock The structure of social capital and cultural participation: A
+  cross-sectional study.
+\newblock {\em Sociological Perspectives}, 67(1-3):173--195.
 
 \bibitem[Dimaggio and Useem, 1978]{dimaggio1978}
 Dimaggio, P. and Useem, M. (1978).
@@ -52,17 +53,18 @@ Hollstein, B. (2023).
   relationship-related structural approach.
 \newblock {\em Advances in Life Course Research}, 56:100539.
 
-\bibitem[Holt, 1998]{holt1998}
-Holt, D.~B. (1998).
-\newblock Does cultural capital structure american consumption?
-\newblock {\em Journal of Consumer Research}.
-\newblock 25:1-25.
-
 \bibitem[J{\ae}ger and Meuleman, 2026]{jaeger2026}
 J{\ae}ger, M.~M. and Meuleman, R. (2026).
 \newblock Cultured means connected? the effect of cultural tastes on social
   capital.
 \newblock {\em The British Journal of Sociology}.
+
+\bibitem[Joseph and Carley, 2015]{joseph2015}
+Joseph, K. and Carley, K.~M. (2015).
+\newblock Culture, networks, twitter and foursquare: testing a model of
+  cultural conversion with social media data.
+\newblock In {\em Proceedings of the International AAAI Conference on Web and
+  Social Media}, volume~9, pages 186--195.
 
 \bibitem[Joseph et~al., 2014]{joseph2014check-ins-26e}
 Joseph, K., Carley, K.~M., and Hong, J.~I. (2014).
@@ -89,21 +91,38 @@ Lizardo, O. (2006).
 \newblock {\em American Sociological Review}.
 \newblock 71:778-807.
 
+\bibitem[Lizardo, 2011]{lizardo2011}
+Lizardo, O. (2011).
+\newblock Cultural correlates of ego-network closure.
+\newblock {\em Sociological Perspectives}, 54(3):479--487.
+
+\bibitem[Lizardo, 2013]{lizardo2013}
+Lizardo, O. (2013).
+\newblock Variety in cultural choice and the activation of social ties.
+\newblock {\em Social Science Research}, 42(2):321--330.
+
 \bibitem[Lizardo, 2016]{lizardo2016why-418}
 Lizardo, O. (2016).
 \newblock Why “cultural matters” matter: Culture talk as the mobilization
   of cultural capital in interaction.
 \newblock {\em Poetics}, 58:1--17.
 
+\bibitem[Lizardo, 2024]{lizardo2024}
+Lizardo, O. (2024).
+\newblock Culture and social capital.
+\newblock In {\em Handbook on Inequality and Social Capital}. Edward Elgar
+  Publishing.
+
+\bibitem[Lizardo, 2025]{lizardo2025}
+Lizardo, O. (2025).
+\newblock Cultural tastes and everyday networks.
+\newblock In {\em Handbook of Culture and Social Networks}. Edward Elgar
+  Publishing.
+
 \bibitem[Long, 2003]{long2003}
 Long, E. (2003).
 \newblock {\em Book Clubs: Women and the Uses of Reading in Everyday Life}.
 \newblock Chicago: University of Chicago Press.
-
-\bibitem[Marsden, 2024]{marsden2024}
-Marsden, P.~V. (2024).
-\newblock On integrating life course and social network research.
-\newblock {\em Advances in Life Course Research}, 59:100593.
 
 \bibitem[McPherson and Drobnic, 1992]{mcpherson1992}
 McPherson, J.~Miller, P. A.~P. and Drobnic, S. (1992).
@@ -134,17 +153,21 @@ Popielarz, P.~A. and McPherson, J.~M. (1995).
 \newblock {\em American Journal of Sociology}.
 \newblock 101:698-720.
 
-\bibitem[Suitor and Morgan, 1997]{suitor1997}
-Suitor, J.~Jill, B.~W. and Morgan, D.~L. (1997).
-\newblock It\textquotesingle s about time: How, why, and when networks change.
-\newblock {\em Social Networks}.
-\newblock 19:1-7.
+\bibitem[Puetz, 2015]{puetz2015}
+Puetz, K. (2015).
+\newblock Consumer culture, taste preferences, and social network formation.
+\newblock {\em Sociology Compass}, 9(6):438--449.
 
 \bibitem[Vacchiano et~al., 2024]{vacchiano2024}
 Vacchiano, M., Hollstein, B., and Settersten~Jr, R.~A. (2024).
 \newblock Networked lives: Probing the influence of social networks on the life
   course.
 \newblock {\em Advances in Life Course Research}, 59:100589.
+
+\bibitem[Vaisey and Lizardo, 2010]{vaisey2010}
+Vaisey, S. and Lizardo, O. (2010).
+\newblock Can cultural worldviews influence network composition?
+\newblock {\em Social Forces}, 88(4):1595--1618.
 
 \bibitem[Vanzella-Yang and Abrutyn, 2022]{vanzella2022}
 Vanzella-Yang, A. and Abrutyn, S. (2022).
@@ -162,5 +185,10 @@ Weiss, J., Lawton, L., and Fischer, C. (2022).
 Winship, C. and Mare, R.~D. (1984).
 \newblock Regression models with ordinal variables.
 \newblock {\em American Sociological Review}, 49(4):512.
+
+\bibitem[Wohl, 2015]{wohl2015community-2d2}
+Wohl, H. (2015).
+\newblock Community sense: The cohesive power of aesthetic judgment.
+\newblock {\em Sociological Theory}, 33(4):299--326.
 
 \end{thebibliography}
