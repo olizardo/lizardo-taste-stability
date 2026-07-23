@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.7.22)  22 JUL 2026 18:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.7.22)  22 JUL 2026 18:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -701,14 +701,14 @@ dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 
 [4]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 108.
+(Font)              <7> on input line 106.
 
 
 [5]
-<Plots/pca_loadings.png, id=138, 578.16pt x 433.62pt>
+<Plots/pca_loadings.png, id=142, 578.16pt x 433.62pt>
 File: Plots/pca_loadings.png Graphic file (type png)
 <use Plots/pca_loadings.png>
-Package pdftex.def Info: Plots/pca_loadings.png  used on input line 114.
+Package pdftex.def Info: Plots/pca_loadings.png  used on input line 112.
 (pdftex.def)             Requested size: 293.25209pt x 219.93907pt.
 
 
@@ -717,7 +717,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.126 
+l.124 
        <./Plots/pca_loadings.png (PNG copy)>]
 
 [7] (./Tabs/pcs_network_stability_modern.tex
@@ -740,11 +740,11 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 4
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-<Plots/unified_cultural_effects.png, id=181, 722.7pt x 361.35pt>
+<Plots/unified_cultural_effects.png, id=201, 722.7pt x 361.35pt>
 File: Plots/unified_cultural_effects.png Graphic file (type png)
 <use Plots/unified_cultural_effects.png>
 Package pdftex.def Info: Plots/unified_cultural_effects.png  used on input line
- 149.
+ 147.
 (pdftex.def)             Requested size: 293.25429pt x 146.62715pt.
 
 
@@ -753,12 +753,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.156 
-      {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/font
-s/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc} <.
-/Plots/unified_cultural_effects.png (PNG copy)>]
+l.154 
+       <./Plots/unified_cultural_effects.png (PNG copy)>]
 
-[9]
+[9{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
 
 [10]
 
@@ -783,10 +782,10 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18405 strings out of 475102
- 370754 string characters out of 5764877
- 802948 words of memory out of 5000000
- 41091 multiletter control sequences out of 15000+600000
+ 18425 strings out of 475102
+ 371147 string characters out of 5764877
+ 803349 words of memory out of 5000000
+ 41106 multiletter control sequences out of 15000+600000
  642847 words of font info for 95 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,10n,110p,1583b,1267s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -800,10 +799,10 @@ ts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/
 public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on manuscript_research_note.pdf (15 pages, 806057 bytes).
+Output written on manuscript_research_note.pdf (15 pages, 807033 bytes).
 PDF statistics:
- 417 PDF objects out of 1000 (max. 8388607)
- 361 compressed objects within 4 object streams
- 76 named destinations out of 1000 (max. 500000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 384 compressed objects within 4 object streams
+ 81 named destinations out of 1000 (max. 500000)
  123 words of extra memory for PDF output out of 10000 (max. 10000000)
 

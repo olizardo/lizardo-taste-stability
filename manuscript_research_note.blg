@@ -4,45 +4,45 @@ The top-level auxiliary file: manuscript_research_note.aux
 The style file: apalike.bst
 Database file #1: references.bib
 Warning--can't use both volume and number fields in joseph2015
-You've used 33 entries,
+You've used 38 entries,
             1935 wiz_defined-function locations,
-            663 strings with 8730 characters,
-and the built_in function-call counts, 11757 in all, are:
-= -- 1174
-> -- 357
-< -- 30
-+ -- 114
-- -- 110
-* -- 948
-:= -- 2071
-add.period$ -- 106
-call.type$ -- 33
-change.case$ -- 218
-chr.to.int$ -- 33
-cite$ -- 34
-duplicate$ -- 476
-empty$ -- 894
-format.name$ -- 165
-if$ -- 2297
+            686 strings with 9186 characters,
+and the built_in function-call counts, 13369 in all, are:
+= -- 1335
+> -- 405
+< -- 36
++ -- 134
+- -- 124
+* -- 1064
+:= -- 2361
+add.period$ -- 124
+call.type$ -- 38
+change.case$ -- 249
+chr.to.int$ -- 38
+cite$ -- 39
+duplicate$ -- 543
+empty$ -- 1010
+format.name$ -- 192
+if$ -- 2608
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 35
-newline$ -- 173
-num.names$ -- 99
-pop$ -- 161
+missing$ -- 41
+newline$ -- 201
+num.names$ -- 114
+pop$ -- 185
 preamble$ -- 1
-purify$ -- 220
+purify$ -- 252
 quote$ -- 0
-skip$ -- 365
+skip$ -- 420
 stack$ -- 0
-substring$ -- 865
-swap$ -- 44
+substring$ -- 965
+swap$ -- 49
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 194
+type$ -- 222
 warning$ -- 1
-while$ -- 103
+while$ -- 115
 width$ -- 0
-write$ -- 433
+write$ -- 500
 (There was 1 warning)

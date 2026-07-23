@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[Bott, 1971]{bott1971}
+Bott, E. (1971).
+\newblock {\em Family and Social Network}.
+\newblock London: Tavistock Institute of Human Relations.
+
 \bibitem[Cebula, 2022]{cebula2022}
 Cebula, M. (2022).
 \newblock Inequality in social capital: assessing the importance of structural
@@ -29,6 +34,18 @@ Dimaggio, P. and Useem, M. (1978).
 Erickson, B.~H. (1996).
 \newblock Culture, class, and connections.
 \newblock {\em American journal of sociology}, 102(1):217--251.
+
+\bibitem[Feld, 1981]{feld1981}
+Feld, S.~L. (1981).
+\newblock The focused organization of social ties.
+\newblock {\em American Journal of Sociology}.
+\newblock 86:1015-1035.
+
+\bibitem[Fischer and Oliker, 1983]{fischer1983}
+Fischer, C.~S. and Oliker, S.~J. (1983).
+\newblock A research note on friendship, gender, and the life cycle.
+\newblock {\em Social Forces}.
+\newblock 62:124-133.
 
 \bibitem[Gardner et~al., 1995]{gardner1995regression-3ad}
 Gardner, W., Mulvey, E.~P., and Shaw, E.~C. (1995).
@@ -65,13 +82,6 @@ Joseph, K. and Carley, K.~M. (2015).
   cultural conversion with social media data.
 \newblock In {\em Proceedings of the International AAAI Conference on Web and
   Social Media}, volume~9, pages 186--195.
-
-\bibitem[Joseph et~al., 2014]{joseph2014check-ins-26e}
-Joseph, K., Carley, K.~M., and Hong, J.~I. (2014).
-\newblock Check-ins in “blau space” applying blau’s macrosociological
-  theory to foursquare check-ins from new york city.
-\newblock {\em {ACM} Transactions on Intelligent Systems and Technology
-  ({TIST})}, 5(3):1--22.
 
 \bibitem[Lewis and Kaufman, 2018]{lewis2018conversion-9be}
 Lewis, K. and Kaufman, J. (2018).
@@ -124,6 +134,13 @@ Long, E. (2003).
 \newblock {\em Book Clubs: Women and the Uses of Reading in Everyday Life}.
 \newblock Chicago: University of Chicago Press.
 
+\bibitem[McPherson and Smith-Lovin, 1987]{mcpherson1987}
+McPherson, M. and Smith-Lovin, L. (1987).
+\newblock Homophily in voluntary organizations: Status distance and the
+  composition of face-to-face groups.
+\newblock {\em American Sociological Review}.
+\newblock 52:370-379.
+
 \bibitem[McPherson and Drobnic, 1992]{mcpherson1992}
 McPherson, J.~Miller, P. A.~P. and Drobnic, S. (1992).
 \newblock Social networks and organizational dynamics.
@@ -146,6 +163,12 @@ Mundlak, Y. (1978).
 \newblock On the pooling of time series and cross section data.
 \newblock {\em Econometrica}, 46(1):69.
 
+\bibitem[Offer and Fischer, 2018]{offer2018difficult-67c}
+Offer, S. and Fischer, C.~S. (2018).
+\newblock Difficult people: Who is perceived to be demanding in personal
+  networks and why are they there?
+\newblock {\em American Sociological Review}, 83(1):111--142.
+
 \bibitem[Popielarz and McPherson, 1995]{popielarz1995}
 Popielarz, P.~A. and McPherson, J.~M. (1995).
 \newblock On the edge or in between: Niche position, niche overlap, and the
@@ -157,6 +180,11 @@ Popielarz, P.~A. and McPherson, J.~M. (1995).
 Puetz, K. (2015).
 \newblock Consumer culture, taste preferences, and social network formation.
 \newblock {\em Sociology Compass}, 9(6):438--449.
+
+\bibitem[Schultz and Breiger, 2010]{schultz2010strength-1dc}
+Schultz, J. and Breiger, R.~L. (2010).
+\newblock The strength of weak culture.
+\newblock {\em Poetics}, 38(6):610--624.
 
 \bibitem[Vacchiano et~al., 2024]{vacchiano2024}
 Vacchiano, M., Hollstein, B., and Settersten~Jr, R.~A. (2024).

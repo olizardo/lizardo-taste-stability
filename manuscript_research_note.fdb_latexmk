@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex manuscript_research_note"] 1784770137.80767 "manuscript_research_note.aux" "manuscript_research_note.bbl" "manuscript_research_note" 1784770139.76577 0
-  "./references.bib" 1784770045.00234 35663 470422044e8105c8b28e79fe28638e81 ""
+["bibtex manuscript_research_note"] 1784771540.31441 "manuscript_research_note.aux" "manuscript_research_note.bbl" "manuscript_research_note" 1784771542.24304 0
+  "./references.bib" 1784771397.27526 36490 d73d481fb3be605e8bec798fd5682434 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "manuscript_research_note.aux" 1784770139.59058 11433 3d99b06e8375319ddf504e5a0a8c6ae4 "pdflatex"
+  "manuscript_research_note.aux" 1784771542.06136 11925 dcc46c342f50b437df08d2fd4650f767 "pdflatex"
   (generated)
   "manuscript_research_note.bbl"
   "manuscript_research_note.blg"
   (rewritten before read)
-["pdflatex"] 1784770137.86329 "manuscript_research_note.tex" "manuscript_research_note.pdf" "manuscript_research_note" 1784770139.76609 0
+["pdflatex"] 1784771540.36876 "manuscript_research_note.tex" "manuscript_research_note.pdf" "manuscript_research_note" 1784771542.2432 0
   "/etc/texmf/web2c/texmf.cnf" 1782433752.17514 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
@@ -163,9 +163,9 @@
   "Plots/unified_cultural_effects.png" 1784761908.10477 163144 d087fb83e2ec481f6af87295a9e3c503 ""
   "Tabs/descriptives.tex" 1784761480.83504 974 f40db3cd5c1932bd40405789007f0af2 ""
   "Tabs/pcs_network_stability_modern.tex" 1784761480.83004 2400 87f77cc8e2f07e49689d9b1609874fd0 ""
-  "manuscript_research_note.aux" 1784770139.59058 11433 3d99b06e8375319ddf504e5a0a8c6ae4 "pdflatex"
-  "manuscript_research_note.bbl" 1784770137.85759 7561 0492b6ee3135d6af31949a0833084ee0 "bibtex manuscript_research_note"
-  "manuscript_research_note.tex" 1784770126.22068 26490 fa03f9139e97c0be3c92079b726a917b ""
+  "manuscript_research_note.aux" 1784771542.06136 11925 dcc46c342f50b437df08d2fd4650f767 "pdflatex"
+  "manuscript_research_note.bbl" 1784771540.36442 8490 1a270fdbb9c1f65cefbf957df7556b10 "bibtex manuscript_research_note"
+  "manuscript_research_note.tex" 1784771529.30077 26799 5b7160d82959b992b40cd047d8daf0b5 ""
   (generated)
   "manuscript_research_note.aux"
   "manuscript_research_note.log"
